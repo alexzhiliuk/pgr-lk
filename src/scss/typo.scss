@@ -1,10 +1,12 @@
-.h3 {
-    
+@mixin h3 {
     font-style: normal;
     font-weight: 600;
     @include clamp(font-size, 28, 36);
     line-height: 1.1;
-    
+}
+
+.h3 {
+    @include h3;
 }
 
 .text-m {
@@ -17,6 +19,16 @@
     &_bold {
         font-weight: 600;
     }
+
+}
+
+.text-xs {
+
+    font-style: normal;
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 1.45;
+    letter-spacing: 0.4px;
 
 }
 
