@@ -1,3 +1,14 @@
+@mixin h2 {
+    font-style: normal;
+    font-weight: 600;
+    @include clamp(font-size, 36, 44);
+    line-height: 1.1;
+}
+
+.h2 {
+    @include h2;
+}
+
 @mixin h3 {
     font-style: normal;
     font-weight: 600;

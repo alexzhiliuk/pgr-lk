@@ -39,6 +39,10 @@ body {
 
 main {
     padding-top: 32px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
 }
 
 ul, ol {

@@ -2,6 +2,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 8px;
 
     text-align: center;
     padding: 10px;
@@ -29,5 +30,18 @@
         &:hover {
             background: #ECECEC;
         }
+    }
+
+    &_transparent {
+        background: rgba($colorWhite, .16);
+        color: $colorWhite;
+
+        &:hover {
+            background: rgba($colorWhite, .32);
+        }
+    }
+
+    &_l {
+        padding: 16px;
     }
 }
