@@ -1,0 +1,182 @@
+<section class="login-section container">
+    <form action="" class="login-form" id="loginPhoneForm">
+        <div class="login-form__header">
+            <h2 class="h3">Вход в личный кабинет</h2>
+            <p class="text-m color-text-2">Введите номер телефона и мы отправим SMS с кодом подтверждения</p>
+        </div>
+        <div class="login-form__body">
+            <div class="input text-m" data-placeholder="Номер телефона">
+                <input type="tel" class="login-form__input text-m" data-tel-input placeholder="Номер телефона" id="loginPhoneInput"> 
+            </div>
+            <button type="button" class="login-form__submit btn text-m text-m_bold" disabled id="loginGetCode">Получить код</button>
+        </div>
+    </form>
+    <form action="" class="login-form" id="loginCodeForm" style="display: none;">
+        <div class="login-form__nav">
+            <button type="button" class="btn btn_outline text-m text-m_bold" id="buttonBack">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M15.7071 5.29289C16.0976 5.68342 16.0976 6.31658 15.7071 6.70711L10.4142 12L15.7071 17.2929C16.0976 17.6834 16.0976 18.3166 15.7071 18.7071C15.3166 19.0976 14.6834 19.0976 14.2929 18.7071L8.29289 12.7071C7.90237 12.3166 7.90237 11.6834 8.29289 11.2929L14.2929 5.29289C14.6834 4.90237 15.3166 4.90237 15.7071 5.29289Z" fill="#6B6D80"/>
+                </svg>
+                Изменить номер
+            </button>
+        </div>
+        <div class="login-form__header">
+            <h2 class="h3">Введите код</h2>
+            <p class="text-m color-text-2">Код был отправлен на номер <span id="userPhone" style="white-space: nowrap;"></span></p>
+        </div>
+        <div class="login-form__body">
+            <div class="login-form__code">
+                <input type="number" class="input text-m" min="0" max="9" maxlength="1">
+                <input type="number" class="input text-m" min="0" max="9" maxlength="1">
+                <input type="number" class="input text-m" min="0" max="9" maxlength="1">
+                <input type="number" class="input text-m" min="0" max="9" maxlength="1">
+            </div>
+            <button type="button" class="login-form__submit btn text-m text-m_bold" disabled id="loginGetCodeAgain">Отправить код повторно через <span></span></button>
+        </div>
+    </form>
+</section>
+
+<script>
+    var timeLeft = 5;
+
+    function checkInput() {
+        setTimeout(() => {
+            let inputValue = $('#loginPhoneInput').val().trim();
+            if (inputValue === "") {
+                $('#loginGetCode').attr('disabled', true);
+            } else {
+                $('#loginGetCode').removeAttr('disabled');
+            }
+        }, 100)
+    }
+
+    $('#loginPhoneInput').on('input', function () {
+        checkInput();
+    });
+
+    checkInput();
+
+    $('#loginGetCode').click(function() {
+        $("#loginPhoneForm").hide()
+        $("#userPhone").html($("#loginPhoneInput").val())
+        $("#loginCodeForm").show()
+        updateSubmitButton()
+    })
+    $('#buttonBack').click(function() {
+        $("#loginCodeForm").hide()
+        $("#loginPhoneForm").show()
+        resetCodeForm()
+    })
+
+    $('.login-form__code input').on('input', function (e) {
+        var $this = $(this);
+
+        var value = $this.val();
+        if (value.length > 1) {
+            $this.val(value.slice(0, 1)); 
+        }
+
+        
+        if (e.originalEvent.data === null) {
+            var index = $('.login-form__code input').index($this);
+            if ($this.val() === '') {
+                if (index > 0) {
+                    $('.login-form__code input').eq(index - 1).focus();
+                }
+            }
+        } else {
+            var index = $('.login-form__code input').index($this);
+            if (index < 3) {
+                $('.login-form__code input').eq(index + 1).focus();
+            }
+        }
+
+
+        checkAndSendRequest();
+    });
+
+    $('.login-form__code input').on('paste', function (e) {
+        e.preventDefault()
+        var pasteData = e.originalEvent.clipboardData.getData('text');
+        var $inputs = $('.login-form__code input');
+        for (var i = 0; i < pasteData.length && i < 4; i++) {
+            $inputs.eq(i).val(pasteData.charAt(i));
+        }
+        checkAndSendRequest();
+    });
+
+    // Проверка заполненности полей и отправка запроса
+    function checkAndSendRequest() {
+        var isFilled = true;
+        $('.login-form__code input').each(function () {
+            if ($(this).val() === '') {
+                isFilled = false;
+                return false;
+            }
+        });
+
+        if (isFilled) {
+            sendRequest();
+        }
+    }
+
+    // Функция отправки запроса
+    function sendRequest() {
+        var code = [];
+        $('.login-form__code input').each(function () {
+            code.push($(this).val());
+        });
+        var codeString = code.join('');
+
+        
+        $.ajax({
+            url: '/your-api-endpoint', // Укажите правильный URL для вашего запроса
+            method: 'POST',
+            data: {
+                code: codeString
+            },
+            success: function(response) {
+                console.log('Запрос отправлен успешно', response);
+            },
+            error: function(xhr, status, error) {
+                console.log('Ошибка запроса', error);
+            }
+        });
+    }
+
+
+    function updateSubmitButton() {
+        var $button = $('#loginGetCodeAgain');
+        if (!$button.is(":visible")) { return }
+        var $timerSpan = $button.find('span');
+
+        if (timeLeft > 0) {
+            var minutes = Math.floor(timeLeft / 60);
+            var seconds = timeLeft % 60;
+            $timerSpan.text(pad(minutes) + ':' + pad(seconds));
+            timeLeft--;
+            setTimeout(updateSubmitButton, 1000);
+        } else {
+            $button.html("Отправить код повторно <span></span>")
+            $button.prop('disabled', false);
+        }
+    }
+    
+    $('#loginGetCodeAgain').click(function(e) {
+        timeLeft = 5
+        $(this).prop('disabled', true);
+        $(this).html("Отправить код повторно через <span></span>")
+        updateSubmitButton()
+    })
+
+    // Добавление нуля к числу, если оно меньше 10
+    function pad(number) {
+        return (number < 10 ? '0' : '') + number;
+    }
+
+    function resetCodeForm() {
+        $('.login-form__code input').val("")
+        timeLeft = 5
+    }
+
+</script>

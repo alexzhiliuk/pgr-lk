@@ -1,0 +1,33 @@
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+    padding: 10px;
+    border-radius: 12px;
+
+    background: $colorPrimary;
+    color: $colorWhite;
+    * {
+        color: $colorWhite;
+    }
+
+    @media screen and (max-width: $breakpoint768) {
+        padding: 16px;
+    }
+
+    &:disabled {
+        opacity: .56;
+    }
+
+    &_outline {
+        background: none;
+        color: $colorPrimary;
+        outline: 1px solid $colorBorder;
+
+        &:hover {
+            background: #ECECEC;
+        }
+    }
+}

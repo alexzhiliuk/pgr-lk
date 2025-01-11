@@ -1,0 +1,29 @@
+.h3 {
+    
+    font-style: normal;
+    font-weight: 600;
+    @include clamp(font-size, 28, 36);
+    line-height: 1.1;
+    
+}
+
+.text-m {
+
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 1.6;
+
+    &_bold {
+        font-weight: 600;
+    }
+
+}
+
+.color-text-2 {
+    color: $colorText2;
+
+    * {
+        color: $colorText2;
+    }
+}
