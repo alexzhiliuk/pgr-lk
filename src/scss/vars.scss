@@ -1,6 +1,6 @@
 // Container
 $conteinerWidth: 1120 + px;
-$containerPadding: 10 + px;
+$containerPadding: clamp(16px, 3vw, 40px);
 
 // Breakpoints
 $breakpoint1440: 1439.98 + px;
@@ -35,3 +35,6 @@ $burgerBreakpoint: $breakpoint1024;
 
 // Transitions
 $quickTransition: all 120ms ease-out;
+
+// Shadows
+$shadowDefault: 0px 4px 24px rgba(0, 0, 0, 0.12);

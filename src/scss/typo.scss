@@ -9,6 +9,20 @@
     @include h3;
 }
 
+@mixin text-l {
+    font-style: normal;
+    font-weight: 500;
+    @include clamp(font-size, 15, 17);
+    line-height: 1.65;
+
+    &_bold {
+        font-weight: 700;
+    }
+}
+.text-l {
+    @include text-l;
+}
+
 .text-m {
 
     font-style: normal;

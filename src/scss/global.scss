@@ -14,10 +14,10 @@
 }
 
 .container {
-    max-width: calc($conteinerWidth + 4 * $containerPadding);
+    max-width: calc($conteinerWidth + 2 * $containerPadding);
     width: 100%;
     margin: 0 auto;
-    padding: 0 calc(2 * $containerPadding);
+    padding: 0 $containerPadding;
 
 }
 
@@ -38,7 +38,7 @@ body {
 }
 
 main {
-    
+    padding-top: 32px;
 }
 
 ul, ol {
