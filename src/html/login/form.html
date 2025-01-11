@@ -129,7 +129,9 @@
         var codeString = code.join('');
 
         // Временно
-        if (codeString === "1111") { window.location.pathname = '' }
+        if (codeString === "1111") { 
+            window.location.host == 'alexzhiliuk.github.io' ? window.location.pathname = 'pgr-lk/dist/index.html'  : window.location.pathname = '' 
+        }
         
         $.ajax({
             url: '/your-api-endpoint', // Укажите правильный URL для вашего запроса

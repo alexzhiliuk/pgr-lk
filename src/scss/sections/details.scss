@@ -41,6 +41,7 @@
         padding: 12px 0;
         border-bottom: 2px solid transparent;
 
+        white-space: nowrap;
         text-wrap: nowrap;
         user-select: none;
         -webkit-user-drag: none;
@@ -138,6 +139,7 @@
     @media screen and (max-width: $breakpoint576) {
         @include width100vw;
         text-wrap: nowrap;
+        white-space: nowrap;
     }
     
 }

@@ -770,6 +770,7 @@ input.input:hover {
     flex-direction: column;
     justify-content: space-between;
     overflow-y: auto;
+    overflow-x: hidden;
   }
   .header_active .header__right_mobile {
     display: flex;
@@ -803,6 +804,9 @@ input.input:hover {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
     border-left: none;
+  }
+  .header_active .header__right .header-icon .tooltip {
+    display: none;
   }
 }
 
@@ -935,6 +939,15 @@ input.input:hover {
   background: #FFFFFF;
   box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.12);
 }
+.credit-card__title {
+  white-space: nowrap;
+  text-wrap: nowrap;
+}
+.credit-card__value {
+  white-space: nowrap;
+  text-wrap: nowrap;
+}
+
 .info {
   padding: 24px;
   border-radius: 16px;
@@ -1085,6 +1098,7 @@ input.input:hover {
 .details__tab {
   padding: 12px 0;
   border-bottom: 2px solid transparent;
+  white-space: nowrap;
   text-wrap: nowrap;
   user-select: none;
   -webkit-user-drag: none;
@@ -1169,6 +1183,7 @@ input.input:hover {
     width: 100vw;
     margin: 0 calc(-1 * (100vw - 100%) / 2);
     text-wrap: nowrap;
+    white-space: nowrap;
   }
 }
 

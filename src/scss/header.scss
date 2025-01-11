@@ -173,6 +173,7 @@
             flex-direction: column;
             justify-content: space-between;
             overflow-y: auto;
+            overflow-x: hidden;
 
             .header__right_mobile {
                 display: flex;
@@ -210,6 +211,10 @@
                         border-top-left-radius: 0;
                         border-bottom-left-radius: 0;
                         border-left: none;
+                    }
+
+                    .tooltip {
+                        display: none;
                     }
                 }
             }

@@ -38,9 +38,13 @@
 
     // .credit-card__title
     &__title {
+        white-space: nowrap;
+        text-wrap: nowrap;
     }
 
     // .credit-card__value
     &__value {
+        white-space: nowrap;
+        text-wrap: nowrap;
     }
 }
