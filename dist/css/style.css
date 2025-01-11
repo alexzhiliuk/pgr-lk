@@ -1188,6 +1188,7 @@ input.input:hover {
 }
 
 .details-table {
+  min-width: 100%;
   border-collapse: collapse;
 }
 .details-table th {
