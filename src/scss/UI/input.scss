@@ -43,7 +43,8 @@ input.input {
         pointer-events: none;
     }
 
-    &[data-placeholder]:has(input:not(:placeholder-shown)) {
+    &[data-placeholder]:has(input:not(:placeholder-shown)),
+    &[data-placeholder]:has(input:focus-within) {
         &::before {
             top: 6px;
             translate: none;

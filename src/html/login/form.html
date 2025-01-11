@@ -128,6 +128,8 @@
         });
         var codeString = code.join('');
 
+        // Временно
+        if (codeString === "1111") { window.location.pathname = '' }
         
         $.ajax({
             url: '/your-api-endpoint', // Укажите правильный URL для вашего запроса
