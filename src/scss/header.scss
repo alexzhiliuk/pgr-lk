@@ -229,6 +229,28 @@
         border-color: rgba($color: #1B1F3B, $alpha: .4);
     }
 
+    &[data-notifications] {
+        position: relative;
+        &::after {
+            content: attr(data-notifications);
+            @include text-s;
+            color: $colorWhite;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 20px;
+            aspect-ratio: 1;
+            border-radius: 50%;
+            background: $colorRed;
+
+            position: absolute;
+            top: 0;
+            right: 0;
+            translate: 4px -4px;
+        }
+    }
+
     // .header-icon_profile
     &_profile {
         width: unset;

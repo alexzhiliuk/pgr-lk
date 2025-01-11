@@ -403,6 +403,13 @@ button {
   font-weight: 600;
 }
 
+.text-s {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 1.53;
+}
+
 .text-xs {
   font-style: normal;
   font-weight: 500;
@@ -694,6 +701,28 @@ input.input:hover {
 }
 .header-icon:hover {
   border-color: rgba(27, 31, 59, 0.4);
+}
+.header-icon[data-notifications] {
+  position: relative;
+}
+.header-icon[data-notifications]::after {
+  content: attr(data-notifications);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 1.53;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: #E02D3C;
+  position: absolute;
+  top: 0;
+  right: 0;
+  translate: 4px -4px;
 }
 .header-icon_profile {
   width: unset;

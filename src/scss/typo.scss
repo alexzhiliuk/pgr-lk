@@ -22,6 +22,16 @@
 
 }
 
+@mixin text-s {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 1.53;
+}
+.text-s {
+    @include text-s;
+}
+
 .text-xs {
 
     font-style: normal;
