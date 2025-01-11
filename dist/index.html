@@ -11,31 +11,36 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@200;400;500;700&display=swap&_v=20250111233420" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap&_v=20250111233420" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@200;400;500;700&display=swap&_v=20250112020735" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap&_v=20250112020735" rel="stylesheet">
     
 
     <!-- CSS -->
-    <link rel="stylesheet" href="css/style.min.css?_v=20250111233420">
+    <link rel="stylesheet" href="css/style.min.css?_v=20250112020735">
 
     <link
       rel="stylesheet"
-      href="https://unpkg.com/swiper/swiper-bundle.min.css?_v=20250111233420"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css?_v=20250112020735"
     />
 
     <!-- JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js?_v=20250111233420"></script>
-    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js?_v=20250111233420"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js?_v=20250112020735"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js?_v=20250112020735"></script>
 
     <title>Главная</title>
 </head>
     <body>
+        <div class="loader" id="loader">
+    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M40 20C40 31.0457 31.0457 40 20 40C8.9543 40 0 31.0457 0 20C0 8.9543 8.9543 0 20 0V3C10.6112 3 3 10.6112 3 20C3 29.3888 10.6112 37 20 37C29.3888 37 37 29.3888 37 20H40Z" fill="white"/>
+    </svg>        
+</div>
         <header class="header">
     <div class="header__inner">
         <a href="index.html" class="header__logo">
             <img src="img/header/logo.svg" alt="">
         </a>
-        <nav class="header__nav">
+        <!-- <nav class="header__nav">
             <ul class="header__menu text-m color-text-2">
                 <li>
                     <a href="" class="active">Портфель</a>
@@ -50,7 +55,7 @@
                     <a href="">История операций</a>
                 </li>
             </ul>
-        </nav>
+        </nav> -->
         <div class="header__right">
             <div class="header-icon tooltip-item" data-notifications="4">
                 <img src="img/header/notifications.svg" alt="">
@@ -237,6 +242,95 @@
                 </tbody>
             </table>
         </div>
+        <div class="details__payments payments">
+            <div class="payment payment_open payment_overdue">
+                <div class="payment__header">
+                    <div class="payment__num">1</div>
+                    <div class="payment__desc">
+                        <p class="text-s payment__date">Платеж 10 сентября 2024</p>
+                        <p class="text-m payment__sum">Сумма 20 746, 54 ₽</p>
+                    </div>
+                </div>
+                <div class="payment__body">
+                    <div class="payment__properties">
+                        <div class="payment__property">
+                            <p class="payment__property-title text-s">Основной долг </p>
+                            <p class="payment__property-value text-m">15 209 ₽</p>
+                        </div>
+                        <div class="payment__property">
+                            <p class="payment__property-title text-s">Проценты</p>
+                            <p class="payment__property-value text-m">5 500 ₽</p>
+                        </div>
+                        <div class="payment__property">
+                            <p class="payment__property-title text-s">Остаток задолжности</p>
+                            <p class="payment__property-value text-m">50 000 ₽</p>
+                        </div>
+                        <div class="payment__property">
+                            <p class="payment__property-title text-s">Статус</p>
+                            <p class="payment__property-value payment__property-value_overdue text-m">Просрочен</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="payment payment_paid">
+                <div class="payment__header">
+                    <div class="payment__num">2</div>
+                    <div class="payment__desc">
+                        <p class="text-s payment__date">Платеж 10 сентября 2024</p>
+                        <p class="text-m payment__sum">Сумма 20 746, 54 ₽</p>
+                    </div>
+                </div>
+                <div class="payment__body">
+                    <div class="payment__properties">
+                        <div class="payment__property">
+                            <p class="payment__property-title text-s">Основной долг </p>
+                            <p class="payment__property-value text-m">15 209 ₽</p>
+                        </div>
+                        <div class="payment__property">
+                            <p class="payment__property-title text-s">Проценты</p>
+                            <p class="payment__property-value text-m">5 500 ₽</p>
+                        </div>
+                        <div class="payment__property">
+                            <p class="payment__property-title text-s">Остаток задолжности</p>
+                            <p class="payment__property-value text-m">50 000 ₽</p>
+                        </div>
+                        <div class="payment__property">
+                            <p class="payment__property-title text-s">Статус</p>
+                            <p class="payment__property-value payment__property-value_paid text-m">Оплачен</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="payment">
+                <div class="payment__header">
+                    <div class="payment__num">3</div>
+                    <div class="payment__desc">
+                        <p class="text-s payment__date">Платеж 10 сентября 2024</p>
+                        <p class="text-m payment__sum">Сумма 20 746, 54 ₽</p>
+                    </div>
+                </div>
+                <div class="payment__body">
+                    <div class="payment__properties">
+                        <div class="payment__property">
+                            <p class="payment__property-title text-s">Основной долг </p>
+                            <p class="payment__property-value text-m">15 209 ₽</p>
+                        </div>
+                        <div class="payment__property">
+                            <p class="payment__property-title text-s">Проценты</p>
+                            <p class="payment__property-value text-m">5 500 ₽</p>
+                        </div>
+                        <div class="payment__property">
+                            <p class="payment__property-title text-s">Остаток задолжности</p>
+                            <p class="payment__property-value text-m">50 000 ₽</p>
+                        </div>
+                        <div class="payment__property">
+                            <p class="payment__property-title text-s">Статус</p>
+                            <p class="payment__property-value text-m">Предстоящий платёж</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="details__pagination details-pagination text-s text-s_bold">
             <a href="#" class="details-pagination__arrow">
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -274,9 +368,15 @@
         }
     }
     scrollToActive(".details__tabs", ".details__tab_active")
+
+
+    // Payments 
+    $(".payment__header").click(function(e) {
+        $(this).parents(".payment").toggleClass("payment_open")
+    })
 </script>
         </main>
 
-        <script src="js/app.min.js?_v=20250111233420"></script>
+        <script src="js/app.min.js?_v=20250112020735"></script>
     </body>
 </html>

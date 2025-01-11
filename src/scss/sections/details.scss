@@ -9,7 +9,7 @@
     flex-direction: column;
     gap: 12px;
 
-    @media screen and (max-width: $breakpoint576) {
+    @media screen and (max-width: $breakpoint768) {
         @include width100vw;
         border-radius: 0;
         padding: 8px 16px 16px;
@@ -29,7 +29,7 @@
         }
         scrollbar-width: none;
 
-        @media screen and (max-width: $breakpoint576) {
+        @media screen and (max-width: $breakpoint768) {
             @include width100vw;
             padding: 0 16px;
         }
@@ -136,10 +136,8 @@
     width: 100%;
     @include scrollX;
 
-    @media screen and (max-width: $breakpoint576) {
-        @include width100vw;
-        text-wrap: nowrap;
-        white-space: nowrap;
+    @media screen and (max-width: $breakpoint768) {
+        display: none;
     }
     
 }
@@ -148,6 +146,8 @@
 
     min-width: 100%;
     border-collapse: collapse;
+    text-wrap: nowrap;
+    white-space: nowrap;
 
     th {
         color: $colorText2;
@@ -190,6 +190,132 @@
         }
     }
 }
+
+.payments {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid $colorBorder;
+
+    @media screen and (max-width: $breakpoint768) {
+        @include width100vw;
+    }
+}
+
+.payment {
+
+    display: flex;
+    flex-direction: column;
+
+    // .payment_overdue
+    &_overdue {
+        background: rgba($color: #F45725, $alpha: .12);
+        --border-color: rgba(244, 87, 37, 0.24);
+    }
+    &_paid {
+        background: rgba($color: #4AC99B, $alpha: .32);
+        --border-color: rgba(74, 201, 155, 0.24);
+    }
+
+    &_open {
+        .payment__header {
+            border-bottom: 1px solid var(--border-color, $colorBorder);
+            &::after {
+                rotate: 180deg;
+            }
+        }
+        .payment__body {
+            padding: 12px;
+            padding-left: calc(16px + 42px + 12px);
+            grid-template-rows: 1fr;
+        }
+    }
+
+    // .payment__header
+    &__header {
+        display: flex;
+        align-items: center;
+        gap: 12px; 
+
+        border-top: 1px solid $colorBorder;
+        padding: 8px 16px;
+        
+        &::after {
+            content: '';
+            width: 20px;
+            height: 20px;
+            background: url("../img/payments/arrow.svg") center center / contain no-repeat;
+            margin-left: auto;
+        }
+    }
+
+    // .payment__num
+    &__num {
+        flex-shrink: 0;
+        width: 42px;
+        height: 42px;
+        border-radius: 50%;
+        background: $colorBlack004;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    // .payment__desc
+    &__desc {
+    }
+
+    // .payment__date
+    &__date {
+        color: $colorText2;
+    }
+
+    // .payment__sum
+    &__sum {
+        color: #0D1017;
+    }
+
+    &__body {
+        padding-left: calc(16px + 42px + 12px);
+
+        display: grid;
+        grid-template-rows: 0fr;
+        overflow: hidden;
+    }
+
+    // .payment__properties
+    &__properties {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+
+        overflow: hidden;
+    }
+
+    // .payment__property
+
+    &__property {
+    }
+
+    // .payment__property-title
+    &__property-title {
+        color: $colorText2;
+    }
+
+    // .payment__property-value
+    &__property-value {
+        color: #0D1017;
+
+        &_overdue {
+            color: #F45725;
+        }
+        &_paid {
+            color: #4AC99B;
+        }
+    }
+}
+
+
 
 .details-pagination {
     

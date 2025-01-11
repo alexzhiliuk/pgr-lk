@@ -8,3 +8,10 @@ import * as infoTitleInput from './modules/infoTitleInput.js';
 
 // flsFunctions.isWebp()
 
+$(window).on('load', function () {
+    $('#loader').fadeOut('slow');
+});
+
+setTimeout(function () {
+    $('#loader').fadeOut('slow');
+}, 5000);

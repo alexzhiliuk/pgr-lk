@@ -1,0 +1,23 @@
+@keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg); 
+    }
+}
+
+.loader {
+    position: fixed;
+    inset: 0;
+    background: rgba($color: $colorBlack, $alpha: .2);
+    z-index: $loaderLayer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    svg {
+        animation: spin 2s linear infinite;
+    }
+}
