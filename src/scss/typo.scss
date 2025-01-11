@@ -34,12 +34,20 @@
     @include text-l;
 }
 
-.text-m {
-
+@mixin text-m {
     font-style: normal;
     font-weight: 500;
     font-size: 15px;
     line-height: 1.6;
+}
+@mixin text-m_bold {
+    @include text-m;
+    font-weight: 600;
+}
+
+.text-m {
+
+    @include text-m;
 
     &_bold {
         font-weight: 600;
@@ -55,16 +63,21 @@
 }
 .text-s {
     @include text-s;
+
+    &_bold {
+        font-weight: 600;
+    }
 }
 
-.text-xs {
-
+@mixin text-xs {
     font-style: normal;
     font-weight: 500;
     font-size: 11px;
     line-height: 1.45;
     letter-spacing: 0.4px;
-
+}
+.text-xs {
+    @include text-xs;
 }
 
 .color-text-2 {

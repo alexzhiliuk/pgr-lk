@@ -1,0 +1,40 @@
+.filter-btn {
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    color: $colorText1;
+    border-radius: 12px;
+    background: $colorBlack004;
+    padding: 6px 12px;
+    outline: 1px solid $colorBlack004;
+
+    &[data-count] {
+        &::after {
+            content: attr(data-count);
+            @include text-xs;
+            color: $colorText1;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            padding: 2px 6px;
+            border-radius: 50px;
+            background: rgba($color: #79818C, $alpha: .12);
+        }
+    }
+
+    &:hover {
+        background: rgba($color: $colorBlack, $alpha: .08);
+    }
+
+    // .filter-btn_active
+    &_active {
+        box-shadow: $shadowDefault;
+        background: $colorWhite;
+        outline: 1px solid $colorBorder;
+    }
+
+}

@@ -1,0 +1,235 @@
+
+.details {
+
+    background: $colorWhite;
+    padding: 12px 24px 24px;
+    border-radius: 16px;
+    
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    @media screen and (max-width: $breakpoint576) {
+        @include width100vw;
+        border-radius: 0;
+        padding: 8px 16px 16px;
+    }
+
+    // .details__tabs
+    &__tabs {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        width: 100%;
+        border-bottom: 1px solid $colorBorder;
+
+        overflow-x: auto;
+        &::-webkit-scrollbar {
+            display: none;
+        }
+        scrollbar-width: none;
+
+        @media screen and (max-width: $breakpoint576) {
+            @include width100vw;
+            padding: 0 16px;
+        }
+    }
+
+    // .details__tab
+    &__tab {
+
+        padding: 12px 0;
+        border-bottom: 2px solid transparent;
+
+        text-wrap: nowrap;
+        user-select: none;
+        -webkit-user-drag: none;
+
+        &:hover {
+            color: $colorText1;
+            border-bottom: 2px solid $colorBorder;
+        }
+
+        // .details__tab_active
+        &_active {
+            color: $colorText1;
+            border-bottom: 2px solid $colorRed;
+        }
+    }
+
+    // .details__nav
+    &__nav {
+        margin-top: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @media screen and (max-width: $breakpoint576) {
+            width: 100%;
+            flex-direction: column;
+            align-items: unset;
+            gap: 20px;
+        }
+    }
+
+    // .details__filters
+    &__filters, &__btns {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 8px;
+    }
+
+    &__filters {
+        @media screen and (max-width: $breakpoint576) {
+
+            flex-wrap: nowrap;
+            padding: 30px;
+            margin: -30px;
+
+            overflow-x: auto;
+            &::-webkit-scrollbar {
+                display: none;
+            }
+            scrollbar-width: none;
+
+            & > * {
+                text-wrap: nowrap;
+                user-select: none;
+                -webkit-user-drag: none;
+                flex-shrink: 0;
+            }
+        }
+    }
+
+    &__btns {
+        @media screen and (max-width: $breakpoint576) {
+            width: 100%;
+            flex-direction: column;
+            align-items: unset;
+            gap: 4px;
+
+            .btn {
+                padding: 10px;
+                gap: 8px;
+                @include text-m_bold;
+
+                svg {
+                    width: 24px;
+                    height: auto;
+                }
+            }
+        }
+    }
+
+    // .details__table
+    &__table {
+    }
+
+    // .details__pagination
+    &__pagination {
+    }
+}
+
+.details-table-wrapper {
+    width: 100%;
+    @include scrollX;
+
+    @media screen and (max-width: $breakpoint576) {
+        @include width100vw;
+        text-wrap: nowrap;
+    }
+    
+}
+
+.details-table {
+
+    border-collapse: collapse;
+
+    th {
+        color: $colorText2;
+        text-align: left;
+        padding: 12px;
+        border-bottom: 1px solid $colorBorder;
+    }
+
+    td {
+        color: $colorText1;
+        padding: 12px;
+        border-bottom: 1px solid $colorBorder;
+    }
+
+    tr {
+        & > :last-child {
+            text-align: right;
+        }
+    }
+
+    // .details-table__green-row
+    &__green-row {
+        td {
+            background: rgba($color: #4AC99B, $alpha: .08);
+
+            &.details-table__colored-text {
+                color: #3AA981;
+            }
+        }
+    }
+    
+    // .details-table__red-row
+    &__red-row {
+        td {
+            background: rgba($color: #F45725, $alpha: .08);
+
+            &.details-table__colored-text {
+                color: $colorRed;
+            }
+        }
+    }
+}
+
+.details-pagination {
+    
+    padding-top: 4px;
+
+    display: flex;
+    align-items: center;
+    gap: 4px;
+
+    @media screen and (max-width: $breakpoint576) {
+        justify-content: center;
+    }
+
+    // .details-pagination__arrow
+    &__arrow {
+        flex: 0 0 32px;
+        aspect-ratio: 1;
+        
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    // .details-pagination__item
+    &__item {
+
+        flex: 0 0 32px;
+        aspect-ratio: 1;
+        
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        border-radius: 12px;
+
+        // .details-pagination__item_active
+        &_active,
+        &:hover {
+            background: $colorBlack004;
+        }
+    }
+
+    &__dots {
+        pointer-events: none;
+    }
+}

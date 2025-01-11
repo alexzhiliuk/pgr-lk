@@ -11,21 +11,21 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@200;400;500;700&display=swap&_v=20250111194502" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap&_v=20250111194502" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@200;400;500;700&display=swap&_v=20250111205400" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap&_v=20250111205400" rel="stylesheet">
     
 
     <!-- CSS -->
-    <link rel="stylesheet" href="css/style.min.css?_v=20250111194502">
+    <link rel="stylesheet" href="css/style.min.css?_v=20250111205400">
 
     <link
       rel="stylesheet"
-      href="https://unpkg.com/swiper/swiper-bundle.min.css?_v=20250111194502"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css?_v=20250111205400"
     />
 
     <!-- JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js?_v=20250111194502"></script>
-    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js?_v=20250111194502"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js?_v=20250111205400"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js?_v=20250111205400"></script>
 
     <title>Главная</title>
 </head>
@@ -167,47 +167,116 @@
         </div>
     </div>
 </div>
+            <div class="container">
+    <div class="details">
+        <div class="details__tabs text-s color-text-2 draggable">
+            <a href="#" class="details__tab details__tab_active">График платежей</a>
+            <a href="#" class="details__tab">Информация</a>
+            <a href="#" class="details__tab">Залог</a>
+            <a href="#" class="details__tab">История операций</a>
+            <a href="#" class="details__tab">Реквизиты кредита</a>
+            <a href="#" class="details__tab">Входящие документы</a>
+        </div>
+        <div class="details__nav">
+            <div class="details__filters draggable">
+                <a href="#" class="text-s filter-btn filter-btn_active">Все</a>
+                <a href="#" class="text-s filter-btn" data-count="24">Предстоящие</a>
+                <a href="#" class="text-s filter-btn" data-count="2">Просроченные</a>
+            </div>
+            <div class="details__btns">
+                <a href="#" class="btn btn_secondary btn_s text-s text-s_bold">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8.66634 2.00016C8.66634 1.63197 8.36786 1.3335 7.99967 1.3335C7.63148 1.3335 7.33301 1.63197 7.33301 2.00016V8.39069L5.13775 6.19543C4.8774 5.93508 4.45529 5.93508 4.19494 6.19543C3.93459 6.45577 3.93459 6.87788 4.19494 7.13823L7.52827 10.4716C7.78862 10.7319 8.21073 10.7319 8.47108 10.4716L11.8044 7.13823C12.0648 6.87788 12.0648 6.45577 11.8044 6.19543C11.5441 5.93508 11.122 5.93508 10.8616 6.19543L8.66634 8.39069V2.00016Z" fill="black"/>
+                        <path d="M1.99968 9.3335C2.36787 9.3335 2.66634 9.63197 2.66634 10.0002V10.8002C2.66634 11.3712 2.66686 11.7594 2.69138 12.0595C2.71526 12.3517 2.75854 12.5012 2.81167 12.6055C2.9395 12.8564 3.14347 13.0603 3.39435 13.1882C3.49862 13.2413 3.64809 13.2846 3.94037 13.3085C4.24043 13.333 4.62862 13.3335 5.19968 13.3335H10.7997C11.3707 13.3335 11.7589 13.333 12.059 13.3085C12.3513 13.2846 12.5007 13.2413 12.605 13.1882C12.8559 13.0603 13.0599 12.8564 13.1877 12.6055C13.2408 12.5012 13.2841 12.3517 13.308 12.0595C13.3325 11.7594 13.333 11.3712 13.333 10.8002V10.0002C13.333 9.63197 13.6315 9.3335 13.9997 9.3335C14.3679 9.3335 14.6663 9.63197 14.6663 10.0002V10.8277C14.6663 11.3644 14.6664 11.8073 14.6369 12.168C14.6063 12.5428 14.5406 12.8872 14.3757 13.2108C14.12 13.7126 13.7121 14.1205 13.2103 14.3762C12.8868 14.541 12.5423 14.6068 12.1676 14.6374C11.8068 14.6668 11.3639 14.6668 10.8272 14.6668H5.17214C4.63549 14.6668 4.19259 14.6668 3.83179 14.6374C3.45706 14.6068 3.11259 14.541 2.78903 14.3762C2.28727 14.1205 1.87932 13.7126 1.62366 13.2108C1.4588 12.8872 1.39309 12.5428 1.36247 12.168C1.33299 11.8073 1.333 11.3643 1.33301 10.8277V10.0002C1.33301 9.63197 1.63149 9.3335 1.99968 9.3335Z" fill="black"/>
+                    </svg>
+                    Скачать        
+                </a>
+            </div>
+        </div>
+        <div class="details__table details-table-wrapper">
+            <table class="details-table text-s">
+                <thead>
+                    <tr>
+                        <th>№</th>
+                        <th>Cумма</th>
+                        <th>Дата платежа</th>
+                        <th>Основной долг</th>
+                        <th>Проценты</th>
+                        <th>Остаток задолжности</th>
+                        <th>Статус</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="details-table__green-row">
+                        <td>1</td>
+                        <td>20 746,00 ₽</td>
+                        <td>10 сентября 2024</td>
+                        <td>15 209,00 ₽</td>
+                        <td>5 500,00 ₽</td>
+                        <td>50 000,00 ₽</td>
+                        <td class="details-table__colored-text">Оплачен</td>
+                    </tr>
+                    <tr class="details-table__red-row">
+                        <td>2</td>
+                        <td>20 746,00 ₽</td>
+                        <td>10 сентября 2024</td>
+                        <td>15 209,00 ₽</td>
+                        <td>5 500,00 ₽</td>
+                        <td>50 000,00 ₽</td>
+                        <td class="details-table__colored-text">Просрочен</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>20 746,00 ₽</td>
+                        <td>10 сентября 2024</td>
+                        <td>15 209,00 ₽</td>
+                        <td>5 500,00 ₽</td>
+                        <td>50 000,00 ₽</td>
+                        <td>Предстоящий платёж</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="details__pagination details-pagination text-s text-s_bold">
+            <a href="#" class="details-pagination__arrow">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M10.7071 3.29289C11.0976 3.68342 11.0976 4.31658 10.7071 4.70711L7.41421 8L10.7071 11.2929C11.0976 11.6834 11.0976 12.3166 10.7071 12.7071C10.3166 13.0976 9.68342 13.0976 9.29289 12.7071L5.29289 8.70711C4.90237 8.31658 4.90237 7.68342 5.29289 7.29289L9.29289 3.29289C9.68342 2.90237 10.3166 2.90237 10.7071 3.29289Z" fill="#191C30" fill-opacity="0.9"/>
+                </svg>                    
+            </a>
+            <a href="#" class="details-pagination__item details-pagination__item_active">1</a>
+            <a href="#" class="details-pagination__item">2</a>
+            <a href="#" class="details-pagination__item">3</a>
+            <div class="details-pagination__item details-pagination__dots">...</div>
+            <a href="#" class="details-pagination__item">13</a>
+            <a href="#" class="details-pagination__arrow">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M5.29289 3.29289C5.68342 2.90237 6.31658 2.90237 6.70711 3.29289L10.7071 7.29289C11.0976 7.68342 11.0976 8.31658 10.7071 8.70711L6.70711 12.7071C6.31658 13.0976 5.68342 13.0976 5.29289 12.7071C4.90237 12.3166 4.90237 11.6834 5.29289 11.2929L8.58579 8L5.29289 4.70711C4.90237 4.31658 4.90237 3.68342 5.29289 3.29289Z" fill="#191C30" fill-opacity="0.9"/>
+                </svg>                    
+            </a>
+        </div>
+    </div>
+</div>
 
 <script>
-
-    //  Auto Width of Input
-    // Отслеживание ввода текста
-    $('.auto-width-input').on('input', function() {
-        $(this).width(($(this).val().length) + 'ch'); 
-    });
-
-    // Инициализация ширины при загрузке страницы
-    $('.auto-width-input').each(function(i, el) {
-        $(el).width(($(el).val().length) + 'ch'); 
-    })
-
-    // Control of title input 
-    $(".info__edit-title").click(function() {
-        $input = $(this).parents(".info__title_editable").find("input")
-        $input.prop("disabled", false).focus();
-        var len = $input.val().length;
-        $input[0].setSelectionRange(len, len);
-        $(this).hide()
-    })
-    $(".info__title_editable input").on('blur', function() {
-        $(this).prop('disabled', true)
-        update($(this).val())
-        $(".info__edit-title").show()
-    });
-    $(".info__title_editable input").on('keydown', function(e) {
-        if (e.key === 'Enter') {
-            $(this).prop('disabled', true)
-            update($(this).val())
-            $(".info__edit-title").show()
+    function scrollToActive(sliderSelector, activeTabSelector) {
+        const $slider = $(sliderSelector);
+        const $activeItem = $slider.find(activeTabSelector);
+    
+        if ($activeItem.length) {
+          const scrollLeft = $slider.scrollLeft();
+          const activeOffset = $activeItem.position().left;
+          const sliderWidth = $slider.width();
+          const activeWidth = $activeItem.outerWidth(true);
+    
+          const targetScroll = scrollLeft + activeOffset - (sliderWidth / 2) + (activeWidth / 2);
+    
+          $slider.animate({ scrollLeft: targetScroll }, 500); // Анимация скролла
         }
-    });
-
-    function update(value) {
-        $(".credit-card_active .credit-card__title").html(value)
     }
+    scrollToActive(".details__tabs", ".details__tab_active")
 </script>
         </main>
 
-        <script src="js/app.min.js?_v=20250111194502"></script>
+        <script src="js/app.min.js?_v=20250111205400"></script>
     </body>
 </html>

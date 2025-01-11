@@ -16,3 +16,17 @@
     }
     #{$property}: clamp(#{$min}px, #{$dynamic}vw, #{$max}px);
 }
+
+@mixin scrollX {
+    overflow-x: auto;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+    scrollbar-width: none;
+}
+
+@mixin width100vw {
+    width: 100vw;
+    margin: 0 calc(-1 * (100vw - 100%) / 2);
+}

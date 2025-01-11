@@ -5,6 +5,12 @@
     width: 100%;
     padding: 8px clamp(16px, 3vw, 40px);
     background: $colorBg;
+    border-bottom: 1px solid transparent;
+
+    &_scrolled {
+        border-color: $colorBorder;
+        box-shadow: $shadowDefault;
+    }
 
     &__inner {
         width: 100%;
