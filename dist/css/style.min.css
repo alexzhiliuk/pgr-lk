@@ -842,26 +842,26 @@ input.input:hover {
   .header_active .header__right {
     gap: 0;
   }
-  .header_active .header__right .header-icon:first-of-type {
+  .header_active .header__right .header-icon:first-child {
     order: 2;
     margin-left: 12px;
   }
-  .header_active .header__right .header-icon:nth-of-type(2) {
+  .header_active .header__right .header-icon:nth-child(2) {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
     flex-grow: 1;
     justify-content: flex-start;
     max-width: calc(100% - 48px - 48px - 16px);
   }
-  .header_active .header__right .header-icon:nth-of-type(2) .header-icon__text {
+  .header_active .header__right .header-icon:nth-child(2) .header-icon__text {
     overflow: hidden;
   }
-  .header_active .header__right .header-icon:nth-of-type(2) .header-icon__text * {
+  .header_active .header__right .header-icon:nth-child(2) .header-icon__text * {
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
   }
-  .header_active .header__right .header-icon:nth-of-type(3) {
+  .header_active .header__right .header-icon:nth-child(3) {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
     border-left: none;
