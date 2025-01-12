@@ -872,6 +872,7 @@ input.input:hover {
 }
 
 .header-icon {
+  cursor: pointer;
   width: 48px;
   height: 48px;
   flex-shrink: 0;
