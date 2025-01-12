@@ -5,6 +5,8 @@ import * as draggable from './../libs/draggable/slider.js'
 import * as header from './modules/header.js';
 import * as autoWidthInput from './modules/autoWidthInput.js';
 import * as infoTitleInput from './modules/infoTitleInput.js';
+import * as copy from './modules/copy.js';
+import * as details from './modules/details.js';
 
 // flsFunctions.isWebp()
 

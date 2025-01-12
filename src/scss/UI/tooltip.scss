@@ -11,6 +11,7 @@
 .tooltip {
     opacity: 0;
     pointer-events: none;
+    z-index: 2;
 
     position: absolute;
     top: calc(100% + 12px);
@@ -32,5 +33,17 @@
 
         height: 4px;
         width: 100%;
+    }
+
+    &_top {
+        bottom: calc(100% + 12px);
+        top: unset;
+    
+        &::before {
+            bottom: 0;
+            top: unset;
+            translate: -50% 100%;
+            rotate: 180deg;
+        }
     }
 }

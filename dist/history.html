@@ -175,19 +175,14 @@
             <div class="container">
     <div class="details">
         <div class="details__tabs text-s color-text-2 draggable">
-            <a href="/" class="details__tab details__tab_active">График платежей</a>
+            <a href="/" class="details__tab">График платежей</a>
             <a href="information.html" class="details__tab">Информация</a>
             <a href="deposit.html" class="details__tab">Залог</a>
-            <a href="history.html" class="details__tab">История операций</a>
+            <a href="history.html" class="details__tab details__tab_active">История операций</a>
             <a href="requisites.html" class="details__tab">Реквизиты кредита</a>
             <a href="documents.html" class="details__tab">Входящие документы</a>
         </div>
         <div class="details__nav">
-            <div class="details__filters draggable">
-                <a href="#" class="text-s filter-btn filter-btn_active">Все</a>
-                <a href="#" class="text-s filter-btn" data-count="24">Предстоящие</a>
-                <a href="#" class="text-s filter-btn" data-count="2">Просроченные</a>
-            </div>
             <div class="details__btns">
                 <a href="#" class="btn btn_secondary btn_s text-s text-s_bold">
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -198,138 +193,34 @@
                 </a>
             </div>
         </div>
-
         <div class="details__table details-table-wrapper">
             <table class="details-table text-s">
                 <thead>
                     <tr>
-                        <th>№</th>
-                        <th>Cумма</th>
-                        <th>Дата платежа</th>
-                        <th>Основной долг</th>
-                        <th>Проценты</th>
-                        <th>Остаток задолжности</th>
-                        <th>Статус</th>
+                        <th>Дата</th>
+                        <th>Тип операции</th>
+                        <th>Сумма</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr class="details-table__green-row">
-                        <td>1</td>
-                        <td>20 746,00 ₽</td>
-                        <td>10 сентября 2024</td>
-                        <td>15 209,00 ₽</td>
-                        <td>5 500,00 ₽</td>
-                        <td>50 000,00 ₽</td>
-                        <td class="details-table__colored-text">Оплачен</td>
-                    </tr>
-                    <tr class="details-table__red-row">
-                        <td>2</td>
-                        <td>20 746,00 ₽</td>
-                        <td>10 сентября 2024</td>
-                        <td>15 209,00 ₽</td>
-                        <td>5 500,00 ₽</td>
-                        <td>50 000,00 ₽</td>
-                        <td class="details-table__colored-text">Просрочен</td>
-                    </tr>
                     <tr>
-                        <td>3</td>
+                        <td>10 Мая 2024</td>
+                        <td>СБП</td>
                         <td>20 746,00 ₽</td>
-                        <td>10 сентября 2024</td>
-                        <td>15 209,00 ₽</td>
-                        <td>5 500,00 ₽</td>
-                        <td>50 000,00 ₽</td>
-                        <td>Предстоящий платёж</td>
                     </tr>
+                   
                 </tbody>
             </table>
         </div>
-
-        <div class="details__payments payments">
-            <div class="payment payment_open payment_overdue">
-                <div class="payment__header">
-                    <div class="payment__num">1</div>
-                    <div class="payment__desc">
-                        <p class="text-s payment__date">Платеж 10 сентября 2024</p>
-                        <p class="text-m payment__sum">Сумма 20 746, 54 ₽</p>
-                    </div>
+        <div class="details__history history">
+            <div class="history__item">
+                <div class="history__left">
+                    <div class="history__title text-s">10 мая 2024</div>
+                    <div class="history__value text-m">20 746, 54 ₽</div>
                 </div>
-                <div class="payment__body">
-                    <div class="payment__properties">
-                        <div class="payment__property">
-                            <p class="payment__property-title text-s">Основной долг </p>
-                            <p class="payment__property-value text-m">15 209 ₽</p>
-                        </div>
-                        <div class="payment__property">
-                            <p class="payment__property-title text-s">Проценты</p>
-                            <p class="payment__property-value text-m">5 500 ₽</p>
-                        </div>
-                        <div class="payment__property">
-                            <p class="payment__property-title text-s">Остаток задолжности</p>
-                            <p class="payment__property-value text-m">50 000 ₽</p>
-                        </div>
-                        <div class="payment__property">
-                            <p class="payment__property-title text-s">Статус</p>
-                            <p class="payment__property-value payment__property-value_overdue text-m">Просрочен</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="payment payment_paid">
-                <div class="payment__header">
-                    <div class="payment__num">2</div>
-                    <div class="payment__desc">
-                        <p class="text-s payment__date">Платеж 10 сентября 2024</p>
-                        <p class="text-m payment__sum">Сумма 20 746, 54 ₽</p>
-                    </div>
-                </div>
-                <div class="payment__body">
-                    <div class="payment__properties">
-                        <div class="payment__property">
-                            <p class="payment__property-title text-s">Основной долг </p>
-                            <p class="payment__property-value text-m">15 209 ₽</p>
-                        </div>
-                        <div class="payment__property">
-                            <p class="payment__property-title text-s">Проценты</p>
-                            <p class="payment__property-value text-m">5 500 ₽</p>
-                        </div>
-                        <div class="payment__property">
-                            <p class="payment__property-title text-s">Остаток задолжности</p>
-                            <p class="payment__property-value text-m">50 000 ₽</p>
-                        </div>
-                        <div class="payment__property">
-                            <p class="payment__property-title text-s">Статус</p>
-                            <p class="payment__property-value payment__property-value_paid text-m">Оплачен</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="payment">
-                <div class="payment__header">
-                    <div class="payment__num">3</div>
-                    <div class="payment__desc">
-                        <p class="text-s payment__date">Платеж 10 сентября 2024</p>
-                        <p class="text-m payment__sum">Сумма 20 746, 54 ₽</p>
-                    </div>
-                </div>
-                <div class="payment__body">
-                    <div class="payment__properties">
-                        <div class="payment__property">
-                            <p class="payment__property-title text-s">Основной долг </p>
-                            <p class="payment__property-value text-m">15 209 ₽</p>
-                        </div>
-                        <div class="payment__property">
-                            <p class="payment__property-title text-s">Проценты</p>
-                            <p class="payment__property-value text-m">5 500 ₽</p>
-                        </div>
-                        <div class="payment__property">
-                            <p class="payment__property-title text-s">Остаток задолжности</p>
-                            <p class="payment__property-value text-m">50 000 ₽</p>
-                        </div>
-                        <div class="payment__property">
-                            <p class="payment__property-title text-s">Статус</p>
-                            <p class="payment__property-value text-m">Предстоящий платёж</p>
-                        </div>
-                    </div>
+                <div class="history__right">
+                    <div class="history__title text-s">••1100</div>
+                    <div class="history__value text-m">СБП</div>
                 </div>
             </div>
         </div>
@@ -350,9 +241,9 @@
                 </svg>                    
             </a>
         </div>
+
     </div>
 </div>
-
 
         </main>
 

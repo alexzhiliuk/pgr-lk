@@ -27,6 +27,10 @@
         color: $colorPrimary;
         outline: 1px solid $colorBorder;
 
+        * {
+            color: $colorPrimary;
+        }
+
         &:hover {
             background: #ECECEC;
         }
@@ -35,6 +39,9 @@
     &_transparent {
         background: rgba($colorWhite, .16);
         color: $colorWhite;
+        * {
+            color: $colorWhite;
+        }
 
         &:hover {
             background: rgba($colorWhite, .32);
@@ -45,6 +52,16 @@
     &_secondary {
         background: $colorBlack004;
         color: $colorText1;
+
+        * {
+            color: $colorText1;
+        }
+
+        span {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
 
         &:hover {
             background: rgba($color: $colorBlack, $alpha: .08);

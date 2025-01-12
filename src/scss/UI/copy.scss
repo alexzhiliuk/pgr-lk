@@ -1,0 +1,14 @@
+.copy {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    max-width: fit-content;
+
+    &::after {
+        content: '';
+        width: 16px;
+        height: 16px;
+        background: url("../img/copy/icon.svg") center center / contain no-repeat;
+    }
+}
