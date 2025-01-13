@@ -32,6 +32,10 @@
 }
 .text-l {
     @include text-l;
+
+    &_bold {
+        font-weight: 700;
+    }
 }
 
 @mixin text-m {

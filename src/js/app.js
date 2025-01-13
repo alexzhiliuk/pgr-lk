@@ -7,6 +7,7 @@ import * as autoWidthInput from './modules/autoWidthInput.js';
 import * as infoTitleInput from './modules/infoTitleInput.js';
 import * as copy from './modules/copy.js';
 import * as details from './modules/details.js';
+import * as notifications from './modules/notifications.js';
 
 // flsFunctions.isWebp()
 
