@@ -26,6 +26,16 @@
     scrollbar-width: none;
 }
 
+@mixin scrollY {
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+    scrollbar-width: none;
+}
+
 @mixin width100vw {
     width: 100vw;
     margin-left: calc(-1 * (100vw - 100%) / 2);

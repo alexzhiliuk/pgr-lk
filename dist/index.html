@@ -11,21 +11,21 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@200;400;500;700&display=swap&_v=20250113104314" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap&_v=20250113104314" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@200;400;500;700&display=swap&_v=20250113115813" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap&_v=20250113115813" rel="stylesheet">
     
 
     <!-- CSS -->
-    <link rel="stylesheet" href="css/style.min.css?_v=20250113104314">
+    <link rel="stylesheet" href="css/style.min.css?_v=20250113115813">
 
     <link
       rel="stylesheet"
-      href="https://unpkg.com/swiper/swiper-bundle.min.css?_v=20250113104314"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css?_v=20250113115813"
     />
 
     <!-- JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js?_v=20250113104314"></script>
-    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js?_v=20250113104314"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js?_v=20250113115813"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js?_v=20250113115813"></script>
 
     <title>Главная</title>
 </head>
@@ -34,6 +34,85 @@
     <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path fill-rule="evenodd" clip-rule="evenodd" d="M40 20C40 31.0457 31.0457 40 20 40C8.9543 40 0 31.0457 0 20C0 8.9543 8.9543 0 20 0V3C10.6112 3 3 10.6112 3 20C3 29.3888 10.6112 37 20 37C29.3888 37 37 29.3888 37 20H40Z" fill="white"/>
     </svg>        
+</div>
+        <div class="sidebar-wrapper" data-sidebar="notifications">
+    <aside class="sidebar">
+        <div class="sidebar__header">
+            <div class="sidebar__title text-l text-l_bold">Уведомления</div>
+            <button class="sidebar__close">
+                <img src="img/sidebar/close.svg" alt="">
+            </button>
+        </div>
+        <div class="sidebar__body">
+            <div class="notifications">
+                <div class="notification">
+                    <div class="notification__header">
+                        <div class="notification__title text-m text-m_bold">Новая страховка согласована</div>
+                        <div class="notification__date text-s">15:30</div>
+                        <div class="notification__tag text-s">Нов.</div>
+                    </div>
+                    <div class="notification__body">
+                        <p class="notification__text text-s">
+                            Вам согласована страховка и возвращена процентная ставка 23% по кредиту наличными 439 550,00 ₽.
+                        </p>
+                    </div>
+                </div>
+                <div class="notification">
+                    <div class="notification__header">
+                        <div class="notification__title text-m text-m_bold">Новая страховка согласована</div>
+                        <div class="notification__date text-s">15:30</div>
+                        <div class="notification__tag text-s">Нов.</div>
+                    </div>
+                    <div class="notification__body">
+                        <p class="notification__text text-s">
+                            Вам согласована страховка и возвращена процентная ставка 23% по кредиту наличными 439 550,00 ₽.
+                        </p>
+                    </div>
+                </div>
+                <div class="notification">
+                    <div class="notification__header">
+                        <div class="notification__title text-m text-m_bold">Новая страховка согласована</div>
+                        <div class="notification__date text-s">15:30</div>
+                        <div class="notification__tag text-s">Нов.</div>
+                    </div>
+                    <div class="notification__body">
+                        <p class="notification__text text-s">
+                            Сегодня необходимо обновить страховку по кредиту на 439 550 ₽, иначе процентная ставка увеличится с 24% до 42%, а ежемесячный платёж возрастёт с 20 746,54 ₽ до 32 500 ₽.
+                        </p>
+                        <div class="notification__btns">
+                            <a href="" class="notification__btn btn btn_s btn_secondary text-s">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7.52876 1.52864C7.78911 1.26829 8.21122 1.26829 8.47157 1.52864L11.8049 4.86197C12.0652 5.12232 12.0652 5.54443 11.8049 5.80478C11.5446 6.06513 11.1224 6.06513 10.8621 5.80478L8.66683 3.60952L8.66683 10C8.66683 10.3682 8.36835 10.6667 8.00016 10.6667C7.63197 10.6667 7.3335 10.3682 7.3335 10L7.3335 3.60952L5.13823 5.80478C4.87788 6.06513 4.45577 6.06513 4.19543 5.80478C3.93508 5.54443 3.93508 5.12232 4.19543 4.86197L7.52876 1.52864Z" fill="black"/>
+                                    <path d="M2.00016 9.33337C2.36835 9.33337 2.66683 9.63185 2.66683 10V10.8C2.66683 11.3711 2.66735 11.7593 2.69186 12.0593C2.71574 12.3516 2.75903 12.5011 2.81215 12.6054C2.93999 12.8562 3.14396 13.0602 3.39484 13.188C3.49911 13.2412 3.64858 13.2845 3.94086 13.3083C4.24091 13.3329 4.62911 13.3334 5.20016 13.3334H10.8002C11.3712 13.3334 11.7594 13.3329 12.0595 13.3083C12.3517 13.2845 12.5012 13.2412 12.6055 13.188C12.8564 13.0602 13.0603 12.8562 13.1882 12.6054C13.2413 12.5011 13.2846 12.3516 13.3085 12.0593C13.333 11.7593 13.3335 11.3711 13.3335 10.8V10C13.3335 9.63185 13.632 9.33337 14.0002 9.33337C14.3684 9.33337 14.6668 9.63185 14.6668 10V10.8276C14.6668 11.3642 14.6668 11.8071 14.6374 12.1679C14.6067 12.5427 14.541 12.8871 14.3762 13.2107C14.1205 13.7124 13.7126 14.1204 13.2108 14.3761C12.8872 14.5409 12.5428 14.6066 12.168 14.6372C11.8072 14.6667 11.3643 14.6667 10.8277 14.6667H5.17263C4.63598 14.6667 4.19308 14.6667 3.83228 14.6372C3.45755 14.6066 3.11308 14.5409 2.78952 14.3761C2.28776 14.1204 1.87981 13.7124 1.62415 13.2107C1.45929 12.8871 1.39358 12.5427 1.36296 12.1679C1.33348 11.8071 1.33349 11.3642 1.3335 10.8276V10C1.3335 9.63185 1.63197 9.33337 2.00016 9.33337Z" fill="black"/>
+                                </svg>
+                                Загрузить новую страховку
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="notification">
+                    <div class="notification__header">
+                        <div class="notification__title text-m text-m_bold">Документы на залог готовы</div>
+                        <div class="notification__date text-s">12.09.24 15:30</div>
+                    </div>
+                    <div class="notification__body">
+                        <p class="notification__text text-s">
+                            Сегодня необходимо обновить страховку по кредиту на 439 550 ₽, иначе процентная ставка увеличится с 24% до 42%, а ежемесячный платёж возрастёт с 20 746,54 ₽ до 32 500 ₽.
+                        </p>
+                        <div class="notification__btns">
+                            <a href="" class="notification__btn btn btn_s btn_secondary text-s">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7.52876 1.52864C7.78911 1.26829 8.21122 1.26829 8.47157 1.52864L11.8049 4.86197C12.0652 5.12232 12.0652 5.54443 11.8049 5.80478C11.5446 6.06513 11.1224 6.06513 10.8621 5.80478L8.66683 3.60952L8.66683 10C8.66683 10.3682 8.36835 10.6667 8.00016 10.6667C7.63197 10.6667 7.3335 10.3682 7.3335 10L7.3335 3.60952L5.13823 5.80478C4.87788 6.06513 4.45577 6.06513 4.19543 5.80478C3.93508 5.54443 3.93508 5.12232 4.19543 4.86197L7.52876 1.52864Z" fill="black"/>
+                                    <path d="M2.00016 9.33337C2.36835 9.33337 2.66683 9.63185 2.66683 10V10.8C2.66683 11.3711 2.66735 11.7593 2.69186 12.0593C2.71574 12.3516 2.75903 12.5011 2.81215 12.6054C2.93999 12.8562 3.14396 13.0602 3.39484 13.188C3.49911 13.2412 3.64858 13.2845 3.94086 13.3083C4.24091 13.3329 4.62911 13.3334 5.20016 13.3334H10.8002C11.3712 13.3334 11.7594 13.3329 12.0595 13.3083C12.3517 13.2845 12.5012 13.2412 12.6055 13.188C12.8564 13.0602 13.0603 12.8562 13.1882 12.6054C13.2413 12.5011 13.2846 12.3516 13.3085 12.0593C13.333 11.7593 13.3335 11.3711 13.3335 10.8V10C13.3335 9.63185 13.632 9.33337 14.0002 9.33337C14.3684 9.33337 14.6668 9.63185 14.6668 10V10.8276C14.6668 11.3642 14.6668 11.8071 14.6374 12.1679C14.6067 12.5427 14.541 12.8871 14.3762 13.2107C14.1205 13.7124 13.7126 14.1204 13.2108 14.3761C12.8872 14.5409 12.5428 14.6066 12.168 14.6372C11.8072 14.6667 11.3643 14.6667 10.8277 14.6667H5.17263C4.63598 14.6667 4.19308 14.6667 3.83228 14.6372C3.45755 14.6066 3.11308 14.5409 2.78952 14.3761C2.28776 14.1204 1.87981 13.7124 1.62415 13.2107C1.45929 12.8871 1.39358 12.5427 1.36296 12.1679C1.33348 11.8071 1.33349 11.3642 1.3335 10.8276V10C1.3335 9.63185 1.63197 9.33337 2.00016 9.33337Z" fill="black"/>
+                                </svg>
+                                Загрузить новую страховку
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </aside>
 </div>
         <header class="header">
     <div class="header__inner">
@@ -57,7 +136,7 @@
             </ul>
         </nav> -->
         <div class="header__right">
-            <div class="header-icon tooltip-item" data-notifications="4">
+            <div class="header-icon tooltip-item" data-notifications="4" data-sidebar-open="notifications">
                 <img src="img/header/notifications.svg" alt="">
                 <div class="tooltip text-s">Уведомления</div>
             </div>
@@ -455,6 +534,6 @@
 
         </main>
 
-        <script src="js/app.min.js?_v=20250113104314"></script>
+        <script src="js/app.min.js?_v=20250113115813"></script>
     </body>
 </html>

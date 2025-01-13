@@ -8,6 +8,7 @@ import * as infoTitleInput from './modules/infoTitleInput.js';
 import * as copy from './modules/copy.js';
 import * as details from './modules/details.js';
 import * as notifications from './modules/notifications.js';
+import * as sidebar from './modules/sidebar.js';
 
 // flsFunctions.isWebp()
 
