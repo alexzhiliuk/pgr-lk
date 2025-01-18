@@ -3,6 +3,6 @@ $("[data-sidebar-open]").click(function() {
     $(`[data-sidebar=${id}]`).addClass("sidebar-wrapper_open")
 })
 
-$(".sidebar__close").click(function() {
+$(".sidebar__close, .js-sidebar-close").click(function() {
     $(this).parents(".sidebar-wrapper").removeClass("sidebar-wrapper_open")
 })

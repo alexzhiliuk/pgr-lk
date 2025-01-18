@@ -9,6 +9,7 @@ import * as copy from './modules/copy.js';
 import * as details from './modules/details.js';
 import * as notifications from './modules/notifications.js';
 import * as sidebar from './modules/sidebar.js';
+import * as uploader from './modules/uploader.js';
 
 // flsFunctions.isWebp()
 

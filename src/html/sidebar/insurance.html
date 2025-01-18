@@ -1,0 +1,73 @@
+<div class="sidebar-wrapper" data-sidebar="insurance">
+    <aside class="sidebar">
+        <div class="sidebar__header">
+            <div class="sidebar__title text-l text-l_bold">Обновление страховой</div>
+            <button class="sidebar__close">
+                <img src="@img/sidebar/close.svg" alt="">
+            </button>
+        </div>
+        <div class="sidebar__body">
+            <form action="" class="sidebar__form form">
+                <div class="form__step" data-step="1">
+                    <div class="form__text">
+                        <p class="text-m text-m_bold">Загрузите документы: </p>
+                        <p class="text-m">
+                            1. Чек оплаты <br>
+                            2. Договор (необязательно)
+                        </p>
+                    </div>
+                    <div class="file-uploader">
+                        <label class="file-uploader__area">
+                            <p class="text-m">
+                                <span>Выберите файлы</span> или перетяните их сюда
+                            </p>
+                            <p class="text-s color-text-2">
+                                Формат PNG, JPEG, PDF
+                            </p>
+                            <input type="file" multiple required hidden accept=".png,.jpeg,.jpg,.pdf">
+                        </label>
+                        <ul class="file-uploader__list">
+                            <!-- <li class="file-uploader__file text-m">
+                                <div class="file-uploader__file-icon file-uploader__file-icon_loader"></div>
+                                <div class="file-uploader__file-name">Чек оплаты страховки.jpg</div>
+                                <div class="file-uploader__file-size">1,25 МБ</div>
+                                <div class="file-uploader__file-delete"></div>
+                            </li>
+                            <li class="file-uploader__file text-m">
+                                <div class="file-uploader__file-icon"></div>
+                                <div class="file-uploader__file-name">Чек оплаты страховки.jpg</div>
+                                <div class="file-uploader__file-size">1,25 МБ</div>
+                                <div class="file-uploader__file-delete"></div>
+                            </li> -->
+                        </ul>
+                    </div>
+                    <button id="submitBtn" data-next-step="2" type="submit" class="form__btn btn text-m text-m_bold" disabled>Отправить на проверку</button>
+                </div>
+                <div class="form__step form__success" data-step="2" style="display: none;">
+                    <img src="@img/sidebar/form/success.svg" alt="">
+                    <div class="form__success-text">
+                        <p class="text-m text-m_bold">Документы отправлены</p>
+                        <p class="text-m color-text-2">Проверка займёт 1–2 дня. Мы пришлём вам уведомление о решении по SMS</p>
+                    </div>
+                    <button type="button" class="btn text-m text-m_bold js-sidebar-close">Готово</button>
+                </div>
+            </form>
+        </div>
+    </aside>
+</div>
+
+<script>
+
+    $(".form").on("submit", function(e) {
+        e.preventDefault()
+    })
+
+    $("[data-next-step]").on("click", function(e) {
+        e.preventDefault()
+        
+        const nextStep = Number($(this).attr("data-next-step"))
+
+        $(this).parents("[data-step]").hide().parents(".form").find(`[data-step='${nextStep}']`).show()
+    })
+</script>
+    

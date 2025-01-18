@@ -681,6 +681,102 @@ input.input:hover {
   background: url("../img/copy/icon.svg") center center/contain no-repeat;
 }
 
+.file-uploader {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.file-uploader__area {
+  flex-grow: 1;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  border-radius: 16px;
+  border: 1px dashed #303345;
+  cursor: pointer;
+}
+.file-uploader__area span {
+  color: #E02D3C;
+}
+.file-uploader__area:hover {
+  background: #E0E0E0;
+}
+.file-uploader__list {
+  display: flex;
+  flex-direction: column;
+  border-radius: 16px;
+  border: 1px solid #E0E0E0;
+}
+.file-uploader__list:empty, .file-uploader__list:not(:has(li)) {
+  display: none;
+}
+.file-uploader__file {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px;
+}
+.file-uploader__file:not(:last-child) {
+  border-bottom: 1px solid #E0E0E0;
+}
+.file-uploader__file-icon {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.file-uploader__file-icon::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.file-uploader__file-icon::before {
+  background: url(../img/uploader/doc.svg) center center/contain no-repeat;
+}
+.file-uploader__file-icon_loader::before {
+  background: url(../img/uploader/loader.svg) center center/contain no-repeat;
+  animation: spin 2s linear infinite;
+}
+.file-uploader__file-name {
+  color: rgba(25, 28, 48, 0.9);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+.file-uploader__file-size {
+  color: #6B6D80;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.file-uploader__file-delete {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  cursor: pointer;
+}
+.file-uploader__file-delete::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.file-uploader__file-delete::before {
+  background: url(../img/uploader/remove.svg) center center/contain no-repeat;
+}
+
 .header {
   position: sticky;
   z-index: 9;
@@ -1632,6 +1728,7 @@ input.input:hover {
   border-bottom: 1px solid #E0E0E0;
   padding: 12px 20px;
   width: 100%;
+  height: unset;
   display: flex;
   flex-direction: column;
   gap: 4px;
@@ -1786,6 +1883,8 @@ input.input:hover {
   overflow-y: auto;
   overflow-x: hidden;
   overscroll-behavior: contain;
+  display: flex;
+  flex-direction: column;
 }
 .sidebar__header {
   display: flex;
@@ -1815,6 +1914,33 @@ input.input:hover {
 .sidebar__body {
   flex-grow: 1;
   padding: 20px;
+}
+.sidebar__form {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  min-height: 100%;
+}
+.sidebar__form .form__step {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  min-height: 100%;
+}
+.sidebar__form .form__success {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  text-align: center;
+}
+.sidebar__form .form__success-text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
 }
 
 @font-face {

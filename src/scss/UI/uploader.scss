@@ -1,0 +1,118 @@
+@mixin file-icon() {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &::before {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.file-uploader {
+
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    // .file-uploader__area
+    &__area {
+        flex-grow: 1;
+        min-height: 300px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        padding: 16px;
+        border-radius: 16px;
+        border: 1px dashed $colorPrimary;
+
+        cursor: pointer;
+
+        span {
+            color: $colorRed;
+        }
+
+        &:hover {
+            background: $colorBorder;
+        }
+    }
+
+    // .file-uploader__list
+    &__list {
+        display: flex;
+        flex-direction: column;
+        
+        border-radius: 16px;
+        border: 1px solid $colorBorder;
+
+        &:empty,
+        &:not(:has(li)) {
+            display: none;
+        }
+    }
+
+    // .file-uploader__file
+    &__file {
+        &:not(:last-child) {
+            border-bottom: 1px solid $colorBorder;
+        }
+
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        padding: 10px;
+    }
+
+    // .file-uploader__file-icon
+    &__file-icon {
+        @include file-icon;
+
+        &::before {
+            background: url(../img/uploader/doc.svg) center center / contain no-repeat;
+        }
+
+        &_loader {
+            &::before {
+                background: url(../img/uploader/loader.svg) center center / contain no-repeat;
+    
+                animation: spin 2s linear infinite;
+            }
+        }
+    }
+    
+    // .file-uploader__file-name
+    &__file-name {
+        color: $colorText1;
+
+        @include textOverflow(1);
+    }
+
+    // .file-uploader__file-size
+    &__file-size {
+        color: $colorText2;
+        white-space: nowrap;
+        flex-shrink: 0;
+    }
+
+    // .file-uploader__file-delete
+    &__file-delete {
+        @include file-icon;
+        margin-left: auto;
+        cursor: pointer;
+
+        &::before {
+            background: url(../img/uploader/remove.svg) center center / contain no-repeat;
+        }
+    }
+}

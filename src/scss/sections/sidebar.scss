@@ -30,6 +30,9 @@
     overflow-y: auto;
     overflow-x: hidden;
     overscroll-behavior: contain;
+
+    display: flex;
+    flex-direction: column;
     
 
     // .sidebar__header
@@ -71,6 +74,42 @@
     &__body {
         flex-grow: 1;
         padding: 20px;
+    }
+
+    &__form {
+        flex-grow: 1;
+
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        min-height: 100%;
+
+        .form {
+            &__step {
+                flex-grow: 1;
+
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                min-height: 100%;
+            }
+
+            &__success {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                flex-grow: 1;
+
+                text-align: center;
+
+                &-text {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 4px;
+                }
+            }
+        }
     }
 }
 
