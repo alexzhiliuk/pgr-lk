@@ -18,6 +18,10 @@
         padding: 16px;
     }
 
+    &:hover {
+        background: lighten($colorPrimary, 7);
+    }
+
     &:disabled {
         opacity: .56;
     }

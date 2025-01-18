@@ -122,97 +122,119 @@
             background: rgba(0, 0, 0, 0.08);
         }
     }
+
+    ol {
+        color: $colorText1;
+        list-style-type: decimal;
+        list-style-position: inside;
+        margin-bottom: 8px;
+    }
 }
 
 
 // In Sidebar
 .sidebar {
+    .notification {
+        width: 100%;
+        padding: 12px 16px;
+
+        &__body {
+            padding-right: 0;
+        }
+
+        & + .notification {
+            margin-top: -12px;
+        }
+    }
     .notifications {
         margin: -20px;
         height: 100%;
-    }
-    .notification {
 
-        background: none;
-        border: none;
-        border-radius: 0;
-        border-bottom: 1px solid $colorBorder;
-        padding: 12px 20px;
-        width: 100%;
-        height: unset;
+        .notification {
 
-        display: flex;
-        flex-direction: column;
-        gap: 4px;
-
-        &:hover {
-            background: $colorBlack004;
-        }
+            background: none;
+            border: none;
+            border-radius: 0;
+            border-bottom: 1px solid $colorBorder;
+            padding: 12px 20px;
+            width: 100%;
+            height: unset;
     
-        // .notification__header
-        &__header {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        // .notification__title
-        &__title {
-            color: $colorText1;
-            margin-right: auto;
-        }
-
-        // .notification__date
-        &__date {
-            color: $colorText2;
-        }
-
-        // .notification__tag
-        &__tag {
-            padding: 2px 6px;
-            background: $colorRed;
-            border-radius: 20px;
-            color: $colorWhite;
-        }
-    
-        // .notification__body
-        &__body {
             display: flex;
             flex-direction: column;
             gap: 4px;
     
-            padding-right: 0;
-        }
-
-        // .notification__text
-        &__text {
-            color: $colorText1;
-            overflow: visible;
-            -webkit-line-clamp: unset;
-            -webkit-box-orient: unset;
-
-            margin-bottom: 8px;
-        }
-
-        // .notification__btns
-        &__btns {
-            display: flex;
-            align-items: center;
-            gap: 4px;
-            flex-wrap: wrap;
-        }
-
-        // .notification__btn
-        &__btn {
-            &.btn {
+            &:hover {
                 background: $colorBlack004;
+            }
 
-                &:hover {
-                    background: rgba(0, 0, 0, 0.08);
+            & + .notification {
+                margin-top: 0;
+            }
+        
+            // .notification__header
+            &__header {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+            }
+    
+            // .notification__title
+            &__title {
+                color: $colorText1;
+                margin-right: auto;
+            }
+    
+            // .notification__date
+            &__date {
+                color: $colorText2;
+            }
+    
+            // .notification__tag
+            &__tag {
+                padding: 2px 6px;
+                background: $colorRed;
+                border-radius: 20px;
+                color: $colorWhite;
+            }
+        
+            // .notification__body
+            &__body {
+                display: flex;
+                flex-direction: column;
+                gap: 4px;
+        
+                padding-right: 0;
+            }
+    
+            // .notification__text
+            &__text {
+                color: $colorText1;
+                overflow: visible;
+                -webkit-line-clamp: unset;
+                -webkit-box-orient: unset;
+    
+                margin-bottom: 8px;
+            }
+    
+            // .notification__btns
+            &__btns {
+                display: flex;
+                align-items: center;
+                gap: 4px;
+                flex-wrap: wrap;
+            }
+    
+            // .notification__btn
+            &__btn {
+                &.btn {
+                    background: $colorBlack004;
+    
+                    &:hover {
+                        background: rgba(0, 0, 0, 0.08);
+                    }
                 }
             }
         }
-    }
-
-    
+    }    
 }

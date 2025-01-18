@@ -111,38 +111,3 @@
         
     }
 }
-
-.properties {
-
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-
-    // .properties__item
-    &__item {
-        display: flex;
-        align-items: flex-end;
-        gap: 8px;
-    }
-
-    // .properties__title
-    &__title {
-        color: $colorWhite06;
-    }
-
-    // .properties__line
-    &__line {
-        flex: 1 0 10px;
-        height: .6em;
-        opacity: .2;
-        border-top: 1px solid $colorWhite;
-        pointer-events: none;
-    }
-
-    // .properties__value
-    &__value {
-        font-weight: 600;
-        color: $colorWhite;
-        text-align: right;
-    }
-}

@@ -6,3 +6,24 @@ $("[data-sidebar-open]").click(function() {
 $(".sidebar__close, .js-sidebar-close").click(function() {
     $(this).parents(".sidebar-wrapper").removeClass("sidebar-wrapper_open")
 })
+
+
+// Sidebar Form
+$(".form").on("submit", function(e) {
+    e.preventDefault()
+})
+
+$("[data-next-step]").on("click", function(e) {
+    e.preventDefault()
+    
+    const nextStep = Number($(this).attr("data-next-step"))
+
+    $(this).parents("[data-step]").hide().parents(".form").find(`[data-step='${nextStep}']`).show()
+})
+$("[data-prev-step]").on("click", function(e) {
+    e.preventDefault()
+    
+    const prevStep = Number($(this).attr("data-prev-step"))
+
+    $(this).parents("[data-step]").hide().parents(".form").find(`[data-step='${prevStep}']`).show()
+})

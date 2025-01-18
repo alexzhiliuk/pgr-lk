@@ -49,11 +49,11 @@ function checkFiles(files) {
 
 }
 
-fileInput.addEventListener('change', () => {
+fileInput ? fileInput.addEventListener('change', () => {
 
     handleFiles(checkFiles(fileInput.files));
 
-});
+}): null;
 
 function handleFiles(files) {
     updateFileInput()

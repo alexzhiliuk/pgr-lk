@@ -84,6 +84,14 @@
     @include text-xs;
 }
 
+.color-text-1 {
+    color: $colorText1;
+
+    * {
+        color: $colorText1;
+    }
+}
+
 .color-text-2 {
     color: $colorText2;
 

@@ -18,7 +18,7 @@ input.input {
 
 .input {
 
-    input {
+    input, select {
         padding: 16px;
         border-radius: 12px;
         border: 1px solid $colorBorder;
@@ -30,6 +30,16 @@ input.input {
             color: $colorText2;
             opacity: 0;
         }
+
+        &:disabled {
+            color: rgba($color: #1B1F3B, $alpha: .4)
+        }
+    }
+
+    select {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
     }
 
     position: relative;
@@ -41,6 +51,8 @@ input.input {
         translate: 0 -50%;
         color: $colorText2;
         pointer-events: none;
+
+        @include text-s;
     }
 
     &[data-placeholder]:has(input:not(:placeholder-shown)),
@@ -55,7 +67,33 @@ input.input {
             padding-top: 26px;
             padding-bottom: 6px;
             outline: 2px solid $colorPrimary;
-            border-color: transparent
+            border-color: transparent;
+
+            &:disabled {
+                outline: none;
+                border-color: $colorBorder;
+            }
+        }
+    }
+
+    &_select {
+        &[data-placeholder]::before {
+            top: 6px;
+            translate: none;
+            font-size: 13px;
+        }
+        &::after {
+            content: '';
+            position: absolute;
+            top: 50%; right: 12px;
+            translate: 0 -50%;
+            width: 24px; height: 24px;
+            background: url(../img/select/arrow.svg) center center / contain no-repeat;
+        }
+        select {
+            cursor: pointer;
+            padding-top: 26px;
+            padding-bottom: 6px;
         }
     }
 }

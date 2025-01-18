@@ -68,3 +68,9 @@ button {
     overflow-y: clip;
     overflow-x: clip;
 }
+
+.text-with-img {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}

@@ -111,5 +111,26 @@
             }
         }
     }
+
+    &__btns {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
 }
 
+.qr {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    flex-grow: 1;
+
+    &__img {
+        width: 200px;
+        height: auto;
+        display: block;
+    }
+}
