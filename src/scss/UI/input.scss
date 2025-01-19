@@ -18,6 +18,13 @@ input.input {
 
 .input {
 
+    &__caption {
+        margin-top: 4px;
+    }
+    &__wrapper {
+        position: relative;
+    }
+
     input, select {
         padding: 16px;
         border-radius: 12px;
@@ -40,11 +47,16 @@ input.input {
         -webkit-appearance: none;
         -moz-appearance: none;
         appearance: none;
+        
+        line-height: inherit;
+        font-size: inherit;
+        font-weight: inherit;
     }
 
     position: relative;
     &[data-placeholder]::before {
         content: attr(data-placeholder);
+        z-index: 1;
         position: absolute;
         left: 16px;
         top: 50%;
@@ -52,7 +64,6 @@ input.input {
         color: $colorText2;
         pointer-events: none;
 
-        @include text-s;
     }
 
     &[data-placeholder]:has(input:not(:placeholder-shown)),
@@ -61,13 +72,12 @@ input.input {
             top: 6px;
             translate: none;
             font-size: 13px;
+            font-weight: 400;
         }
 
         input {
             padding-top: 26px;
             padding-bottom: 6px;
-            outline: 2px solid $colorPrimary;
-            border-color: transparent;
 
             &:disabled {
                 outline: none;
@@ -76,11 +86,19 @@ input.input {
         }
     }
 
+    &[data-placeholder]:has(input:focus-within) {
+        input {
+            outline: 2px solid $colorPrimary;
+            border-color: transparent;
+        }
+    }
+
     &_select {
         &[data-placeholder]::before {
             top: 6px;
             translate: none;
             font-size: 13px;
+            font-weight: 400;
         }
         &::after {
             content: '';
@@ -96,4 +114,21 @@ input.input {
             padding-bottom: 6px;
         }
     }
+
+    &_date {
+        input {
+            &::-webkit-inner-spin-button,
+            &::-webkit-calendar-picker-indicator {
+                cursor: pointer;
+                width: 24px;
+                height: 24px;
+                background: url(../img/datepicker/icon.svg) center center / contain no-repeat;
+
+                position: absolute;
+                right: 16px; top: 50%;
+                translate: 0 -50%;
+            }
+        }
+    }
+
 }

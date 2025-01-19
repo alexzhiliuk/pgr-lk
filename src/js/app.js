@@ -10,6 +10,8 @@ import * as details from './modules/details.js';
 import * as notifications from './modules/notifications.js';
 import * as sidebar from './modules/sidebar.js';
 import * as uploader from './modules/uploader.js';
+import * as input from './modules/input.js';
+import * as toggle from './modules/toggle.js';
 
 // flsFunctions.isWebp()
 

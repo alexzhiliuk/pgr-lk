@@ -1,0 +1,46 @@
+.radio-inputs {
+
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    // .radio-inputs__title
+    &__title {
+    }
+
+    // .radio-inputs__items
+    &__items {
+        border-radius: 16px;
+        border: 1px solid $colorBorder;
+
+        & > * {
+            &:not(:last-child) {
+                border-bottom: 1px solid $colorBorder;
+            }
+        }
+    }
+}
+
+.radio {
+    padding: 16px;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    input[type="radio"] {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        background: $colorSecondary;
+
+        &:checked {
+            border: 6px solid $colorPrimary;
+        }
+    }
+}

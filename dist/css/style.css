@@ -589,6 +589,12 @@ input.input:hover {
 .input {
   position: relative;
 }
+.input__caption {
+  margin-top: 4px;
+}
+.input__wrapper {
+  position: relative;
+}
 .input input, .input select {
   padding: 16px;
   border-radius: 12px;
@@ -607,39 +613,43 @@ input.input:hover {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  line-height: inherit;
+  font-size: inherit;
+  font-weight: inherit;
 }
 .input[data-placeholder]::before {
   content: attr(data-placeholder);
+  z-index: 1;
   position: absolute;
   left: 16px;
   top: 50%;
   translate: 0 -50%;
   color: #6B6D80;
   pointer-events: none;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 13px;
-  line-height: 1.53;
 }
 .input[data-placeholder]:has(input:not(:placeholder-shown))::before, .input[data-placeholder]:has(input:focus-within)::before {
   top: 6px;
   translate: none;
   font-size: 13px;
+  font-weight: 400;
 }
 .input[data-placeholder]:has(input:not(:placeholder-shown)) input, .input[data-placeholder]:has(input:focus-within) input {
   padding-top: 26px;
   padding-bottom: 6px;
-  outline: 2px solid #303345;
-  border-color: transparent;
 }
 .input[data-placeholder]:has(input:not(:placeholder-shown)) input:disabled, .input[data-placeholder]:has(input:focus-within) input:disabled {
   outline: none;
   border-color: #E0E0E0;
 }
+.input[data-placeholder]:has(input:focus-within) input {
+  outline: 2px solid #303345;
+  border-color: transparent;
+}
 .input_select[data-placeholder]::before {
   top: 6px;
   translate: none;
   font-size: 13px;
+  font-weight: 400;
 }
 .input_select::after {
   content: "";
@@ -655,6 +665,16 @@ input.input:hover {
   cursor: pointer;
   padding-top: 26px;
   padding-bottom: 6px;
+}
+.input_date input::-webkit-inner-spin-button, .input_date input::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  background: url(../img/datepicker/icon.svg) center center/contain no-repeat;
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  translate: 0 -50%;
 }
 
 .tooltip-item {
@@ -733,6 +753,7 @@ input.input:hover {
 }
 .sidebar .properties__value {
   color: rgba(25, 28, 48, 0.9);
+  font-weight: 500;
 }
 
 @keyframes spin {
@@ -864,6 +885,39 @@ input.input:hover {
 }
 .file-uploader__file-delete::before {
   background: url(../img/uploader/remove.svg) center center/contain no-repeat;
+}
+
+.radio-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.radio-inputs__items {
+  border-radius: 16px;
+  border: 1px solid #E0E0E0;
+}
+.radio-inputs__items > *:not(:last-child) {
+  border-bottom: 1px solid #E0E0E0;
+}
+
+.radio {
+  padding: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.radio input[type=radio] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #F4F4F4;
+}
+.radio input[type=radio]:checked {
+  border: 6px solid #303345;
 }
 
 .header {
@@ -1793,7 +1847,7 @@ input.input:hover {
 .sidebar .notification__body {
   padding-right: 0;
 }
-.sidebar .notification + .notification {
+.sidebar .notification:not([style*="display: none"]) + .notification {
   margin-top: -12px;
 }
 .sidebar .notifications {
@@ -2028,6 +2082,11 @@ input.input:hover {
   display: flex;
   flex-direction: column;
   gap: 8px;
+}
+@media screen and (max-width: 575.98px) {
+  .sidebar__btns {
+    margin-top: auto;
+  }
 }
 
 .qr {

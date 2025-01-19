@@ -142,7 +142,7 @@
             padding-right: 0;
         }
 
-        & + .notification {
+        &:not([style*="display: none"]) + .notification {
             margin-top: -12px;
         }
     }
