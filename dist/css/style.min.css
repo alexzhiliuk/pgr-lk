@@ -400,6 +400,10 @@ button {
   gap: 8px;
 }
 
+.text-center {
+  text-align: center;
+}
+
 .h2 {
   font-style: normal;
   font-weight: 600;
@@ -537,6 +541,15 @@ button {
 .btn_l {
   padding: 16px;
 }
+.btn_icon {
+  padding: 10px;
+  max-width: fit-content;
+}
+.btn_icon svg {
+  width: 24px;
+  height: 24px;
+  display: block;
+}
 
 .filter-btn {
   display: flex;
@@ -594,6 +607,16 @@ input.input:hover {
 }
 .input__wrapper {
   position: relative;
+}
+.input__icon {
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  translate: 0 -50%;
+  width: 24px;
+  height: 24px;
+  display: block;
+  cursor: pointer;
 }
 .input input, .input select {
   padding: 16px;
@@ -676,7 +699,6 @@ input.input:hover {
   top: 50%;
   translate: 0 -50%;
 }
-
 .tooltip-item {
   position: relative;
 }
@@ -2087,6 +2109,13 @@ input.input:hover {
   .sidebar__btns {
     margin-top: auto;
   }
+}
+.sidebar__btns-row {
+  display: flex;
+  gap: 8px;
+}
+.sidebar__btns-row > * {
+  flex: 1 0 fit-content;
 }
 
 .qr {

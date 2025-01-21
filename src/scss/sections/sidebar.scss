@@ -109,6 +109,7 @@
                     gap: 4px;
                 }
             }
+
         }
     }
 
@@ -119,6 +120,15 @@
 
         @media screen and (max-width: $breakpoint576) {
             margin-top: auto;
+        }
+
+        &-row {
+            display: flex;
+            gap: 8px;
+
+            & > * {
+                flex: 1 0 fit-content;
+            }
         }
     }
 }
