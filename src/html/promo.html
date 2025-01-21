@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="promo">
+        <div class="promo__img">
+            <img src="@img/promo/img.png" alt="">
+        </div>
+        <div class="promo__main">
+            <p class="text-s color-text-2">Получите денежный бонус</p>
+            <p class="text-m color-text-1">Отправьте другу для регистрации промокод DGH74H и получите 5 000 ₽</p>
+        </div>
+        <a href="#" class="promo__btn btn btn_secondary btn_s text-s text-s_bold copy tooltip-item" data-copy="promocode1234">                 
+            Копировать промокод
+            <div class="tooltip tooltip_top">
+                Копировать
+            </div>
+        </a>
+        <div class="promo__close"></div>
+    </div>
+</div>
+
+<script>
+    $(".promo__close").click(function() {
+        $(this).find(".promo").remove()
+    })
+</script>

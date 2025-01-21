@@ -11,21 +11,21 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@200;400;500;700&display=swap&_v=20250121175653" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap&_v=20250121175653" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@200;400;500;700&display=swap&_v=20250121182415" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap&_v=20250121182415" rel="stylesheet">
     
 
     <!-- CSS -->
-    <link rel="stylesheet" href="css/style.min.css?_v=20250121175653">
+    <link rel="stylesheet" href="css/style.min.css?_v=20250121182415">
 
     <link
       rel="stylesheet"
-      href="https://unpkg.com/swiper/swiper-bundle.min.css?_v=20250121175653"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css?_v=20250121182415"
     />
 
     <!-- JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js?_v=20250121175653"></script>
-    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js?_v=20250121175653"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js?_v=20250121182415"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js?_v=20250121182415"></script>
 
     <title>Портфель</title>
 </head>
@@ -857,9 +857,33 @@
 
     </div>
 </div>
+            <div class="container">
+    <div class="promo">
+        <div class="promo__img">
+            <img src="img/promo/img.png" alt="">
+        </div>
+        <div class="promo__main">
+            <p class="text-s color-text-2">Получите денежный бонус</p>
+            <p class="text-m color-text-1">Отправьте другу для регистрации промокод DGH74H и получите 5 000 ₽</p>
+        </div>
+        <a href="#" class="promo__btn btn btn_secondary btn_s text-s text-s_bold copy tooltip-item" data-copy="promocode1234">                 
+            Копировать промокод
+            <div class="tooltip tooltip_top">
+                Копировать
+            </div>
+        </a>
+        <div class="promo__close"></div>
+    </div>
+</div>
+
+<script>
+    $(".promo__close").click(function() {
+        $(this).find(".promo").remove()
+    })
+</script>
             
         </main>
 
-        <script src="js/app.min.js?_v=20250121175653"></script>
+        <script src="js/app.min.js?_v=20250121182415"></script>
     </body>
 </html>
