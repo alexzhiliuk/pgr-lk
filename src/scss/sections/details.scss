@@ -123,12 +123,12 @@
         }
     }
 
-    // .details__table
-    &__table {
-    }
-
-    // .details__pagination
-    &__pagination {
+    &__empty {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        height: clamp(300px, 53vw, 530px);
     }
 }
 
@@ -165,8 +165,13 @@
     tr {
         & > :last-child {
             text-align: right;
-            display: flex;
-            justify-content: flex-end;
+            
+            & > * {
+                display: flex;
+                justify-content: flex-end;
+                width: 100%;
+                max-width: 100%;
+            }
         }
     }
 
@@ -189,6 +194,20 @@
             &.details-table__colored-text {
                 color: $colorRed;
             }
+        }
+    }
+
+    &__mortgage {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+
+        img {
+            width: 64px;
+            height: 64px;
+            border-radius: 8px;
+            overflow: hidden;
+            object-fit: cover;
         }
     }
 }
@@ -502,5 +521,17 @@
 
     &__dots {
         pointer-events: none;
+    }
+}
+
+
+.property {
+    display: flex;
+    flex-direction: column;
+    &__title {
+        color: $colorText2;
+    }
+    &__value {
+        color: $colorText1;
     }
 }

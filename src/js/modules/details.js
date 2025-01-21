@@ -16,7 +16,7 @@ function scrollToActive(sliderSelector, activeTabSelector) {
 scrollToActive(".details__tabs", ".details__tab_active")
 
 
-// Payments 
-$(".payment__header").click(function(e) {
-    $(this).parents(".payment").toggleClass("payment_open")
+// Property Accordeon 
+$(".property-accordeon__header").click(function(e) {
+    $(this).parents(".property-accordeon").toggleClass("property-accordeon_open")
 })

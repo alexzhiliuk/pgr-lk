@@ -766,6 +766,123 @@ input.input:hover {
   text-align: right;
 }
 
+.property {
+  display: flex;
+  flex-direction: column;
+}
+.property__title {
+  color: #6B6D80;
+}
+.property__value {
+  color: rgba(25, 28, 48, 0.9);
+}
+
+.property-accordeons {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #E0E0E0;
+}
+@media screen and (min-width: 767.98px) {
+  .property-accordeons {
+    display: none;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .property-accordeons {
+    width: 100vw;
+    margin-left: calc(-1 * (100vw - 100%) / 2);
+    margin-right: calc(-1 * (100vw - 100%) / 2);
+  }
+}
+
+.property-accordeon {
+  display: flex;
+  flex-direction: column;
+}
+.property-accordeon_overdue {
+  background: rgba(244, 87, 37, 0.12);
+  --border-color: rgba(244, 87, 37, 0.24);
+}
+.property-accordeon_paid {
+  background: rgba(74, 201, 155, 0.32);
+  --border-color: rgba(74, 201, 155, 0.24);
+}
+.property-accordeon_warning {
+  background: rgba(255, 199, 0, 0.12);
+}
+.property-accordeon_open .property-accordeon__header {
+  border-bottom: 1px solid var(--border-color, #E0E0E0);
+}
+.property-accordeon_open .property-accordeon__header::after {
+  rotate: 180deg;
+}
+.property-accordeon_open .property-accordeon__body {
+  padding: 12px;
+  padding-left: 70px;
+  grid-template-rows: 1fr;
+}
+.property-accordeon__header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-top: 1px solid #E0E0E0;
+  padding: 8px 16px;
+}
+.property-accordeon__header::after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background: url("../img/payments/arrow.svg") center center/contain no-repeat;
+  margin-left: auto;
+}
+.property-accordeon__num {
+  flex-shrink: 0;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.04);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.property-accordeon__num img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.property-accordeon__date {
+  color: #6B6D80;
+}
+.property-accordeon__sum {
+  color: #0D1017;
+}
+.property-accordeon__body {
+  padding-left: 70px;
+  display: grid;
+  grid-template-rows: 0fr;
+  overflow: hidden;
+}
+.property-accordeon__properties {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  overflow: hidden;
+}
+.property-accordeon__property-title {
+  color: #6B6D80;
+}
+.property-accordeon__property-value {
+  color: #0D1017;
+}
+.property-accordeon__property-value_overdue {
+  color: #F45725;
+}
+.property-accordeon__property-value_paid {
+  color: #4AC99B;
+}
+
 .sidebar .properties__title {
   color: #6B6D80;
 }
@@ -940,6 +1057,36 @@ input.input:hover {
 }
 .radio input[type=radio]:checked {
   border: 6px solid #303345;
+}
+
+.progress {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 154px;
+  width: 100%;
+}
+.progress__title {
+  color: rgba(25, 28, 48, 0.9);
+}
+.progress__bar {
+  height: 4px;
+  border-radius: 2px;
+  background: white;
+  background: #EDEDED;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.progress__bar::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  border-radius: 2px;
+  width: var(--progress-width);
+  background: var(--progress-color);
 }
 
 .header {
@@ -1355,6 +1502,9 @@ input.input:hover {
   width: 100%;
   min-width: 344px;
 }
+.info__properties_wide {
+  min-width: 502px;
+}
 @media screen and (max-width: 991.98px) {
   .info__properties {
     min-width: unset;
@@ -1473,6 +1623,14 @@ input.input:hover {
     height: auto;
   }
 }
+.details__empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: clamp(300px, 53vw, 530px);
+}
+
 .details-table-wrapper {
   width: 100%;
   overflow-x: auto;
@@ -1506,8 +1664,12 @@ input.input:hover {
 }
 .details-table tr > :last-child {
   text-align: right;
+}
+.details-table tr > :last-child > * {
   display: flex;
   justify-content: flex-end;
+  width: 100%;
+  max-width: 100%;
 }
 .details-table__green-row td {
   background: rgba(74, 201, 155, 0.08);
@@ -1520,6 +1682,18 @@ input.input:hover {
 }
 .details-table__red-row td.details-table__colored-text {
   color: #E02D3C;
+}
+.details-table__mortgage {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.details-table__mortgage img {
+  width: 64px;
+  height: 64px;
+  border-radius: 8px;
+  overflow: hidden;
+  object-fit: cover;
 }
 
 .payments {
@@ -1772,6 +1946,17 @@ input.input:hover {
 }
 .details-pagination__dots {
   pointer-events: none;
+}
+
+.property {
+  display: flex;
+  flex-direction: column;
+}
+.property__title {
+  color: #6B6D80;
+}
+.property__value {
+  color: rgba(25, 28, 48, 0.9);
 }
 
 .notifications__title {

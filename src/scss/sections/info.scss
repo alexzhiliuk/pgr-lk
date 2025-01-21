@@ -105,6 +105,10 @@
         width: 100%;
         min-width: 344px;
 
+        &_wide {
+            min-width: 502px;
+        }
+
         @media screen and (max-width: $breakpoint992) {
             min-width: unset;
         }
