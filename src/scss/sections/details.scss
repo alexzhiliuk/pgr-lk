@@ -130,6 +130,13 @@
         text-align: center;
         height: clamp(300px, 53vw, 530px);
     }
+
+    &__map {
+        height: 210px;
+        width: 100%;
+        border-radius: 12px;
+        border: 1px solid $colorBorder;
+    }
 }
 
 .details-table-wrapper {
@@ -154,6 +161,7 @@
         text-align: left;
         padding: 12px;
         border-bottom: 1px solid $colorBorder;
+        font-weight: 400;
     }
 
     td {
@@ -172,6 +180,16 @@
                 width: 100%;
                 max-width: 100%;
             }
+        }
+
+        &:last-child {
+            td {
+                border-bottom: none;
+            }
+        }
+
+        &:has(a:hover) td  {
+            background: $colorBlack004;
         }
     }
 
@@ -475,6 +493,33 @@
             }
         }
     }
+
+    &_simple {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+
+    &__icon {
+        width: 32px;
+        height: 32px;
+        flex-shrink: 0;
+        border-radius: 50%;
+        background: #F6F6F6;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        svg {
+            width: 20px;
+            height: 20px;;
+        }
+    }
+
+    &__download {
+        margin-left: auto;
+    }
 }
 
 
@@ -521,17 +566,5 @@
 
     &__dots {
         pointer-events: none;
-    }
-}
-
-
-.property {
-    display: flex;
-    flex-direction: column;
-    &__title {
-        color: $colorText2;
-    }
-    &__value {
-        color: $colorText1;
     }
 }

@@ -20,6 +20,17 @@
     @include h3;
 }
 
+@mixin h5 {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 1.1;
+}
+
+.h5 {
+    @include h5;
+}
+
 @mixin text-l {
     font-style: normal;
     font-weight: 500;

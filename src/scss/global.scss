@@ -78,3 +78,45 @@ button {
 .text-center {
     text-align: center;
 }
+
+.two-columns {
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+
+    & > :first-child {
+        flex: 0 0 calc(100% - 390px - 24px);
+        max-width: calc(100% - 390px - 24px);
+    }
+    
+    & > :last-child {
+        flex: 0 0 390px;
+    }
+
+    @media screen and (max-width: $breakpoint992) {
+        flex-direction: column-reverse;
+        
+        & > :first-child {
+            max-width: unset;
+        }
+        & > :last-child {
+            flex: unset;
+        }
+    }
+
+    @media screen and (max-width: $breakpoint992) and (min-width: $breakpoint768) {
+        & > :first-child,
+        & > :last-child {
+            width: 100%;
+        }
+    }
+
+    @media screen and (max-width: $breakpoint768) {
+        
+        & > :last-child {
+            @include width100vw;
+            border-radius: 0;
+            padding: 16px;
+        }
+    }
+}

@@ -13,7 +13,7 @@
 
     // .properties__title
     &__title {
-        color: $colorWhite06;
+        
     }
 
     // .properties__line
@@ -21,14 +21,13 @@
         flex: 1 0 10px;
         height: .6em;
         opacity: .2;
-        border-top: 1px solid $colorWhite;
+        border-top: 1px solid rgba($color: #1D2433, $alpha: .65);
         pointer-events: none;
     }
 
     // .properties__value
     &__value {
         font-weight: 600;
-        color: $colorWhite;
         text-align: right;
     }
 }
@@ -40,6 +39,7 @@
         color: $colorText2;
     }
     &__value {
+        margin-top: 2px;
         color: $colorText1;
     }
 }
@@ -179,6 +179,28 @@
         &_paid {
             color: #4AC99B;
         }
+    }
+}
+
+// In Info
+.info {
+    .properties {
+        
+        // .properties__title
+        &__title {
+            color: $colorWhite06;
+        }
+
+        // .properties__line
+        &__line {
+            border-top: 1px solid $colorWhite;
+        }
+
+        // .properties__value
+        &__value {
+            color: $colorWhite;
+        }
+
     }
 }
 

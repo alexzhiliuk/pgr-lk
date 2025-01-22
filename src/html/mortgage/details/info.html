@@ -1,0 +1,90 @@
+<div class="container">
+    <div class="two-columns">
+        <div class="details">
+            <div class="details__tabs text-s color-text-2 draggable">
+                <a href="mortgage.html" class="details__tab details__tab_active">Информация</a>
+                <a href="mortgage-payments.html" class="details__tab">График платежей</a>
+                <a href="mortgage-docs.html" class="details__tab">Документы</a>
+            </div>
+            <div class="details__map"></div>
+            <div class="details__table details-table-wrapper">
+                <table class="details-table text-s">
+                    <tbody>
+                        <tr>
+                            <td>Тип</td>
+                            <td>Квартира</td>
+                        </tr>
+                        <tr>
+                            <td>Адрес</td>
+                            <td>МО, г. Мытищи, ул. Лётная, д. 42</td>
+                        </tr>
+                        <tr>
+                            <td>Пол заёмщика</td>
+                            <td>Мужской</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="details__info details-info">
+                <div class="property">
+                    <div class="property__title text-s">Тип</div>
+                    <div class="property__value text-m">Квартира</div>
+                </div>
+                <div class="property">
+                    <div class="property__title text-s">Адрес</div>
+                    <div class="property__value text-m">МО, г. Мытищи, ул. Лётная, д. 42</div>
+                </div>
+                <div class="property">
+                    <div class="property__title text-s">Пол заёмщика</div>
+                    <div class="property__value text-m">Мужской</div>
+                </div>
+            </div>
+        </div>
+        <div class="overview-card">
+            <a href="@img/overview/mortgage.png" class="overview-card__img gallery-img">
+                <img src="@img/overview/mortgage.png" alt="">
+            </a>
+            <div class="overview-card__map"></div>
+            <div class="overview-card__price">
+                <p class="text-s color-text-2">Стоимость закладной</p>
+                <p class="h5 color-text-1">5 945 000,00 ₽</p>
+            </div>
+            <div class="overview-card__properties properties text-s"> 
+                <div class="properties__item">
+                    <div class="properties__title color-text-2">Следующий платёж</div>
+                    <div class="properties__line"></div>
+                    <div class="properties__value color-text-1">10&nbsp;сентября</div>
+                </div>
+                <div class="properties__item">
+                    <div class="properties__title color-text-2">Выплачено заёмщиком</div>
+                    <div class="properties__line"></div>
+                    <div class="properties__value color-text-1">3 235 000 ₽</div>
+                </div>
+                <div class="properties__item">
+                    <div class="properties__title color-text-2">Выплачено тело долга</div>
+                    <div class="properties__line"></div>
+                    <div class="properties__value color-text-1">1 387 000 ₽</div>
+                </div>
+                <div class="properties__item">
+                    <div class="properties__title color-text-2">Выплачены проценты</div>
+                    <div class="properties__line"></div>
+                    <div class="properties__value color-text-1">1 848 000 ₽</div>
+                </div>
+                
+            </div>
+            <div class="overview-card__btns">
+                <a href="" class="overview-card__btn btn text-m text-m_bold">Продать</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $('.gallery-img').magnificPopup({
+      type: 'image', // Тип контента
+      gallery: {
+        enabled: true // Выключить галерею
+      },
+      titleSrc: 'alt' // Подпись будет взята из атрибута alt
+    });
+</script>

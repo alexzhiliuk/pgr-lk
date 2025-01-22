@@ -15,6 +15,7 @@
 @import "UI/uploader";
 @import "UI/radio";
 @import "UI/progress";
+@import "UI/back";
 
 @import "header";
 
@@ -26,6 +27,9 @@
 @import "sections/slider";
 @import "sections/sidebar";
 @import "sections/promo";
+@import "sections/table";
+@import "sections/overview";
 
 
 @import "../libs/swiper/swiper";
+@import "../libs/magnific/magnific";

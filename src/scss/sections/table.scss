@@ -1,0 +1,19 @@
+.table-section {
+    border-radius: 16px;
+    background: $colorWhite;
+    padding: 12px;
+    padding-top: 4px;
+
+    width: 100%;
+    @include scrollX;
+
+    @media screen and (max-width: $breakpoint768) {
+        @include width100vw;
+        border-radius: 0;
+        padding: 16px;
+
+        table {
+            display: none;
+        }
+    }
+}
