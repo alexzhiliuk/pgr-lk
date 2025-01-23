@@ -543,7 +543,7 @@ button {
 .btn:disabled {
   opacity: 0.56;
 }
-.btn:has(svg:first-child) {
+.btn_pr_18 {
   padding-right: 18px;
 }
 .btn_outline {
@@ -926,6 +926,10 @@ input.input:hover {
 }
 .property-accordeon__property-value_paid {
   color: #4AC99B;
+}
+.property-accordeon__property-value .btn {
+  max-width: fit-content;
+  margin: 1px;
 }
 
 .info .properties__title {
@@ -1729,20 +1733,26 @@ input.input:hover {
   padding: 12px;
   border-bottom: 1px solid #E0E0E0;
 }
+.details-table td.details-table__nested {
+  padding: 0;
+}
 .details-table tr > :last-child {
   text-align: right;
 }
-.details-table tr > :last-child > * {
+.details-table tr > :last-child > *:not(table) {
   display: flex;
   justify-content: flex-end;
   width: 100%;
   max-width: 100%;
 }
-.details-table tr:last-child td {
+.details-table tr:last-child > td {
   border-bottom: none;
 }
-.details-table tr:has(a:hover) td {
+.details-table tr:has(a:hover) > td:not(.details-table__nested) {
   background: rgba(0, 0, 0, 0.04);
+}
+.details-table tr:not(.open-nested) + :has(td.details-table__nested) {
+  display: none;
 }
 .details-table__green-row td {
   background: rgba(74, 201, 155, 0.08);
@@ -1767,6 +1777,24 @@ input.input:hover {
   border-radius: 8px;
   overflow: hidden;
   object-fit: cover;
+}
+.details-table__btns {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.nested-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-wrap: nowrap;
+  white-space: nowrap;
+  overflow: hidden;
+  text-align: left;
+  background: rgba(0, 0, 0, 0.04);
+}
+.nested-table td {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.04);
 }
 
 .payments {
@@ -2537,6 +2565,24 @@ input.input:hover {
 .overview-card__properties {
   gap: 12px;
 }
+.overview-card__btns {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.overview-card__sum-block {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 28px 20px;
+  background-color: #F2F3F5;
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  border-radius: 16px;
+}
+
 .gallery-img {
   position: relative;
 }

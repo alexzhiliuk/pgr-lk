@@ -12,6 +12,7 @@ import * as sidebar from './modules/sidebar.js';
 import * as uploader from './modules/uploader.js';
 import * as input from './modules/input.js';
 import * as toggle from './modules/toggle.js';
+import * as gallery from './modules/gallery.js';
 
 // flsFunctions.isWebp()
 

@@ -9,20 +9,15 @@
         
         <!-- Sidebars -->
         @@include('html/sidebar/notifications.html')
-        @@include('html/sidebar/regular-payment.html')
-        @@include('html/sidebar/early-payment.html')
         @@include('html/sidebar/profile.html')
 
         <!-- Header -->
         @@include('html/investor/header.html')
 
         <main>            
-            @@include('html/investor/info.html')
-            @@include('html/investor/details/portfolio.html')
-            @@include('html/promo.html')
-            <!-- @@include('html/borrower/credits.html')
-            @@include('html/borrower/notifications.html')
-            @@include('html/borrower/details/payments.html') -->
+            @@include('html/back.html')
+            @@include('html/loan/table.html')
+            @@include('html/loan/details/info.html')
         </main>
 
         <script src="js/app.min.js"></script>
