@@ -13,6 +13,9 @@ import * as uploader from './modules/uploader.js';
 import * as input from './modules/input.js';
 import * as toggle from './modules/toggle.js';
 import * as gallery from './modules/gallery.js';
+import * as rangeInput from './modules/rangeInput.js';
+import * as showcase from './modules/showcase.js';
+import * as select from './modules/select.js';
 
 // flsFunctions.isWebp()
 

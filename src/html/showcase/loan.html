@@ -1,0 +1,492 @@
+<div class="showcase-section container container_wide">
+    <aside class="showcase-aside">
+        <div class="showcase-aside__mobile-header">
+            <div class="showcase-aside__mobile-header-title text-l text-l_bold">Фильтры</div>
+            <div class="showcase-aside__mobile-header-cross close-filters">
+                <img src="@img/sidebar/close.svg" alt="">                   
+            </div>
+        </div>
+        <div class="showcase-aside__wrapper">
+            <div class="showcase-filter radio-inputs">
+                <div class="radio-inputs__items text-m color-text-1">
+                    <label class="radio">
+                        <input type="radio" name="type" checked="">
+                        Закладные
+                    </label>
+                    <label class="radio">
+                        <input type="radio" name="type">
+                        Займы
+                    </label>
+                </div>
+            </div>
+            <div class="showcase-filter">
+                <div class="showcase-filter__title text-s color-text-2">Цена, руб.</div>
+                <div class="showcase-filter__body">
+                    <div class="double-range-input" data-value-gap="100000">
+                        <div class="double-range-input__inputs text-m">
+                            <input type="text" class="double-range-input__number double-range-input__number_min" value="800000">
+                            <input type="text" class="double-range-input__number double-range-input__number_max" value="1600000">
+                            
+                        </div>
+                        <div class="double-range-input__progress">
+                            <input class="double-range-input__range double-range-input__range_min" type="range" min="0" max="2400000" step="1000" value="800000">
+                            <input class="double-range-input__range double-range-input__range_max" type="range" min="0" max="2400000" step="1000" value="1600000">
+                            <div class="double-range-input__progress-line"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="showcase-filter">
+                <div class="showcase-filter__title text-s color-text-2">Площадь, м3</div>
+                <div class="showcase-filter__body">
+                    <div class="double-range-input" data-value-gap="100">
+                        <div class="double-range-input__inputs">
+                            <input type="text" class="double-range-input__number double-range-input__number_min" value="330">
+                            <input type="text" class="double-range-input__number double-range-input__number_max" value="660">
+                            
+                        </div>
+                        <div class="double-range-input__progress">
+                            <input class="double-range-input__range double-range-input__range_min" type="range" min="0" max="1000" value="330">
+                            <input class="double-range-input__range double-range-input__range_max" type="range" min="0" max="1000" value="660">
+                            <div class="double-range-input__progress-line"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="showcase-filter check-inputs">
+                <div class="check-inputs__title text-s color-text-2">Регион</div>
+                <div class="check-inputs__items text-m color-text-1 text-s">
+                    <label class="check check_slim">
+                        <input type="checkbox" name="region" checked="">
+                        Москва
+                    </label>
+                    <label class="check check_slim">
+                        <input type="checkbox" name="region">
+                        Московская область
+                    </label>
+                    <label class="check check_slim">
+                        <input type="checkbox" name="region" checked="">
+                        Санкт-Петербург
+                    </label>
+                    <label class="check check_slim">
+                        <input type="checkbox" name="region">
+                        Ленинградская область
+                    </label>
+                </div>
+            </div>
+            <div class="showcase-filter check-inputs">
+                <div class="check-inputs__title text-s color-text-2">Вид объекта</div>
+                <div class="check-inputs__items text-m color-text-1 text-s">
+                    <label class="check check_slim">
+                        <input type="checkbox" name="object" checked="">
+                        Дом
+                    </label>
+                    <label class="check check_slim">
+                        <input type="checkbox" name="object">
+                        Квартира
+                    </label>
+                    <label class="check check_slim">
+                        <input type="checkbox" name="object" >
+                        Апартаменты
+                    </label>
+                </div>
+            </div>
+            <div class="showcase-filter check-inputs">
+                <div class="check-inputs__title text-s color-text-2">Кол-во комнат</div>
+                <div class="check-inputs__items text-m color-text-1 text-s">
+                    <div class="check-inputs__row">
+                        <label class="check check_slim">
+                            <input type="checkbox" name="rooms" checked="">
+                            Студия
+                        </label>
+                    </div>
+                    <div class="check-inputs__row">
+                        <label class="check check_slim">
+                            <input type="checkbox" name="rooms" checked="">
+                            1
+                        </label>
+                        <label class="check check_slim">
+                            <input type="checkbox" name="rooms">
+                            2
+                        </label>
+                    </div>
+                    <div class="check-inputs__row">
+                        <label class="check check_slim">
+                            <input type="checkbox" name="rooms" checked="">
+                            3
+                        </label>
+                        <label class="check check_slim">
+                            <input type="checkbox" name="rooms">
+                            4
+                        </label>
+                    </div>
+                    <div class="check-inputs__row">
+                        <label class="check check_slim">
+                            <input type="checkbox" name="rooms" checked="">
+                            5
+                        </label>
+                        <label class="check check_slim">
+                            <input type="checkbox" name="rooms">
+                            6
+                        </label>
+                    </div>
+                    <div class="check-inputs__row">
+                        <label class="check check_slim">
+                            <input type="checkbox" name="rooms" checked="">
+                            7
+                        </label>
+                        <label class="check check_slim">
+                            <input type="checkbox" name="rooms">
+                            8
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="showcase-filter">
+                <div class="showcase-filter__title text-s color-text-2">Этажность</div>
+                <div class="showcase-filter__body">
+                    <div class="double-range-input" data-value-gap="1">
+                        <div class="double-range-input__inputs">
+                            <input type="text" class="double-range-input__number double-range-input__number_min" value="8">
+                            <input type="text" class="double-range-input__number double-range-input__number_max" value="16">
+                            
+                        </div>
+                        <div class="double-range-input__progress">
+                            <input class="double-range-input__range double-range-input__range_min" type="range" min="1" max="24" value="8">
+                            <input class="double-range-input__range double-range-input__range_max" type="range" min="1" max="24" value="16">
+                            <div class="double-range-input__progress-line"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <div class="showcase-aside__mobile-footer">
+            <a href="#" class="showcase-aside__mobile-footer-btn btn close-filters">
+                Показать <span class="showcase-aside__mobile-footer-count">12</span>
+            </a>
+        </div>
+    </aside>
+    <div class="showcase">
+        <div class="showcase__header">
+            <div class="showcase__sorting_mobile">
+                <button class="btn btn_outline body-regular" id="openFilters">
+                    <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2.5 7.31543L12.5 7.31543M12.5 7.31543C12.5 8.69614 13.6193 9.81543 15 9.81543C16.3807 9.81543 17.5 8.69614 17.5 7.31543C17.5 5.93472 16.3807 4.81543 15 4.81543C13.6193 4.81543 12.5 5.93472 12.5 7.31543ZM7.5 13.9821L17.5 13.9821M7.5 13.9821C7.5 15.3628 6.38071 16.4821 5 16.4821C3.61929 16.4821 2.5 15.3628 2.5 13.9821C2.5 12.6014 3.61929 11.4821 5 11.4821C6.38071 11.4821 7.5 12.6014 7.5 13.9821Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>                        
+                    Фильтры
+                </button>
+            </div>
+        </div>
+        <div class="showcase__body">
+            <div class="details__table details-table-wrapper">
+                <table class="details-table text-s">
+                    <thead>
+                        <tr>
+                            <th>Сумма займа</th>
+                            <th>Дата займа</th>
+                            <th>Дата завершения</th>
+                            <th>Доходность</th>
+                            <th>Залог</th>
+                            <th>Действия</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>25 000 000,00 ₽</td>
+                            <td>12.12.2022</td>
+                            <td>12.12.2027</td>
+                            <td>24%</td>
+                            <td>
+                                <div class="details-table__btns">
+                                    <a href="javascript:void(0)" class="btn btn_s btn_outline" data-table-nested-btn>
+                                        <span>Развернуть</span>
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M3.29289 5.29289C3.68342 4.90237 4.31658 4.90237 4.70711 5.29289L8 8.58579L11.2929 5.29289C11.6834 4.90237 12.3166 4.90237 12.7071 5.29289C13.0976 5.68342 13.0976 6.31658 12.7071 6.70711L8.70711 10.7071C8.31658 11.0976 7.68342 11.0976 7.29289 10.7071L3.29289 6.70711C2.90237 6.31658 2.90237 5.68342 3.29289 5.29289Z" fill="#191C30" fill-opacity="0.9"/>
+                                        </svg>                                        
+                                    </a>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="details-table__btns">
+                                    <a href="javascript:void(0)" class="btn btn_s text-s text-s_bold">
+                                        <span>Отправить заявку</span>                                     
+                                    </a>
+                                    <button class="showcase__fav-btn">
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M7.99413 3.42388C6.66123 1.8656 4.43853 1.44643 2.76849 2.87334C1.09846 4.30026 0.863343 6.68598 2.17483 8.3736C3.26524 9.77674 6.56521 12.7361 7.64676 13.6939C7.76777 13.801 7.82827 13.8546 7.89884 13.8757C7.96043 13.8941 8.02783 13.8941 8.08942 13.8757C8.16 13.8546 8.2205 13.801 8.3415 13.6939C9.42305 12.7361 12.723 9.77674 13.8134 8.3736C15.1249 6.68598 14.9185 4.28525 13.2198 2.87334C11.521 1.46144 9.32703 1.8656 7.99413 3.42388Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </svg>                                        
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="details-table__nested" colspan="6">
+                                <table class="nested-table">
+                                    <thead>
+                                        <th>Закладная</th>
+                                        <th>Стоимость закладной</th>
+                                        <th>Выплачено</th>
+                                        <th>Доходность</th>
+                                        <th>Следующий платёж</th>
+                                        <th>Статус</th>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <a href="mortgage.html" class="details-table__mortgage">
+                                                    <img src="@img/mortgage/table-row-img.png" alt="">
+                                                    <div class="property">
+                                                        <div class="property__title">Номер</div>
+                                                        <div class="property__value">050–310</div>
+                                                    </div>
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <a href="mortgage.html">25 000 000,00 ₽</a>
+                                            </td>
+                                            <td>
+                                                <a href="mortgage.html">
+                                                    <div class="property">
+                                                        <div class="property__title">10 платежей</div>
+                                                        <div class="property__value">500 000,00 ₽</div>
+                                                    </div>
+                                                </a>
+                                            </td>
+                                            <td><a href="mortgage.html">24%</a></td>
+                                            <td>
+                                                <a href="mortgage.html">
+                                                    <div class="property">
+                                                        <div class="property__title">17 августа</div>
+                                                        <div class="property__value">50 000,00 ₽</div>
+                                                    </div>
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <a href="mortgage.html">
+                                                    <div class="progress" style="--progress-width: 50%; --progress-color: #FFC700;">
+                                                        <div class="progress__title">Просрочено 2 дня</div>
+                                                        <div class="progress__bar"></div>
+                                                    </div>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="mortgage.html" class="details-table__mortgage">
+                                                    <img src="@img/mortgage/table-row-img.png" alt="">
+                                                    <div class="property">
+                                                        <div class="property__title">Номер</div>
+                                                        <div class="property__value">050–310</div>
+                                                    </div>
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <a href="mortgage.html">25 000 000,00 ₽</a>
+                                            </td>
+                                            <td>
+                                                <a href="mortgage.html">
+                                                    <div class="property">
+                                                        <div class="property__title">10 платежей</div>
+                                                        <div class="property__value">500 000,00 ₽</div>
+                                                    </div>
+                                                </a>
+                                            </td>
+                                            <td><a href="mortgage.html">24%</a></td>
+                                            <td>
+                                                <a href="mortgage.html">
+                                                    <div class="property">
+                                                        <div class="property__title">17 августа</div>
+                                                        <div class="property__value">50 000,00 ₽</div>
+                                                    </div>
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <a href="mortgage.html">
+                                                    <div class="progress" style="--progress-width: 50%; --progress-color: #FFC700;">
+                                                        <div class="progress__title">Просрочено 2 дня</div>
+                                                        <div class="progress__bar"></div>
+                                                    </div>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="mortgage.html" class="details-table__mortgage">
+                                                    <img src="@img/mortgage/table-row-img.png" alt="">
+                                                    <div class="property">
+                                                        <div class="property__title">Номер</div>
+                                                        <div class="property__value">050–310</div>
+                                                    </div>
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <a href="mortgage.html">25 000 000,00 ₽</a>
+                                            </td>
+                                            <td>
+                                                <a href="mortgage.html">
+                                                    <div class="property">
+                                                        <div class="property__title">10 платежей</div>
+                                                        <div class="property__value">500 000,00 ₽</div>
+                                                    </div>
+                                                </a>
+                                            </td>
+                                            <td><a href="mortgage.html">24%</a></td>
+                                            <td>
+                                                <a href="mortgage.html">
+                                                    <div class="property">
+                                                        <div class="property__title">17 августа</div>
+                                                        <div class="property__value">50 000,00 ₽</div>
+                                                    </div>
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <a href="mortgage.html">
+                                                    <div class="progress" style="--progress-width: 50%; --progress-color: #FFC700;">
+                                                        <div class="progress__title">Просрочено 2 дня</div>
+                                                        <div class="progress__bar"></div>
+                                                    </div>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+            <div class="details__property-accordeons property-accordeons">
+                <div class="property-accordeon property-accordeon_open">
+                    <div class="property-accordeon__header">
+                        <div class="property-accordeon__num">
+                            1
+                        </div>
+                        <div class="property-accordeon__desc">
+                            <p class="text-s property-accordeon__date">Платеж 17 августа 2024</p>
+                            <p class="text-m property-accordeon__sum">Сумма 50 000,00 ₽</p>
+                        </div>
+                    </div>
+                    <div class="property-accordeon__body">
+                        <div class="property-accordeon__properties">
+                            <div class="property-accordeon__property">
+                                <p class="property-accordeon__property-title text-s">Сумма займа </p>
+                                <p class="property-accordeon__property-value text-m">25 000 000,00 ₽</p>
+                            </div>
+                            <div class="property-accordeon__property">
+                                <p class="property-accordeon__property-title text-s">Дата займа</p>
+                                <p class="property-accordeon__property-value text-m">12.12.2022</p>
+                            </div>
+                            <div class="property-accordeon__property">
+                                <p class="property-accordeon__property-title text-s">Дата завершения</p>
+                                <p class="property-accordeon__property-value text-m">12.12.2027</p>
+                            </div>
+                            <div class="property-accordeon__property">
+                                <p class="property-accordeon__property-title text-s">Доходность</p>
+                                <p class="property-accordeon__property-value text-m">24%</p>
+                            </div>
+                            <div class="property-accordeon__property">
+                                <p class="property-accordeon__property-title text-s">Залог</p>
+                                <p class="property-accordeon__property-value text-m">
+                                    <a href="" class="btn btn_s btn_outline">
+                                        Подробнее
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M5.29289 3.29289C5.68342 2.90237 6.31658 2.90237 6.70711 3.29289L10.7071 7.29289C11.0976 7.68342 11.0976 8.31658 10.7071 8.70711L6.70711 12.7071C6.31658 13.0976 5.68342 13.0976 5.29289 12.7071C4.90237 12.3166 4.90237 11.6834 5.29289 11.2929L8.58579 8L5.29289 4.70711C4.90237 4.31658 4.90237 3.68342 5.29289 3.29289Z" fill="#191C30" fill-opacity="0.9"></path>
+                                        </svg>                                        
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="property-accordeon ">
+                    <div class="property-accordeon__header">
+                        <div class="property-accordeon__num">
+                            2
+                        </div>
+                        <div class="property-accordeon__desc">
+                            <p class="text-s property-accordeon__date">Платеж 17 августа 2024</p>
+                            <p class="text-m property-accordeon__sum">Сумма 50 000,00 ₽</p>
+                        </div>
+                    </div>
+                    <div class="property-accordeon__body">
+                        <div class="property-accordeon__properties">
+                            <div class="property-accordeon__property">
+                                <p class="property-accordeon__property-title text-s">Сумма займа </p>
+                                <p class="property-accordeon__property-value text-m">25 000 000,00 ₽</p>
+                            </div>
+                            <div class="property-accordeon__property">
+                                <p class="property-accordeon__property-title text-s">Дата займа</p>
+                                <p class="property-accordeon__property-value text-m">12.12.2022</p>
+                            </div>
+                            <div class="property-accordeon__property">
+                                <p class="property-accordeon__property-title text-s">Дата завершения</p>
+                                <p class="property-accordeon__property-value text-m">12.12.2027</p>
+                            </div>
+                            <div class="property-accordeon__property">
+                                <p class="property-accordeon__property-title text-s">Доходность</p>
+                                <p class="property-accordeon__property-value text-m">24%</p>
+                            </div>
+                            <div class="property-accordeon__property">
+                                <p class="property-accordeon__property-title text-s">Залог</p>
+                                <p class="property-accordeon__property-value text-m">
+                                    <a href="" class="btn btn_s btn_outline">
+                                        Подробнее
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M5.29289 3.29289C5.68342 2.90237 6.31658 2.90237 6.70711 3.29289L10.7071 7.29289C11.0976 7.68342 11.0976 8.31658 10.7071 8.70711L6.70711 12.7071C6.31658 13.0976 5.68342 13.0976 5.29289 12.7071C4.90237 12.3166 4.90237 11.6834 5.29289 11.2929L8.58579 8L5.29289 4.70711C4.90237 4.31658 4.90237 3.68342 5.29289 3.29289Z" fill="#191C30" fill-opacity="0.9"></path>
+                                        </svg>                                        
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="property-accordeon ">
+                    <div class="property-accordeon__header">
+                        <div class="property-accordeon__num">
+                            3
+                        </div>
+                        <div class="property-accordeon__desc">
+                            <p class="text-s property-accordeon__date">Платеж 17 августа 2024</p>
+                            <p class="text-m property-accordeon__sum">Сумма 50 000,00 ₽</p>
+                        </div>
+                    </div>
+                    <div class="property-accordeon__body">
+                        <div class="property-accordeon__properties">
+                            <div class="property-accordeon__property">
+                                <p class="property-accordeon__property-title text-s">Сумма займа </p>
+                                <p class="property-accordeon__property-value text-m">25 000 000,00 ₽</p>
+                            </div>
+                            <div class="property-accordeon__property">
+                                <p class="property-accordeon__property-title text-s">Дата займа</p>
+                                <p class="property-accordeon__property-value text-m">12.12.2022</p>
+                            </div>
+                            <div class="property-accordeon__property">
+                                <p class="property-accordeon__property-title text-s">Дата завершения</p>
+                                <p class="property-accordeon__property-value text-m">12.12.2027</p>
+                            </div>
+                            <div class="property-accordeon__property">
+                                <p class="property-accordeon__property-title text-s">Доходность</p>
+                                <p class="property-accordeon__property-value text-m">24%</p>
+                            </div>
+                            <div class="property-accordeon__property">
+                                <p class="property-accordeon__property-title text-s">Залог</p>
+                                <p class="property-accordeon__property-value text-m">
+                                    <a href="" class="btn btn_s btn_outline">
+                                        Подробнее
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M5.29289 3.29289C5.68342 2.90237 6.31658 2.90237 6.70711 3.29289L10.7071 7.29289C11.0976 7.68342 11.0976 8.31658 10.7071 8.70711L6.70711 12.7071C6.31658 13.0976 5.68342 13.0976 5.29289 12.7071C4.90237 12.3166 4.90237 11.6834 5.29289 11.2929L8.58579 8L5.29289 4.70711C4.90237 4.31658 4.90237 3.68342 5.29289 3.29289Z" fill="#191C30" fill-opacity="0.9"></path>
+                                        </svg>                                        
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              
+            </div>
+            @@include("../components/pagination.html")
+        </div>
+    </div>
+</div>

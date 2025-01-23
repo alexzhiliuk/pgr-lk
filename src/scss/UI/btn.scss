@@ -42,6 +42,10 @@
         &:hover {
             background: #ECECEC;
         }
+
+        @media screen and (max-width: $breakpoint768) {
+            padding: 16px;
+        }
     }
 
     &_transparent {

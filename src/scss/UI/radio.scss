@@ -12,6 +12,7 @@
     &__items {
         border-radius: 16px;
         border: 1px solid $colorBorder;
+        background: $colorWhite;
 
         & > * {
             &:not(:last-child) {
@@ -29,6 +30,10 @@
     align-items: center;
     gap: 12px;
 
+    &_slim {
+        padding: 10px;
+    }
+
     input[type="radio"] {
         -webkit-appearance: none;
         -moz-appearance: none;
@@ -41,6 +46,58 @@
 
         &:checked {
             border: 6px solid $colorPrimary;
+        }
+    }
+}
+
+
+.check-inputs {
+    @extend .radio-inputs;
+
+    &__items {
+        @extend .radio-inputs__items;
+    }
+
+    &__row {
+        display: flex;
+
+        & > * {
+            flex: 1;
+
+            &:not(:last-child) {
+                border-right: 1px solid $colorBorder
+            }
+        }
+    }
+}
+
+.check {
+    @extend .radio;
+
+    &_slim {
+        @extend .radio_slim;
+    }
+
+    input[type="checkbox"] {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+
+        width: 16px;
+        height: 16px;
+        border-radius: 6px;
+        background: $colorSecondary;
+
+        &:checked {
+            background: $colorPrimary;
+            
+            position: relative;
+            &::before {
+                content: '';
+                position: absolute;
+                inset: 0;
+                background: url("../img/checkbox/icon-16.svg") center center / contain no-repeat;
+            }
         }
     }
 }

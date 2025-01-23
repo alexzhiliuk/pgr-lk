@@ -19,6 +19,11 @@
     margin: 0 auto;
     padding: 0 $containerPadding;
 
+    &_wide {
+        max-width: calc(1640px + clamp(16px, 3vw, 40px) * 2);
+        padding: 0 clamp(16px, 3vw, 40px);
+    }
+
 }
 
 

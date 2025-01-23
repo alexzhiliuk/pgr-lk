@@ -1,0 +1,218 @@
+/* -------- RANGE INPUT -------- */
+.range-input {
+
+    // .range-input__label
+    &__label {
+        margin-bottom: 8px;
+    }
+
+    // .range-input__input
+    &__input {
+
+        position: relative;
+        width: 100%;
+
+        input[type="number"] {
+            -moz-appearance: textfield;
+            
+            &::-webkit-outer-spin-button,
+            &::-webkit-inner-spin-button {
+                -webkit-appearance: none;
+                margin: 0;
+            }
+
+        }
+
+        input[type="range"] {
+            background: none;
+            padding: 0;
+            position: absolute;
+            z-index: 3;
+            bottom: 0;
+            left: 0;
+            translate: 0 50%;
+            width: 100%;
+            cursor: pointer;
+
+            -webkit-appearance: none;
+
+            &::-webkit-slider-thumb {
+                -webkit-appearance: none;
+                width: 20px;
+                height: 20px;
+                background-color: $colorPrimary;
+                border: 4px solid $colorPrimary;
+                border-radius: 50%;
+
+                box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3);
+
+                &:hover {
+                    transform: scale3d(1.1, 1.1, 1.1);
+                }
+
+            }
+            &::-moz-range-thumb {
+                -moz-appearance: none;
+                box-sizing: border-box;
+                width: 12px;
+                height: 12px;
+                background-color: $colorPrimary;
+                border-radius: 50%;
+
+                box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3);
+
+                &:hover {
+                    transform: scale3d(1.1, 1.1, 1.1);
+                }
+
+            }
+        }
+    }
+
+    // .range-input__number
+    &__number {
+        border: 1px solid $colorBorder;
+        width: 100%;
+    }
+
+    // .range-input__progress
+    &__progress {
+        transition: unset;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 52%;
+        height: 100%;
+        border-radius: 8px;
+        overflow: hidden;
+        pointer-events: none;
+
+        &::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background-color: $colorPrimary;
+        }
+    }
+
+    // .range-input__captions
+    &__captions {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 8px;
+    }
+
+    // .range-input__caption
+    &__caption {
+        
+    }
+}
+
+.double-range-input {
+
+    // .double-range-input__inputs
+    &__inputs {
+        display: flex;
+    }
+
+    // .double-range-input__number
+    &__number {
+        width: 50%;
+        border: 1px solid $colorBorder;
+
+        color: $colorText1;
+        padding: 16px;
+
+        &:first-child {
+            border-radius: 12px 0 0 12px;
+            border-right: none;
+        }
+
+        &:last-child {
+            border-radius: 0 12px 12px 0;
+            border-left: none;
+            text-align: right;
+        }
+    }
+
+    // .double-range-input__progress
+    &__progress {
+        position: relative;
+        left: 50%;
+        translate: -50% 0;
+        width: calc(100% - 24px);
+        height: 2px;
+
+        &-line {
+            position: absolute;
+            background-color: $colorPrimary;
+            left: 33%;
+            right: 33%;
+            top: 0;
+            bottom: 0;
+            transition: unset;
+        }
+    }
+
+    // .double-range-input__range
+    &__range {
+
+        background: none;
+        padding: 0;
+        position: absolute;
+        z-index: 3;
+        bottom: 0;
+        left: 0;
+        translate: 0 50%;
+        width: 100%;
+        pointer-events: none;
+        cursor: pointer;
+
+        -webkit-appearance: none;
+        &::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            pointer-events: auto;
+            width: 12px;
+            height: 12px;
+            background-color: $colorPrimary;
+            border-radius: 50%;
+
+            box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3);
+
+            &:hover {
+                transform: scale3d(1.1, 1.1, 1.1);
+            }
+
+            @media screen and (max-width: $breakpoint992) {
+                width: 24px;
+                height: 24px;
+            }
+
+        }
+        &::-moz-range-thumb {
+            -moz-appearance: none;
+            pointer-events: auto;
+            width: 8px;
+            height: 8px;
+            background-color: $colorPrimary;
+            border-radius: 50%;
+
+            box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3);
+
+            &:hover {
+                transform: scale3d(1.1, 1.1, 1.1);
+            }
+
+            @media screen and (max-width: $breakpoint992) {
+                width: 16px;
+                height: 16px;
+            }
+
+        }
+
+    }
+}
