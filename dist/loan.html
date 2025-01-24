@@ -11,23 +11,23 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@200;400;500;700&display=swap&_v=20250124130755" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap&_v=20250124130755" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@200;400;500;700&display=swap&_v=20250124145425" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap&_v=20250124145425" rel="stylesheet">
     
 
     <!-- CSS -->
-    <link rel="stylesheet" href="css/style.min.css?_v=20250124130755">
+    <link rel="stylesheet" href="css/style.min.css?_v=20250124145425">
 
     <link
       rel="stylesheet"
-      href="https://unpkg.com/swiper/swiper-bundle.min.css?_v=20250124130755"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css?_v=20250124145425"
     />
 
     <!-- JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js?_v=20250124130755"></script>
-    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js?_v=20250124130755"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js?_v=20250124145425"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js?_v=20250124145425"></script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js?_v=20250124130755"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js?_v=20250124145425"></script>
 
     <title>Портфель</title>
 </head>
@@ -174,24 +174,6 @@
         </div>
     </aside>
 </div>
-
-<script>
-    $(".input_secret .input__icon").click(function() {
-        console.log("click")
-        let input = $(this).parents(".input_secret").find("input")
-        
-        if (input.attr("data-secret") === "false") {
-            input.attr("data-secret", "true")
-            input.val(input.val().replace(/[^ ]/g, "*"))
-            return
-        }
-        if (input.attr("data-secret") === "true") {
-            input.val(input.attr("data-value"))
-            input.attr("data-secret", "false")
-            return
-        }
-    })
-</script>
 
         <!-- Header -->
         <header class="header">
@@ -576,6 +558,6 @@
 </div>
         </main>
 
-        <script src="js/app.min.js?_v=20250124130755"></script>
+        <script src="js/app.min.js?_v=20250124145425"></script>
     </body>
 </html>

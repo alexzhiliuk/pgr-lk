@@ -48,3 +48,20 @@ $("[data-disable-check]").on("input change", function() {
 
     disabledItem.prop("disabled", isDisabled)
 })
+
+
+$(".input_secret .input__icon").click(function() {
+    console.log("click")
+    let input = $(this).parents(".input_secret").find("input")
+    
+    if (input.attr("data-secret") === "false") {
+        input.attr("data-secret", "true")
+        input.val(input.val().replace(/[^ ]/g, "*"))
+        return
+    }
+    if (input.attr("data-secret") === "true") {
+        input.val(input.attr("data-value"))
+        input.attr("data-secret", "false")
+        return
+    }
+})

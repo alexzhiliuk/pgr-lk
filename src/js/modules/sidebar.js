@@ -1,10 +1,14 @@
-$("[data-sidebar-open]").click(function() {
+$("[data-sidebar-open]").click(function(e) {
+    e.preventDefault()
     let id = $(this).attr("data-sidebar-open")
     $(`[data-sidebar=${id}]`).addClass("sidebar-wrapper_open")
 })
 
 $(".sidebar__close, .js-sidebar-close").click(function() {
     $(this).parents(".sidebar-wrapper").removeClass("sidebar-wrapper_open")
+    
+    $(this).parents(".sidebar-wrapper").find("[data-step]").hide()
+    $(this).parents(".sidebar-wrapper").find("[data-step=1]").show()
 })
 
 

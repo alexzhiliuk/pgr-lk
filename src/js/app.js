@@ -16,6 +16,7 @@ import * as gallery from './modules/gallery.js';
 import * as rangeInput from './modules/rangeInput.js';
 import * as showcase from './modules/showcase.js';
 import * as select from './modules/select.js';
+import * as promo from './modules/promo.js';
 
 // flsFunctions.isWebp()
 

@@ -20,34 +20,35 @@
                 </div>
             </div>
             <div class="showcase-filter">
-                <div class="showcase-filter__title text-s color-text-2">Цена, руб.</div>
+                <div class="showcase-filter__title text-s color-text-2">Сумма займа, руб.</div>
                 <div class="showcase-filter__body">
-                    <div class="double-range-input" data-value-gap="100000">
-                        <div class="double-range-input__inputs text-m">
-                            <input type="text" class="double-range-input__number double-range-input__number_min" value="800000">
-                            <input type="text" class="double-range-input__number double-range-input__number_max" value="1600000">
-                            
-                        </div>
-                        <div class="double-range-input__progress">
-                            <input class="double-range-input__range double-range-input__range_min" type="range" min="0" max="2400000" step="1000" value="800000">
-                            <input class="double-range-input__range double-range-input__range_max" type="range" min="0" max="2400000" step="1000" value="1600000">
-                            <div class="double-range-input__progress-line"></div>
-                        </div>
+                    <div class="input text-m">
+                        <input type="text" class="login-form__input text-m" value="812 000 ₽" data-ruble-input data-disable-check="earlyPeymentToStep2"> 
+                    </div>
+                </div>
+                <div class="notification">
+                    <div class="notification__icon">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M2.34315 2.34315C3.84344 0.842855 5.87827 0 8 0C10.1217 0 12.1566 0.842855 13.6569 2.34315C15.1571 3.84344 16 5.87827 16 8C16 10.1217 15.1571 12.1566 13.6569 13.6569C12.1566 15.1571 10.1217 16 8 16C5.87827 16 3.84344 15.1571 2.34315 13.6569C0.842855 12.1566 0 10.1217 0 8C0 5.87827 0.842855 3.84344 2.34315 2.34315ZM8 14C9.5913 14 11.1174 13.3679 12.2426 12.2426C13.3679 11.1174 14 9.5913 14 8C14 6.4087 13.3679 4.88258 12.2426 3.75736C11.1174 2.63214 9.5913 2 8 2C6.4087 2 4.88258 2.63214 3.75736 3.75736C2.63214 4.88258 2 6.4087 2 8C2 9.5913 2.63214 11.1174 3.75736 12.2426C4.88258 13.3679 6.4087 14 8 14ZM7 5.333C7 4.78072 7.44772 4.333 8 4.333H8.007C8.55928 4.333 9.007 4.78072 9.007 5.333C9.007 5.88528 8.55928 6.333 8.007 6.333H8C7.44772 6.333 7 5.88528 7 5.333ZM8 7C8.55228 7 9 7.44772 9 8V10.667C9 11.2193 8.55228 11.667 8 11.667C7.44772 11.667 7 11.2193 7 10.667V8C7 7.44772 7.44772 7 8 7Z" fill="#79818C"></path>
+                        </svg>                                    
+                    </div>
+                    <div class="notification__body">
+                        <p class="notification__text text-s">До 5 млн без налога</p>
                     </div>
                 </div>
             </div>
             <div class="showcase-filter">
-                <div class="showcase-filter__title text-s color-text-2">Площадь, м3</div>
+                <div class="showcase-filter__title text-s color-text-2">Доходность, % годовых</div>
                 <div class="showcase-filter__body">
-                    <div class="double-range-input" data-value-gap="100">
-                        <div class="double-range-input__inputs">
-                            <input type="text" class="double-range-input__number double-range-input__number_min" value="330">
-                            <input type="text" class="double-range-input__number double-range-input__number_max" value="660">
+                    <div class="double-range-input" data-value-gap="1">
+                        <div class="double-range-input__inputs text-m">
+                            <input type="text" class="double-range-input__number double-range-input__number_min" value="33">
+                            <input type="text" class="double-range-input__number double-range-input__number_max" value="66">
                             
                         </div>
                         <div class="double-range-input__progress">
-                            <input class="double-range-input__range double-range-input__range_min" type="range" min="0" max="1000" value="330">
-                            <input class="double-range-input__range double-range-input__range_max" type="range" min="0" max="1000" value="660">
+                            <input class="double-range-input__range double-range-input__range_min" type="range" min="0" max="100" step="1" value="33">
+                            <input class="double-range-input__range double-range-input__range_max" type="range" min="0" max="100" step="1" value="66">
                             <div class="double-range-input__progress-line"></div>
                         </div>
                     </div>
@@ -89,6 +90,23 @@
                         <input type="checkbox" name="object" >
                         Апартаменты
                     </label>
+                </div>
+            </div>
+            <div class="showcase-filter">
+                <div class="showcase-filter__title text-s color-text-2">Площадь, м3</div>
+                <div class="showcase-filter__body">
+                    <div class="double-range-input" data-value-gap="100">
+                        <div class="double-range-input__inputs">
+                            <input type="text" class="double-range-input__number double-range-input__number_min" value="330">
+                            <input type="text" class="double-range-input__number double-range-input__number_max" value="660">
+                            
+                        </div>
+                        <div class="double-range-input__progress">
+                            <input class="double-range-input__range double-range-input__range_min" type="range" min="0" max="1000" value="330">
+                            <input class="double-range-input__range double-range-input__range_max" type="range" min="0" max="1000" value="660">
+                            <div class="double-range-input__progress-line"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="showcase-filter check-inputs">
@@ -168,17 +186,18 @@
         </div>
     </aside>
     <div class="showcase">
-        <div class="showcase__header">
-            <div class="showcase__sorting_mobile">
-                <button class="btn btn_outline body-regular" id="openFilters">
-                    <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M2.5 7.31543L12.5 7.31543M12.5 7.31543C12.5 8.69614 13.6193 9.81543 15 9.81543C16.3807 9.81543 17.5 8.69614 17.5 7.31543C17.5 5.93472 16.3807 4.81543 15 4.81543C13.6193 4.81543 12.5 5.93472 12.5 7.31543ZM7.5 13.9821L17.5 13.9821M7.5 13.9821C7.5 15.3628 6.38071 16.4821 5 16.4821C3.61929 16.4821 2.5 15.3628 2.5 13.9821C2.5 12.6014 3.61929 11.4821 5 11.4821C6.38071 11.4821 7.5 12.6014 7.5 13.9821Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                    </svg>                        
-                    Фильтры
-                </button>
-            </div>
-        </div>
+        @@include("promo.html")
         <div class="showcase__body">
+            <div class="showcase__header">
+                <div class="showcase__sorting_mobile">
+                    <button class="btn btn_outline body-regular" id="openFilters">
+                        <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M2.5 7.31543L12.5 7.31543M12.5 7.31543C12.5 8.69614 13.6193 9.81543 15 9.81543C16.3807 9.81543 17.5 8.69614 17.5 7.31543C17.5 5.93472 16.3807 4.81543 15 4.81543C13.6193 4.81543 12.5 5.93472 12.5 7.31543ZM7.5 13.9821L17.5 13.9821M7.5 13.9821C7.5 15.3628 6.38071 16.4821 5 16.4821C3.61929 16.4821 2.5 15.3628 2.5 13.9821C2.5 12.6014 3.61929 11.4821 5 11.4821C6.38071 11.4821 7.5 12.6014 7.5 13.9821Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>                        
+                        Фильтры
+                    </button>
+                </div>
+            </div>
             <div class="details__table details-table-wrapper">
                 <table class="details-table text-s">
                     <thead>
@@ -209,7 +228,7 @@
                             </td>
                             <td>
                                 <div class="details-table__btns">
-                                    <a href="javascript:void(0)" class="btn btn_s text-s text-s_bold">
+                                    <a href="javascript:void(0)" class="btn btn_s text-s text-s_bold" data-sidebar-open="loan">
                                         <span>Отправить заявку</span>                                     
                                     </a>
                                     <button class="showcase__fav-btn">

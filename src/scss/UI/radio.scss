@@ -71,6 +71,23 @@
     }
 }
 
+@mixin customCheckbox {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    &:checked {
+        background: $colorPrimary;
+        
+        position: relative;
+        &::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: url("../img/checkbox/icon-16.svg") center center / contain no-repeat;
+        }
+    }
+}
 .check {
     @extend .radio;
 
@@ -79,25 +96,12 @@
     }
 
     input[type="checkbox"] {
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        appearance: none;
 
         width: 16px;
         height: 16px;
         border-radius: 6px;
         background: $colorSecondary;
 
-        &:checked {
-            background: $colorPrimary;
-            
-            position: relative;
-            &::before {
-                content: '';
-                position: absolute;
-                inset: 0;
-                background: url("../img/checkbox/icon-16.svg") center center / contain no-repeat;
-            }
-        }
+        @include customCheckbox;
     }
 }

@@ -1,0 +1,67 @@
+.contract-confirm {
+
+    // .conrtact-confirm__body
+    &__body {
+        margin-top: 12px;
+        border-radius: 12px;
+        border: 1px solid $colorBorder;
+    }
+
+    // .contract-confirm__contracts
+    &__contracts {
+        
+    }
+
+    // .contract-confirm__contract
+    &__contract {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        padding: 12px;
+        background: #F4F4F4;
+
+        border-bottom: 1px solid $colorBorder;
+
+        &:first-child {
+            border-radius: 12px 12px 0 0;
+        }
+        
+        a {
+            border-bottom: 1px dashed $colorText1;
+        }
+    }
+
+    // .contract-confirm__confirms
+    &__confirms {
+    }
+
+    // .contract-confirm__confirm
+    &__confirm {
+
+        display: flex;
+        align-items: flex-start;
+        gap: 12px;
+        cursor: pointer;
+
+        padding: 12px 16px;
+        background: $colorWhite;
+
+        &:last-child {
+            border-radius: 0 0 12px 12px;
+        }
+
+        input[type="checkbox"] {
+            @include customCheckbox;
+            
+            background: #ECF1F7;
+            width: 16px;
+            height: 16px;
+            border-radius: 4px;
+
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+    }
+}
+

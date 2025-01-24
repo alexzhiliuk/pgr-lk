@@ -39,6 +39,40 @@
                 position: static;
             }
         }
+
+        &_icon {
+            flex: 0 0 48px;
+            height: 48px;
+            align-self: flex-start;
+            border-radius: 16px;
+            margin-bottom: 0;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            svg {
+                width: 28px;
+                height: 28px;
+            }
+
+            &_warning {
+                background-color: rgba($color: $colorWarning, $alpha: .12);
+                svg {
+                    path {
+                        fill: $colorWarning;
+                    }
+                }
+            }
+            &_error {
+                background-color: rgba($color: $colorError, $alpha: .12);
+                svg {
+                    path {
+                        fill: $colorError;
+                    }
+                }
+            }
+        }
     }
 
     // .promo__main

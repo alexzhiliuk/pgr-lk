@@ -42,3 +42,8 @@ $("#all-mortgages").click(function() {
     $(".showcase-section_map .showcase").removeClass("showcase_filtered")
     $(`.showcase__item`).parent().show()
 })
+
+
+if ($('.showcase__header').children().length === 1 && $('.showcase__header').find(".showcase__sorting_mobile").length === 1) {
+    $('.showcase__header').addClass("desktop-hidden")
+}

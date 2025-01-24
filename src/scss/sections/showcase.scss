@@ -588,13 +588,9 @@
     flex: 0 0 calc(100% - 260px - 24px);
     max-width: calc(100% - 260px - 24px);
 
-    border-radius: 16px;
-    padding: 24px;
-    background: $colorWhite;
-
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 24px;
 
     @media screen and (max-width: $breakpoint992) {
         max-width: 100%;
@@ -602,10 +598,7 @@
     }   
 
     @media screen and (max-width: $breakpoint768) {
-        @include width100vw;
-        border-radius: 0;
-        flex: unset;
-        max-width: unset;
+       
     }
 
     // .showcase__header
@@ -613,6 +606,11 @@
         display: flex;
         flex-direction: column;
 
+        @media screen and (min-width: $breakpoint992) {
+            &.desktop-hidden {
+                display: none;
+            }
+        }
         @media screen and (max-width: $breakpoint992) {
             margin-top: 8px;
             gap: 10px;
@@ -692,13 +690,18 @@
 
     // .showcase__body
     &__body {
-        margin-top: 12px;
-        border-top: 1px solid $colorBorder;
+        border-radius: 16px;
+        padding: 24px;
+        background: $colorWhite;
 
         display: flex;
         flex-direction: column;
         gap: 20px;
 
+        @media screen and (max-width: $breakpoint992) {
+            @include width100vw;
+            border-radius: 0;
+        }
         @media screen and (max-width: $breakpoint768) {
             border-top: unset;
             margin-top: 0;
@@ -715,13 +718,15 @@
 
     // .showcase__list
     &__list {
-        li:last-of-type {
-            .showcase__item {
-                border-bottom: none;
-            }
-
-            .showcase__item-body {
-                border-bottom: unset;
+        li {
+            &:last-of-type {
+                .showcase__item {
+                    border-bottom: none;
+                }
+    
+                .showcase__item-body {
+                    border-bottom: unset;
+                }
             }
         }
 
@@ -766,7 +771,7 @@
         }
 
         &:hover {
-            background-color: #FFF;
+            background-color: $colorBlack004;
         }
 
     }

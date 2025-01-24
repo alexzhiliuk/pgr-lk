@@ -9,7 +9,8 @@
     gap: 20px;
 
     // .overview-card__img
-    &__img {
+    &__img,
+    &__map {
         width: 100%;
         aspect-ratio: 34 / 21;
         border-radius: 12px;
@@ -25,6 +26,7 @@
 
     // .overview-card__map
     &__map {
+        border: 1px solid $colorBorder;
     }
 
     // .overview-card__price
@@ -102,25 +104,9 @@
     }
 }
 
-.properties {
-
-    // .properties__item
-
-    &__item {
-    }
-
-    // .properties__title
-
-    &__title {
-    }
-
-    // .properties__line
-
-    &__line {
-    }
-
-    // .properties__value
-
-    &__value {
+// In Sidebar
+.sidebar {
+    .overview-card {
+        padding: 0;
     }
 }
