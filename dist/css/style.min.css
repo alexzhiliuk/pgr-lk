@@ -931,12 +931,28 @@ input.input:hover {
   display: flex;
   flex-direction: column;
 }
+.property_img {
+  align-items: center;
+  flex-direction: row;
+  gap: 16px;
+}
+.property_img img {
+  width: 64px;
+  height: 64px;
+  border-radius: 8px;
+  overflow: hidden;
+  object-fit: cover;
+  display: block;
+}
 .property__title {
   color: #6B6D80;
 }
 .property__value {
   margin-top: 2px;
   color: rgba(25, 28, 48, 0.9);
+}
+.property__value .btn {
+  max-width: fit-content;
 }
 
 .property-accordeons {
@@ -2219,6 +2235,14 @@ input.input:hover {
     display: none;
   }
 }
+.details-info:not(.open-nested) .details-info_nested {
+  display: none;
+}
+.details-info_nested {
+  background: #F2F3F5;
+  border-radius: 16px;
+  padding: 12px;
+}
 .details-info__title {
   color: #6B6D80;
 }
@@ -2456,6 +2480,9 @@ input.input:hover {
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
+}
+.notification__text:last-child {
+  margin-bottom: 0;
 }
 .notification__btn {
   margin-top: auto;

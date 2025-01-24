@@ -21,11 +21,20 @@ $(".property-accordeon__header").click(function(e) {
     $(this).parents(".property-accordeon").toggleClass("property-accordeon_open")
 })
 
+// Nested
 $("[data-table-nested-btn]").click(function(){
-    const tr = $(this).parents("tr").first()
-    tr.toggleClass("open-nested")
-
-    tr.hasClass("open-nested") ? tr.find("span").html("Свернуть") : tr.find("span").html("Развернуть")
-    tr.hasClass("open-nested") ? $(this).find("svg").css("rotate", "180deg") : $(this).find("svg").css("rotate", "")
+    if ($(this).parents(".details-info").length) {
+        const info = $(this).parents(".details-info").first()
+        info.toggleClass("open-nested")
+        
+        info.hasClass("open-nested") ? $(this).find("span").html("Свернуть") : $(this).find("span").html("Развернуть")
+        info.hasClass("open-nested") ? $(this).find("svg").css("rotate", "180deg") : $(this).find("svg").css("rotate", "")
+    } else {
+        const tr = $(this).parents("tr").first()
+        tr.toggleClass("open-nested")
+    
+        tr.hasClass("open-nested") ? tr.find("span").html("Свернуть") : tr.find("span").html("Развернуть")
+        tr.hasClass("open-nested") ? $(this).find("svg").css("rotate", "180deg") : $(this).find("svg").css("rotate", "")
+    }
     
 })

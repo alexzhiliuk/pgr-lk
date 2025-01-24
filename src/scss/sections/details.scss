@@ -403,6 +403,20 @@
     flex-direction: column;
     gap: 16px;
 
+    &:not(.open-nested) {
+        .details-info {
+            &_nested {
+                display: none;
+            }
+        }
+    }
+
+    &_nested {
+        background: $colorBg;
+        border-radius: 16px;
+        padding: 12px;
+    }
+
     // .details-info__item
     &__item {
     }

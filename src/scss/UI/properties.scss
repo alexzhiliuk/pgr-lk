@@ -35,12 +35,32 @@
 .property {
     display: flex;
     flex-direction: column;
+    
+    &_img {
+        align-items: center;
+        flex-direction: row;
+        gap: 16px;
+
+        img {
+            width: 64px;
+            height: 64px;
+            border-radius: 8px;
+            overflow: hidden;
+            object-fit: cover;
+            display: block;
+        }
+    }
+
     &__title {
         color: $colorText2;
     }
     &__value {
         margin-top: 2px;
         color: $colorText1;
+
+        .btn {
+            max-width: fit-content;
+        }
     }
 }
 

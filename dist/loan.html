@@ -11,23 +11,23 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@200;400;500;700&display=swap&_v=20250123180657" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap&_v=20250123180657" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@200;400;500;700&display=swap&_v=20250124130755" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap&_v=20250124130755" rel="stylesheet">
     
 
     <!-- CSS -->
-    <link rel="stylesheet" href="css/style.min.css?_v=20250123180657">
+    <link rel="stylesheet" href="css/style.min.css?_v=20250124130755">
 
     <link
       rel="stylesheet"
-      href="https://unpkg.com/swiper/swiper-bundle.min.css?_v=20250123180657"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css?_v=20250124130755"
     />
 
     <!-- JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js?_v=20250123180657"></script>
-    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js?_v=20250123180657"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js?_v=20250124130755"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js?_v=20250124130755"></script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js?_v=20250123180657"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js?_v=20250124130755"></script>
 
     <title>Портфель</title>
 </head>
@@ -428,31 +428,101 @@
         </div>
         <div class="details__info details-info">
             <div class="property">
-                <div class="property__title text-s">Закладная, №</div>
-                <div class="property__value text-m">050–310</div>
+                <div class="property__title text-s">Сумма займа</div>
+                <div class="property__value text-m">25 000 000,00 ₽</div>
             </div>
             <div class="property">
-                <div class="property__title text-s">Стоимость закладной</div>
-                <div class="property__value text-m">25 000 000,00 ₽</div>
+                <div class="property__title text-s">Дата займа</div>
+                <div class="property__value text-m">12.12.2022</div>
             </div>
             <div class="property">
-                <div class="property__title text-s">Выплачено</div>
-                <div class="property__value text-m">10 платежей, 500 000,00 ₽</div>
+                <div class="property__title text-s">Дата завершения</div>
+                <div class="property__value text-m">12.12.2027</div>
             </div>
             <div class="property">
                 <div class="property__title text-s">Доходность</div>
                 <div class="property__value text-m">24%</div>
             </div>
             <div class="property">
-                <div class="property__title text-s">Следующий платёж</div>
+                <div class="property__title text-s">Платёж, мес.</div>
                 <div class="property__value text-m">17 августа, 50 000,00 ₽</div>
             </div>
             <div class="property">
-                <div class="property__title text-s">Статус</div>
+                <div class="property__title text-s">Залог</div>
                 <div class="property__value text-m">
-                    <div class="progress" style="--progress-width: 50%; --progress-color: #FFC700;">
-                        <div class="progress__title">Просрочено 2&nbsp;дня</div>
-                        <div class="progress__bar"></div>
+                    <a href="javascript:void(0)" class="btn btn_s btn_outline" data-table-nested-btn>
+                        <span>Развернуть</span>
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M3.29289 5.29289C3.68342 4.90237 4.31658 4.90237 4.70711 5.29289L8 8.58579L11.2929 5.29289C11.6834 4.90237 12.3166 4.90237 12.7071 5.29289C13.0976 5.68342 13.0976 6.31658 12.7071 6.70711L8.70711 10.7071C8.31658 11.0976 7.68342 11.0976 7.29289 10.7071L3.29289 6.70711C2.90237 6.31658 2.90237 5.68342 3.29289 5.29289Z" fill="#191C30" fill-opacity="0.9"/>
+                        </svg>                                        
+                    </a>
+                </div>
+            </div>
+            <div class="details-info details-info_nested">
+                <div class="property property_img">
+                    <img src="img/mortgage/table-row-img.png" alt="">
+                    <div class="property">
+                        <div class="property__title text-s">Закладная, №</div>
+                        <div class="property__value text-m">050–310</div>
+                    </div>
+                </div>
+                <div class="property">
+                    <div class="property__title text-s">Стоимость закладной</div>
+                    <div class="property__value text-m">25 000 000,00 ₽</div>
+                </div>
+                <div class="property">
+                    <div class="property__title text-s">Выплачено</div>
+                    <div class="property__value text-m">10 платежей, 500 000,00 ₽</div>
+                </div>
+                <div class="property">
+                    <div class="property__title text-s">Доходность</div>
+                    <div class="property__value text-m">24%</div>
+                </div>
+                <div class="property">
+                    <div class="property__title text-s">Следующий платёж</div>
+                    <div class="property__value text-m">17 августа, 50 000,00 ₽</div>
+                </div>
+                <div class="property">
+                    <div class="property__title text-s">Статус</div>
+                    <div class="property__value text-m">
+                        <div class="progress" style="--progress-width: 50%; --progress-color: #FFC700;">
+                            <div class="progress__title">Просрочено 2&nbsp;дня</div>
+                            <div class="progress__bar"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="details-info details-info_nested">
+                <div class="property property_img">
+                    <img src="img/mortgage/table-row-img.png" alt="">
+                    <div class="property">
+                        <div class="property__title text-s">Закладная, №</div>
+                        <div class="property__value text-m">050–310</div>
+                    </div>
+                </div>
+                <div class="property">
+                    <div class="property__title text-s">Стоимость закладной</div>
+                    <div class="property__value text-m">25 000 000,00 ₽</div>
+                </div>
+                <div class="property">
+                    <div class="property__title text-s">Выплачено</div>
+                    <div class="property__value text-m">10 платежей, 500 000,00 ₽</div>
+                </div>
+                <div class="property">
+                    <div class="property__title text-s">Доходность</div>
+                    <div class="property__value text-m">24%</div>
+                </div>
+                <div class="property">
+                    <div class="property__title text-s">Следующий платёж</div>
+                    <div class="property__value text-m">17 августа, 50 000,00 ₽</div>
+                </div>
+                <div class="property">
+                    <div class="property__title text-s">Статус</div>
+                    <div class="property__value text-m">
+                        <div class="progress" style="--progress-width: 50%; --progress-color: #FFC700;">
+                            <div class="progress__title">Просрочено 2&nbsp;дня</div>
+                            <div class="progress__bar"></div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -506,6 +576,6 @@
 </div>
         </main>
 
-        <script src="js/app.min.js?_v=20250123180657"></script>
+        <script src="js/app.min.js?_v=20250124130755"></script>
     </body>
 </html>

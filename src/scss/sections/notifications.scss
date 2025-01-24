@@ -107,6 +107,10 @@
         display: -webkit-box;
         -webkit-line-clamp: 3;
         -webkit-box-orient: vertical;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
     }
 
     // .notification__btn
