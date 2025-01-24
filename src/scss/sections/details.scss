@@ -235,6 +235,12 @@
             overflow: hidden;
             object-fit: cover;
         }
+
+        svg {
+            width: 16px;
+            height: auto;
+            display: block;
+        }
     }
 
     &__btns {

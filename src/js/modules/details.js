@@ -33,7 +33,7 @@ $("[data-table-nested-btn]").click(function(){
         const tr = $(this).parents("tr").first()
         tr.toggleClass("open-nested")
     
-        tr.hasClass("open-nested") ? tr.find("span").html("Свернуть") : tr.find("span").html("Развернуть")
+        tr.hasClass("open-nested") ? $(this).find("span").html("Свернуть") : $(this).find("span").html("Развернуть")
         tr.hasClass("open-nested") ? $(this).find("svg").css("rotate", "180deg") : $(this).find("svg").css("rotate", "")
     }
     

@@ -867,10 +867,6 @@ input.input:hover {
 .tooltip-item {
   position: relative;
 }
-.tooltip-item:hover .tooltip {
-  opacity: 1;
-}
-
 .tooltip {
   opacity: 0;
   pointer-events: none;
@@ -2161,6 +2157,11 @@ input.input:hover {
   border-radius: 8px;
   overflow: hidden;
   object-fit: cover;
+}
+.details-table__mortgage svg {
+  width: 16px;
+  height: auto;
+  display: block;
 }
 .details-table__btns {
   display: flex;
