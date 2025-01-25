@@ -804,6 +804,7 @@ input.input:hover {
   line-height: inherit;
   font-size: inherit;
   font-weight: inherit;
+  cursor: pointer;
 }
 .input[data-placeholder]::before {
   content: attr(data-placeholder);
@@ -849,8 +850,7 @@ input.input:hover {
   height: 24px;
   background: url(../img/select/arrow.svg) center center/contain no-repeat;
 }
-.input_select select {
-  cursor: pointer;
+.input_select[data-placeholder] select {
   padding-top: 26px;
   padding-bottom: 6px;
 }
@@ -2630,9 +2630,66 @@ input.input:hover {
 .sidebar .notifications .notification + .notification {
   margin-top: 0;
 }
-.sidebar .notifications .notification__header {
+.sidebar .notifications .notification_with_icon {
+  flex-direction: row;
+  gap: 12px;
+  align-items: flex-start;
+}
+.sidebar .notifications .notification__content {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.sidebar .notifications .notification__icon {
+  width: 48px;
+  height: 48px;
+  flex: 0 0 48px;
+  border-radius: 16px;
   display: flex;
   align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.04);
+}
+.sidebar .notifications .notification__icon svg {
+  width: 28px;
+  height: 28px;
+}
+.sidebar .notifications .notification__icon svg *[fill] {
+  fill: #79818C;
+}
+.sidebar .notifications .notification__icon svg *[stroke] {
+  stroke: #79818C;
+}
+.sidebar .notifications .notification__icon_error {
+  background: rgba(244, 87, 37, 0.24);
+}
+.sidebar .notifications .notification__icon_error svg *[fill] {
+  fill: #F45725;
+}
+.sidebar .notifications .notification__icon_error svg *[stroke] {
+  stroke: #F45725;
+}
+.sidebar .notifications .notification__icon_warning {
+  background: rgba(255, 199, 0, 0.24);
+}
+.sidebar .notifications .notification__icon_warning svg *[fill] {
+  fill: #FFC700;
+}
+.sidebar .notifications .notification__icon_warning svg *[stroke] {
+  stroke: #FFC700;
+}
+.sidebar .notifications .notification__icon_success {
+  background: rgba(58, 169, 129, 0.24);
+}
+.sidebar .notifications .notification__icon_success svg *[fill] {
+  fill: #3AA981;
+}
+.sidebar .notifications .notification__icon_success svg *[stroke] {
+  stroke: #3AA981;
+}
+.sidebar .notifications .notification__header {
+  display: flex;
+  align-items: flex-start;
   gap: 8px;
 }
 .sidebar .notifications .notification__title {
@@ -2641,6 +2698,8 @@ input.input:hover {
 }
 .sidebar .notifications .notification__date {
   color: #6B6D80;
+  white-space: nowrap;
+  text-align: right;
 }
 .sidebar .notifications .notification__tag {
   padding: 2px 6px;

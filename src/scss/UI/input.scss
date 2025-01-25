@@ -17,7 +17,6 @@ input.input {
 }
 
 .input {
-
     &__caption {
         margin-top: 4px;
     }
@@ -59,6 +58,8 @@ input.input {
         line-height: inherit;
         font-size: inherit;
         font-weight: inherit;
+        cursor: pointer;
+
     }
 
     position: relative;
@@ -116,10 +117,11 @@ input.input {
             width: 24px; height: 24px;
             background: url(../img/select/arrow.svg) center center / contain no-repeat;
         }
-        select {
-            cursor: pointer;
-            padding-top: 26px;
-            padding-bottom: 6px;
+        &[data-placeholder] {
+            select {
+                padding-top: 26px;
+                padding-bottom: 6px;
+            }
         }
     }
 

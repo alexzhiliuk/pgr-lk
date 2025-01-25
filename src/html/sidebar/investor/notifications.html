@@ -1,0 +1,127 @@
+<div class="sidebar-wrapper" data-sidebar="notifications">
+    <aside class="sidebar">
+        <div class="sidebar__header">
+            <div class="sidebar__title text-l text-l_bold">Уведомления</div>
+            <button class="sidebar__close">
+                <img src="@img/sidebar/close.svg" alt="">
+            </button>
+        </div>
+        <div class="sidebar__body">
+            <div class="sidebar__form">
+                <label class="input input_select text-m">
+                    <select data-dynamic-select="notifications">
+                        <option value="all" selected>Все</option>
+                        <option value="mortgage">Закладные</option>
+                        <option value="loan">Заём</option>
+                    </select>
+                </label>
+                <label class="input input_select text-m" data-placeholder="Выберите закладную" style="display: none;">
+                    <select data-parent-select="notifications" data-select="mortgage">
+                        <option value=""></option>
+                        <option value="">050–310</option>
+                        <option value="">050–311</option>
+                        <option value="">050–312</option>
+                    </select>
+                </label>
+                <label class="input input_select text-m" data-placeholder="Выберите заём" style="display: none;">
+                    <select data-parent-select="notifications" data-select="loan">
+                        <option value=""></option>
+                        <option value="">№ 100–108</option>
+                        <option value="">№ 100–109</option>
+                        <option value="">№ 100–110</option>
+                    </select>
+                </label>
+                <div class="notifications">
+                    <div class="notification notification_with_icon">
+                        <div class="notification__icon notification__icon_error">
+                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M9.91699 2.91669C9.27266 2.91669 8.75033 3.43902 8.75033 4.08335V12.25H7.58366C6.93933 12.25 6.41699 12.7724 6.41699 13.4167C6.41699 14.061 6.93933 14.5834 7.58366 14.5834H8.75033V16.9167H7.58366C6.93933 16.9167 6.41699 17.439 6.41699 18.0834C6.41699 18.7277 6.93933 19.25 7.58366 19.25H8.75033V23.9167C8.75033 24.561 9.27266 25.0834 9.91699 25.0834C10.5613 25.0834 11.0837 24.561 11.0837 23.9167V19.25H15.7503C16.3947 19.25 16.917 18.7277 16.917 18.0834C16.917 17.439 16.3947 16.9167 15.7503 16.9167H11.0837V14.5834H16.917C20.1387 14.5834 22.7503 11.9717 22.7503 8.75002C22.7503 5.52836 20.1387 2.91669 16.917 2.91669H9.91699ZM11.0837 12.25H16.917C18.85 12.25 20.417 10.683 20.417 8.75002C20.417 6.81702 18.85 5.25002 16.917 5.25002H11.0837V12.25Z" fill="#DD4C1E"/>
+                            </svg>                                
+                        </div>
+                        <div class="notification__content">
+                            <div class="notification__header">
+                                <div class="notification__title text-m text-m_bold">Платёж просрочен</div>
+                                <div class="notification__date text-s">15:30</div>
+                                <div class="notification__tag text-s">Нов.</div>
+                            </div>
+                            <div class="notification__body">
+                                <p class="notification__text text-s">
+                                    Закладная № 100–108, просрочен платёж 24 000 ₽
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="notification notification_with_icon">
+                        <div class="notification__icon notification__icon_success">
+                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M9.91699 2.91669C9.27266 2.91669 8.75033 3.43902 8.75033 4.08335V12.25H7.58366C6.93933 12.25 6.41699 12.7724 6.41699 13.4167C6.41699 14.061 6.93933 14.5834 7.58366 14.5834H8.75033V16.9167H7.58366C6.93933 16.9167 6.41699 17.439 6.41699 18.0834C6.41699 18.7277 6.93933 19.25 7.58366 19.25H8.75033V23.9167C8.75033 24.561 9.27266 25.0834 9.91699 25.0834C10.5613 25.0834 11.0837 24.561 11.0837 23.9167V19.25H15.7503C16.3947 19.25 16.917 18.7277 16.917 18.0834C16.917 17.439 16.3947 16.9167 15.7503 16.9167H11.0837V14.5834H16.917C20.1387 14.5834 22.7503 11.9717 22.7503 8.75002C22.7503 5.52836 20.1387 2.91669 16.917 2.91669H9.91699ZM11.0837 12.25H16.917C18.85 12.25 20.417 10.683 20.417 8.75002C20.417 6.81702 18.85 5.25002 16.917 5.25002H11.0837V12.25Z" fill="#DD4C1E"/>
+                            </svg>                                
+                        </div>
+                        <div class="notification__content">
+                            <div class="notification__header">
+                                <div class="notification__title text-m text-m_bold">Платёж просрочен</div>
+                                <div class="notification__date text-s">15:30</div>
+                                <div class="notification__tag text-s">Нов.</div>
+                            </div>
+                            <div class="notification__body">
+                                <p class="notification__text text-s">
+                                    Закладная № 100–108, просрочен платёж 24 000 ₽
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="notification notification_with_icon">
+                        <div class="notification__icon notification__icon_warning">
+                            <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M13.0007 17.6666V13M13.0007 8.33331H13.0123M24.6673 13C24.6673 19.4433 19.444 24.6666 13.0007 24.6666C6.55733 24.6666 1.33398 19.4433 1.33398 13C1.33398 6.55666 6.55733 1.33331 13.0007 1.33331C19.444 1.33331 24.6673 6.55666 24.6673 13Z" stroke="#FF7043" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>                                                               
+                        </div>
+                        <div class="notification__content">
+                            <div class="notification__header">
+                                <div class="notification__title text-m text-m_bold">Обновили страховку</div>
+                                <div class="notification__date text-s">Вчера 15:30</div>
+                            </div>
+                            <div class="notification__body">
+                                <p class="notification__text text-s">
+                                    Закладная № 100–108, досрочное погашение + 24 000 ₽
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="notification notification_with_icon">
+                        <div class="notification__icon notification__icon_warning">
+                            <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M13.0007 17.6666V13M13.0007 8.33331H13.0123M24.6673 13C24.6673 19.4433 19.444 24.6666 13.0007 24.6666C6.55733 24.6666 1.33398 19.4433 1.33398 13C1.33398 6.55666 6.55733 1.33331 13.0007 1.33331C19.444 1.33331 24.6673 6.55666 24.6673 13Z" stroke="#FF7043" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>                                                               
+                        </div>
+                        <div class="notification__content">
+                            <div class="notification__header">
+                                <div class="notification__title text-m text-m_bold">Скоро закончится срок страховки</div>
+                                <div class="notification__date text-s">12.09.2024 15:30</div>
+                            </div>
+                            <div class="notification__body">
+                                <p class="notification__text text-s">
+                                    Необходимо обновить страховку по кредиту на 439 550 ₽, иначе процентная ставка увеличится с 24% до 42%, а ежемесячный платёж возрастёт с 20 746,54 ₽ до 32 500 ₽.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </aside>
+</div>
+
+<script>
+    $('[data-dynamic-select]').change(function() {
+        var selectedValue = $(this).val();
+        var selectId = $(this).attr("data-dynamic-select");
+
+        console.log(selectedValue, selectId)
+        
+        $('[data-parent-select=' + selectId + ']').parent().hide();
+        $('[data-select=' + selectedValue + ']').parent().show();
+        
+    });
+</script>
