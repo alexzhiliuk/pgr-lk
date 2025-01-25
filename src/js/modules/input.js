@@ -65,3 +65,14 @@ $(".input_secret .input__icon").click(function() {
         return
     }
 })
+
+$('[data-dynamic-select]').change(function() {
+    var selectedValue = $(this).val();
+    var selectId = $(this).attr("data-dynamic-select");
+
+    console.log(selectedValue, selectId)
+    
+    $('[data-parent-select=' + selectId + ']').parent().hide();
+    $('[data-select=' + selectedValue + ']').parent().show();
+    
+});

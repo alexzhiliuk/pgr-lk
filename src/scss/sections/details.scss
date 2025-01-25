@@ -74,7 +74,7 @@
     }
 
     // .details__filters
-    &__filters, &__btns {
+    &__filters, &__btns, &__selects {
         display: flex;
         flex-wrap: wrap;
         align-items: center;
@@ -100,6 +100,15 @@
                 -webkit-user-drag: none;
                 flex-shrink: 0;
             }
+        }
+    }
+
+    &__selects {
+        @media screen and (max-width: $breakpoint576) {
+
+            flex-direction: column;
+            align-items: unset;
+            width: 100%;
         }
     }
 

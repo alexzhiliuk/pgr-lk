@@ -60,6 +60,8 @@ input.input {
         font-weight: inherit;
         cursor: pointer;
 
+        padding-right: 48px;
+
     }
 
     position: relative;
@@ -112,6 +114,7 @@ input.input {
         &::after {
             content: '';
             position: absolute;
+            pointer-events: none;
             top: 50%; right: 12px;
             translate: 0 -50%;
             width: 24px; height: 24px;
