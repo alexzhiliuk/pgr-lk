@@ -17,6 +17,7 @@ import * as rangeInput from './modules/rangeInput.js';
 import * as showcase from './modules/showcase.js';
 import * as select from './modules/select.js';
 import * as promo from './modules/promo.js';
+import * as mortgages from './modules/mortgages.js';
 
 // flsFunctions.isWebp()
 
