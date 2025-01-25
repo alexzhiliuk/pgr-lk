@@ -612,8 +612,7 @@
             }
         }
         @media screen and (max-width: $breakpoint992) {
-            margin-top: 8px;
-            gap: 10px;
+            gap: 12px;
         }
     }
 
@@ -701,6 +700,7 @@
         @media screen and (max-width: $breakpoint992) {
             @include width100vw;
             border-radius: 0;
+            padding: 16px;
         }
         @media screen and (max-width: $breakpoint768) {
             border-top: unset;

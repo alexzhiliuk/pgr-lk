@@ -423,10 +423,6 @@
         padding: 12px;
     }
 
-    // .details-info__item
-    &__item {
-    }
-
     // .details-info__title
     &__title {
         color: $colorText2;
@@ -435,6 +431,54 @@
     // .details-info__value
     &__value {
         color: #0D1017;
+    }
+
+    &__columns {
+        display: flex;
+        gap: 12px;
+        align-items: flex-start;
+    }
+
+    &__img {
+        width: 100px;
+        flex: 0 0 100px;
+        
+        img {
+            width: 100%;
+            aspect-ratio: 1;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+    }
+
+    &__properties {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;    
+    }
+}
+
+.details-info-list {
+ 
+    @media screen and (min-width: $breakpoint768) {
+        display: none;
+    }   
+
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    & > * {
+        @include width100vw;
+
+        padding: 16px;
+        padding-top: 0;
+        border-bottom: 1px solid $colorBorder;
+        &:last-child {
+            padding-bottom: 0;
+            border-bottom: none;
+        }
     }
 }
 

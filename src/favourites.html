@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('html/head.html',{
+        "title": "Портфель"
+    })
+    <body>
+        <!-- Loader -->
+        @@include('html/loader.html')
+        
+        <!-- Sidebars -->
+        @@include('html/sidebar/notifications.html')
+        @@include('html/sidebar/withdraw.html')
+        @@include('html/sidebar/profile.html')
+
+        <!-- Header -->
+        @@include('html/investor/header.html')
+
+        <main>            
+            @@include('html/favourites/mortgages.html')
+            @@include('html/promo.html')
+        </main>
+
+        <script src="js/app.min.js"></script>
+    </body>
+</html>

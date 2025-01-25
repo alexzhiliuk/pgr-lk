@@ -119,6 +119,50 @@
         </div>
     </aside>
 </div>
+        <div class="sidebar-wrapper" data-sidebar="withdraw">
+    <aside class="sidebar">
+        <div class="sidebar__header">
+            <div class="sidebar__title text-l text-l_bold">Вывод денежных средств</div>
+            <button class="sidebar__close">
+                <img src="img/sidebar/close.svg" alt="">
+            </button>
+        </div>
+        <div class="sidebar__body">
+            <form action="" class="sidebar__form form">
+                <div class="form__step" data-step="1">
+                    <div class="input text-m" data-placeholder="Куда">
+                        <input type="text" class="login-form__input text-m" value="Карта ···· 5246" disabled placeholder="Куда"> 
+                    </div>
+                    <div class="input text-m" data-placeholder="Введите сумму">
+                        <input type="text" class="login-form__input text-m" placeholder="Сумма досрочного платежа" data-ruble-input data-disable-check="earlyPeymentToStep2"> 
+                    </div>
+                    <div class="notification">
+                        <div class="notification__icon">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M2.34315 2.34315C3.84344 0.842855 5.87827 0 8 0C10.1217 0 12.1566 0.842855 13.6569 2.34315C15.1571 3.84344 16 5.87827 16 8C16 10.1217 15.1571 12.1566 13.6569 13.6569C12.1566 15.1571 10.1217 16 8 16C5.87827 16 3.84344 15.1571 2.34315 13.6569C0.842855 12.1566 0 10.1217 0 8C0 5.87827 0.842855 3.84344 2.34315 2.34315ZM8 14C9.5913 14 11.1174 13.3679 12.2426 12.2426C13.3679 11.1174 14 9.5913 14 8C14 6.4087 13.3679 4.88258 12.2426 3.75736C11.1174 2.63214 9.5913 2 8 2C6.4087 2 4.88258 2.63214 3.75736 3.75736C2.63214 4.88258 2 6.4087 2 8C2 9.5913 2.63214 11.1174 3.75736 12.2426C4.88258 13.3679 6.4087 14 8 14ZM7 5.333C7 4.78072 7.44772 4.333 8 4.333H8.007C8.55928 4.333 9.007 4.78072 9.007 5.333C9.007 5.88528 8.55928 6.333 8.007 6.333H8C7.44772 6.333 7 5.88528 7 5.333ZM8 7C8.55228 7 9 7.44772 9 8V10.667C9 11.2193 8.55228 11.667 8 11.667C7.44772 11.667 7 11.2193 7 10.667V8C7 7.44772 7.44772 7 8 7Z" fill="#79818C"></path>
+                            </svg>                                    
+                        </div>
+                        <div class="notification__body">
+                            <p class="notification__text text-s">При выводе наличными откроется чат с менеджером</p>
+                        </div>
+                    </div>
+                    <div class="sidebar__btns">
+                        <button data-next-step="2" type="button" class="form__btn btn btn_secondary text-m text-m_bold">Получить наличными</button>
+                        <button data-next-step="2" type="button" class="form__btn btn text-m text-m_bold">Вывести деньги</button>
+                    </div>
+                </div>
+                <div class="form__step form__success" data-step="2" style="display: none;">
+                    <img src="img/sidebar/form/success.svg" alt="">
+                    <div class="form__success-text">
+                        <p class="text-m text-m_bold">Денежные средства успешно выведены</p>
+                    </div>
+                    <button type="button" class="btn text-m text-m_bold js-sidebar-close">Готово</button>
+                </div>
+            </form>
+        </div>
+    </aside>
+</div>
+    
         <div class="sidebar-wrapper" data-sidebar="profile">
     <aside class="sidebar">
         <div class="sidebar__header">
@@ -225,256 +269,144 @@
 
         <main>            
             <div class="container">
-    <div class="back">
-        <a href="javascript:history.back()" class="btn btn_pr_18 btn_outline text-m text-m_bold">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M15.7071 5.29289C16.0976 5.68342 16.0976 6.31658 15.7071 6.70711L10.4142 12L15.7071 17.2929C16.0976 17.6834 16.0976 18.3166 15.7071 18.7071C15.3166 19.0976 14.6834 19.0976 14.2929 18.7071L8.29289 12.7071C7.90237 12.3166 7.90237 11.6834 8.29289 11.2929L14.2929 5.29289C14.6834 4.90237 15.3166 4.90237 15.7071 5.29289Z" fill="#191C30" fill-opacity="0.9"/>
-            </svg>                
-            Назад
-        </a>
-    </div>
-</div>
-            <div class="container">
-    <div class="table-section">
-        <table class="details-table single-table text-s">
-            <thead>
-                <tr>
-                    <th>Закладная</th>
-                    <th>Стоимость закладной</th>
-                    <th>Выплачено</th>
-                    <th>Доходность</th>
-                    <th>Следующий платёж</th>
-                    <th>Статус</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td class="details-table__mortgage">
-                        
+    <div class="details">
+        <div class="details__tabs text-s color-text-2 draggable">
+            <a href="favourites.html" class="details__tab details__tab_active">Закладные</a>
+            <a href="favourites-loan.html" class="details__tab">Заём</a>
+        </div>
+
+        <div class="details__table details-table-wrapper">
+            <table class="details-table text-s">
+                <thead>
+                    <tr>
+                        <th>Вид объекта</th>
+                        <th>Стоимость закладной</th>
+                        <th>Доходность</th>
+                        <th>Регион</th>
+                        <th>Стоимость объекта</th>
+                        <th>Действия</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <a href="mortgage.html" class="details-table__mortgage">
+                                <img src="img/mortgage/table-row-img.png" alt="">
+                                <div class="property">
+                                    <div class="property__value">Квартира</div>
+                                </div>
+                            </a>
+                        </td>
+                        <td>
+                            <a href="mortgage.html">124 650 000,00 ₽</a>
+                        </td>
+                        <td>
+                            <a href="mortgage.html">
+                                24%
+                            </a>
+                        </td>
+                        <td><a href="mortgage.html">Москва</a></td>
+                        <td>
+                            <a href="mortgage.html">
+                                136 650 000,00 ₽
+                            </a>
+                        </td>
+                        <td>
+                            <div class="details-table__btns">
+                                <a href="javascript:void(0)" class="btn btn_s text-s text-s_bold" data-sidebar-open="loan">
+                                    <span>Отправить заявку</span>                                     
+                                </a>
+                                <button class="showcase__fav-btn showcase__fav-btn_liked">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M7.99413 3.42388C6.66123 1.8656 4.43853 1.44643 2.76849 2.87334C1.09846 4.30026 0.863343 6.68598 2.17483 8.3736C3.26524 9.77674 6.56521 12.7361 7.64676 13.6939C7.76777 13.801 7.82827 13.8546 7.89884 13.8757C7.96043 13.8941 8.02783 13.8941 8.08942 13.8757C8.16 13.8546 8.2205 13.801 8.3415 13.6939C9.42305 12.7361 12.723 9.77674 13.8134 8.3736C15.1249 6.68598 14.9185 4.28525 13.2198 2.87334C11.521 1.46144 9.32703 1.8656 7.99413 3.42388Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg>                                        
+                                </button>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="details-info-list">
+            <div class="details__info details-info">
+                <div class="details-info__columns">
+                    <div class="details-info__img">
                         <img src="img/mortgage/table-row-img.png" alt="">
+                    </div>
+                    <div class="details-info__properties">
                         <div class="property">
-                            <div class="property__title">Номер</div>
-                            <div class="property__value">050–310</div>
+                            <div class="property__title text-s">Сумма займа</div>
+                            <div class="property__value text-m">25 000 000,00 ₽</div>
                         </div>
-                        
-                    </td>
-                    <td>
-                        25 000 000,00 ₽
-                    </td>
-                    <td>
                         <div class="property">
-                            <div class="property__title">10 платежей</div>
-                            <div class="property__value">500 000,00 ₽</div>
-                        </div>                
-                    </td>
-                    <td>24%</td>
-                    <td>
+                            <div class="property__title text-s">Дата займа</div>
+                            <div class="property__value text-m">12.12.2022</div>
+                        </div>
                         <div class="property">
-                            <div class="property__title">17 августа</div>
-                            <div class="property__value">50 000,00 ₽</div>
+                            <div class="property__title text-s">Дата завершения</div>
+                            <div class="property__value text-m">12.12.2027</div>
                         </div>
-                    </td>
-                    <td>
-                        <div class="progress" style="--progress-width: 50%; --progress-color: #FFC700;">
-                            <div class="progress__title">Просрочено 2 дня</div>
-                            <div class="progress__bar"></div>
+                        <div class="property">
+                            <div class="property__title text-s">Доходность</div>
+                            <div class="property__value text-m">24%</div>
                         </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-        <div class="details__info details-info">
-            <div class="property">
-                <div class="property__title text-s">Закладная, №</div>
-                <div class="property__value text-m">050–310</div>
-            </div>
-            <div class="property">
-                <div class="property__title text-s">Стоимость закладной</div>
-                <div class="property__value text-m">25 000 000,00 ₽</div>
-            </div>
-            <div class="property">
-                <div class="property__title text-s">Выплачено</div>
-                <div class="property__value text-m">10 платежей, 500 000,00 ₽</div>
-            </div>
-            <div class="property">
-                <div class="property__title text-s">Доходность</div>
-                <div class="property__value text-m">24%</div>
-            </div>
-            <div class="property">
-                <div class="property__title text-s">Следующий платёж</div>
-                <div class="property__value text-m">17 августа, 50 000,00 ₽</div>
-            </div>
-            <div class="property">
-                <div class="property__title text-s">Статус</div>
-                <div class="property__value text-m">
-                    <div class="progress" style="--progress-width: 50%; --progress-color: #FFC700;">
-                        <div class="progress__title">Просрочено 2&nbsp;дня</div>
-                        <div class="progress__bar"></div>
+                        <div class="property">
+                            <div class="property__title text-s">Платёж, мес.</div>
+                            <div class="property__value text-m">17 августа, 50 000,00 ₽</div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
-</div>
-            <div class="container">
-    <div class="two-columns">
-        <div class="details">
-            <div class="details__tabs text-s color-text-2 draggable">
-                <a href="mortgage.html" class="details__tab">Информация</a>
-                <a href="mortgage-payments.html" class="details__tab details__tab_active">График платежей</a>
-                <a href="mortgage-docs.html" class="details__tab">Документы</a>
-            </div>
-            <div class="details__nav">
-                <div class="details__filters draggable">
-                    <a href="#" class="text-s filter-btn filter-btn_active">Все</a>
-                    <a href="#" class="text-s filter-btn" data-count="24">Предстоящие</a>
-                    <a href="#" class="text-s filter-btn" data-count="2">Просроченные</a>
-                </div>
-                <div class="details__btns">
-                    <a href="#" class="btn btn_secondary btn_s text-s text-s_bold">
+                <div class="showcase__item-btns">
+                    <button class="showcase__fav-btn showcase__fav-btn_liked">
                         <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M8.66634 2.00016C8.66634 1.63197 8.36786 1.3335 7.99967 1.3335C7.63148 1.3335 7.33301 1.63197 7.33301 2.00016V8.39069L5.13775 6.19543C4.8774 5.93508 4.45529 5.93508 4.19494 6.19543C3.93459 6.45577 3.93459 6.87788 4.19494 7.13823L7.52827 10.4716C7.78862 10.7319 8.21073 10.7319 8.47108 10.4716L11.8044 7.13823C12.0648 6.87788 12.0648 6.45577 11.8044 6.19543C11.5441 5.93508 11.122 5.93508 10.8616 6.19543L8.66634 8.39069V2.00016Z" fill="black"/>
-                            <path d="M1.99968 9.3335C2.36787 9.3335 2.66634 9.63197 2.66634 10.0002V10.8002C2.66634 11.3712 2.66686 11.7594 2.69138 12.0595C2.71526 12.3517 2.75854 12.5012 2.81167 12.6055C2.9395 12.8564 3.14347 13.0603 3.39435 13.1882C3.49862 13.2413 3.64809 13.2846 3.94037 13.3085C4.24043 13.333 4.62862 13.3335 5.19968 13.3335H10.7997C11.3707 13.3335 11.7589 13.333 12.059 13.3085C12.3513 13.2846 12.5007 13.2413 12.605 13.1882C12.8559 13.0603 13.0599 12.8564 13.1877 12.6055C13.2408 12.5012 13.2841 12.3517 13.308 12.0595C13.3325 11.7594 13.333 11.3712 13.333 10.8002V10.0002C13.333 9.63197 13.6315 9.3335 13.9997 9.3335C14.3679 9.3335 14.6663 9.63197 14.6663 10.0002V10.8277C14.6663 11.3644 14.6664 11.8073 14.6369 12.168C14.6063 12.5428 14.5406 12.8872 14.3757 13.2108C14.12 13.7126 13.7121 14.1205 13.2103 14.3762C12.8868 14.541 12.5423 14.6068 12.1676 14.6374C11.8068 14.6668 11.3639 14.6668 10.8272 14.6668H5.17214C4.63549 14.6668 4.19259 14.6668 3.83179 14.6374C3.45706 14.6068 3.11259 14.541 2.78903 14.3762C2.28727 14.1205 1.87932 13.7126 1.62366 13.2108C1.4588 12.8872 1.39309 12.5428 1.36247 12.168C1.33299 11.8073 1.333 11.3643 1.33301 10.8277V10.0002C1.33301 9.63197 1.63149 9.3335 1.99968 9.3335Z" fill="black"/>
-                        </svg>
-                        Скачать        
-                    </a>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M7.99413 3.42388C6.66123 1.8656 4.43853 1.44643 2.76849 2.87334C1.09846 4.30026 0.863343 6.68598 2.17483 8.3736C3.26524 9.77674 6.56521 12.7361 7.64676 13.6939C7.76777 13.801 7.82827 13.8546 7.89884 13.8757C7.96043 13.8941 8.02783 13.8941 8.08942 13.8757C8.16 13.8546 8.2205 13.801 8.3415 13.6939C9.42305 12.7361 12.723 9.77674 13.8134 8.3736C15.1249 6.68598 14.9185 4.28525 13.2198 2.87334C11.521 1.46144 9.32703 1.8656 7.99413 3.42388Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>                                        
+                    </button>
+                    <button class="showcase__btn btn btn_s text-s text-s_bold" data-sidebar-open="loan">Отправить заявку</button>
                 </div>
             </div>
-            <div class="details__table details-table-wrapper draggable">
-    <table class="details-table text-s">
-        <thead>
-            <tr>
-                <th>№</th>
-                <th>Cумма</th>
-                <th>Дата платежа</th>
-                <th>Основной долг</th>
-                <th>Проценты</th>
-                <th>Остаток задолжности</th>
-                <th>Статус</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr class="details-table__green-row">
-                <td>1</td>
-                <td>20 746,00 ₽</td>
-                <td>10 сентября 2024</td>
-                <td>15 209,00 ₽</td>
-                <td>5 500,00 ₽</td>
-                <td>50 000,00 ₽</td>
-                <td class="details-table__colored-text">Оплачен</td>
-            </tr>
-            <tr class="details-table__red-row">
-                <td>2</td>
-                <td>20 746,00 ₽</td>
-                <td>10 сентября 2024</td>
-                <td>15 209,00 ₽</td>
-                <td>5 500,00 ₽</td>
-                <td>50 000,00 ₽</td>
-                <td class="details-table__colored-text">Просрочен</td>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td>20 746,00 ₽</td>
-                <td>10 сентября 2024</td>
-                <td>15 209,00 ₽</td>
-                <td>5 500,00 ₽</td>
-                <td>50 000,00 ₽</td>
-                <td>Предстоящий платёж</td>
-            </tr>
-        </tbody>
-    </table>
-</div>
+            <div class="details__info details-info">
+                <div class="details-info__columns">
+                    <div class="details-info__img">
+                        <img src="img/mortgage/table-row-img.png" alt="">
+                    </div>
+                    <div class="details-info__properties">
+                        <div class="property">
+                            <div class="property__title text-s">Сумма займа</div>
+                            <div class="property__value text-m">25 000 000,00 ₽</div>
+                        </div>
+                        <div class="property">
+                            <div class="property__title text-s">Дата займа</div>
+                            <div class="property__value text-m">12.12.2022</div>
+                        </div>
+                        <div class="property">
+                            <div class="property__title text-s">Дата завершения</div>
+                            <div class="property__value text-m">12.12.2027</div>
+                        </div>
+                        <div class="property">
+                            <div class="property__title text-s">Доходность</div>
+                            <div class="property__value text-m">24%</div>
+                        </div>
+                        <div class="property">
+                            <div class="property__title text-s">Платёж, мес.</div>
+                            <div class="property__value text-m">17 августа, 50 000,00 ₽</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="showcase__item-btns">
+                    <button class="showcase__fav-btn showcase__fav-btn_liked">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M7.99413 3.42388C6.66123 1.8656 4.43853 1.44643 2.76849 2.87334C1.09846 4.30026 0.863343 6.68598 2.17483 8.3736C3.26524 9.77674 6.56521 12.7361 7.64676 13.6939C7.76777 13.801 7.82827 13.8546 7.89884 13.8757C7.96043 13.8941 8.02783 13.8941 8.08942 13.8757C8.16 13.8546 8.2205 13.801 8.3415 13.6939C9.42305 12.7361 12.723 9.77674 13.8134 8.3736C15.1249 6.68598 14.9185 4.28525 13.2198 2.87334C11.521 1.46144 9.32703 1.8656 7.99413 3.42388Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>                                        
+                    </button>
+                    <button class="showcase__btn btn btn_s text-s text-s_bold" data-sidebar-open="loan">Отправить заявку</button>
+                </div>
+            </div>
+        </div>
 
-<div class="details__property-accordeons property-accordeons">
-    <div class="property-accordeon property-accordeon_open property-accordeon_overdue">
-        <div class="property-accordeon__header">
-            <div class="property-accordeon__num">1</div>
-            <div class="property-accordeon__desc">
-                <p class="text-s property-accordeon__date">Платеж 10 сентября 2024</p>
-                <p class="text-m property-accordeon__sum">Сумма 20 746, 54 ₽</p>
-            </div>
-        </div>
-        <div class="property-accordeon__body">
-            <div class="property-accordeon__properties">
-                <div class="property-accordeon__property">
-                    <p class="property-accordeon__property-title text-s">Основной долг </p>
-                    <p class="property-accordeon__property-value text-m">15 209 ₽</p>
-                </div>
-                <div class="property-accordeon__property">
-                    <p class="property-accordeon__property-title text-s">Проценты</p>
-                    <p class="property-accordeon__property-value text-m">5 500 ₽</p>
-                </div>
-                <div class="property-accordeon__property">
-                    <p class="property-accordeon__property-title text-s">Остаток задолжности</p>
-                    <p class="property-accordeon__property-value text-m">50 000 ₽</p>
-                </div>
-                <div class="property-accordeon__property">
-                    <p class="property-accordeon__property-title text-s">Статус</p>
-                    <p class="property-accordeon__property-value property-accordeon__property-value_overdue text-m">Просрочен</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="property-accordeon property-accordeon_paid">
-        <div class="property-accordeon__header">
-            <div class="property-accordeon__num">2</div>
-            <div class="property-accordeon__desc">
-                <p class="text-s property-accordeon__date">Платеж 10 сентября 2024</p>
-                <p class="text-m property-accordeon__sum">Сумма 20 746, 54 ₽</p>
-            </div>
-        </div>
-        <div class="property-accordeon__body">
-            <div class="property-accordeon__properties">
-                <div class="property-accordeon__property">
-                    <p class="property-accordeon__property-title text-s">Основной долг </p>
-                    <p class="property-accordeon__property-value text-m">15 209 ₽</p>
-                </div>
-                <div class="property-accordeon__property">
-                    <p class="property-accordeon__property-title text-s">Проценты</p>
-                    <p class="property-accordeon__property-value text-m">5 500 ₽</p>
-                </div>
-                <div class="property-accordeon__property">
-                    <p class="property-accordeon__property-title text-s">Остаток задолжности</p>
-                    <p class="property-accordeon__property-value text-m">50 000 ₽</p>
-                </div>
-                <div class="property-accordeon__property">
-                    <p class="property-accordeon__property-title text-s">Статус</p>
-                    <p class="property-accordeon__property-value property-accordeon__property-value_paid text-m">Оплачен</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="property-accordeon">
-        <div class="property-accordeon__header">
-            <div class="property-accordeon__num">3</div>
-            <div class="property-accordeon__desc">
-                <p class="text-s property-accordeon__date">Платеж 10 сентября 2024</p>
-                <p class="text-m property-accordeon__sum">Сумма 20 746, 54 ₽</p>
-            </div>
-        </div>
-        <div class="property-accordeon__body">
-            <div class="property-accordeon__properties">
-                <div class="property-accordeon__property">
-                    <p class="property-accordeon__property-title text-s">Основной долг </p>
-                    <p class="property-accordeon__property-value text-m">15 209 ₽</p>
-                </div>
-                <div class="property-accordeon__property">
-                    <p class="property-accordeon__property-title text-s">Проценты</p>
-                    <p class="property-accordeon__property-value text-m">5 500 ₽</p>
-                </div>
-                <div class="property-accordeon__property">
-                    <p class="property-accordeon__property-title text-s">Остаток задолжности</p>
-                    <p class="property-accordeon__property-value text-m">50 000 ₽</p>
-                </div>
-                <div class="property-accordeon__property">
-                    <p class="property-accordeon__property-title text-s">Статус</p>
-                    <p class="property-accordeon__property-value text-m">Предстоящий платёж</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-            <div class="details__pagination details-pagination text-s text-s_bold">
+
+        <div class="details__pagination details-pagination text-s text-s_bold">
     <a href="#" class="details-pagination__arrow">
         <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd" clip-rule="evenodd" d="M10.7071 3.29289C11.0976 3.68342 11.0976 4.31658 10.7071 4.70711L7.41421 8L10.7071 11.2929C11.0976 11.6834 11.0976 12.3166 10.7071 12.7071C10.3166 13.0976 9.68342 13.0976 9.29289 12.7071L5.29289 8.70711C4.90237 8.31658 4.90237 7.68342 5.29289 7.29289L9.29289 3.29289C9.68342 2.90237 10.3166 2.90237 10.7071 3.29289Z" fill="#191C30" fill-opacity="0.9"/>
@@ -491,55 +423,26 @@
         </svg>                    
     </a>
 </div>
-        </div>
-        <div class="overview-card">
-            <a href="img/overview/mortgage.png" class="overview-card__img gallery-img">
-                <img src="img/overview/mortgage.png" alt="">
-            </a>
-            <div class="overview-card__map"></div>
-            <div class="overview-card__price">
-                <p class="text-s color-text-2">Стоимость закладной</p>
-                <p class="h5 color-text-1">5 945 000,00 ₽</p>
-            </div>
-            <div class="overview-card__properties properties text-s"> 
-                <div class="properties__item">
-                    <div class="properties__title color-text-2">Следующий платёж</div>
-                    <div class="properties__line"></div>
-                    <div class="properties__value color-text-1">10&nbsp;сентября</div>
-                </div>
-                <div class="properties__item">
-                    <div class="properties__title color-text-2">Выплачено заёмщиком</div>
-                    <div class="properties__line"></div>
-                    <div class="properties__value color-text-1">3 235 000 ₽</div>
-                </div>
-                <div class="properties__item">
-                    <div class="properties__title color-text-2">Выплачено тело долга</div>
-                    <div class="properties__line"></div>
-                    <div class="properties__value color-text-1">1 387 000 ₽</div>
-                </div>
-                <div class="properties__item">
-                    <div class="properties__title color-text-2">Выплачены проценты</div>
-                    <div class="properties__line"></div>
-                    <div class="properties__value color-text-1">1 848 000 ₽</div>
-                </div>
-                
-            </div>
-            <div class="overview-card__btns">
-                <a href="" class="overview-card__btn btn text-m text-m_bold">Продать</a>
-            </div>
-        </div>
     </div>
 </div>
-
-<script>
-    $('.gallery-img').magnificPopup({
-      type: 'image', // Тип контента
-      gallery: {
-        enabled: true // Выключить галерею
-      },
-      titleSrc: 'alt' // Подпись будет взята из атрибута alt
-    });
-</script>
+            <div class="container">
+    <div class="promo">
+        <div class="promo__img">
+            <img src="img/promo/img.png" alt="">
+        </div>
+        <div class="promo__main">
+            <p class="text-s color-text-2">Получите денежный бонус</p>
+            <p class="text-m color-text-1">Отправьте другу для регистрации промокод DGH74H и получите 5 000 ₽</p>
+        </div>
+        <a href="#" class="promo__btn btn btn_secondary btn_s text-s text-s_bold copy tooltip-item" data-copy="promocode1234">                 
+            Копировать промокод
+            <div class="tooltip tooltip_top">
+                Копировать
+            </div>
+        </a>
+        <div class="promo__close"></div>
+    </div>
+</div>
         </main>
 
         <script src="js/app.min.js?_v=20250125213416"></script>
