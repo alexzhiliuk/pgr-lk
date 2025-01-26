@@ -6,14 +6,20 @@ $(".info__edit-title").click(function() {
     $(this).hide()
 })
 $(".info__title_editable input").on('blur', function() {
+    let value = $(this).val().trim()
+    if (value === "") { $(this).focus(); return; }
+
     $(this).prop('disabled', true)
-    update($(this).val())
+    update(value)
     $(".info__edit-title").show()
 });
 $(".info__title_editable input").on('keydown', function(e) {
     if (e.key === 'Enter') {
+        let value = $(this).val().trim()
+        if (value === "") { return }
+
         $(this).prop('disabled', true)
-        update($(this).val())
+        update(value)
         $(".info__edit-title").show()
     }
 });

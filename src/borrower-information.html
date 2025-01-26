@@ -4,13 +4,22 @@
         "title": "Главная"
     })
     <body>
+        <!-- Loader -->
         @@include('html/loader.html')
+        
+        <!-- Sidebars -->
+        @@include('html/sidebar/notifications.html')
+        @@include('html/sidebar/regular-payment.html')
+        @@include('html/sidebar/early-payment.html')
+        @@include('html/sidebar/profile.html')
+
+        <!-- Header -->
         @@include('html/borrower/header.html')
 
         <main>            
             @@include('html/borrower/credits.html')
             @@include('html/borrower/credit.html')
-            @@include('html/borrower/details/documents.html')
+            @@include('html/borrower/details/information.html')
         </main>
 
         <script src="js/app.min.js"></script>

@@ -876,6 +876,10 @@ input.input:hover {
 .tooltip-item {
   position: relative;
 }
+.tooltip-item:hover .tooltip {
+  opacity: 1;
+}
+
 .tooltip {
   opacity: 0;
   pointer-events: none;
@@ -1120,7 +1124,7 @@ input.input:hover {
   cursor: pointer;
   max-width: fit-content;
 }
-.copy::after {
+.copy_with_icon::after {
   content: "";
   width: 16px;
   height: 16px;
@@ -2628,6 +2632,9 @@ input.input:hover {
   margin: -20px;
   height: 100%;
 }
+.sidebar .notifications:not(:first-child) {
+  margin-top: 0;
+}
 .sidebar .notifications .notification {
   background: none;
   border: none;
@@ -2867,18 +2874,18 @@ input.input:hover {
   }
 }
 .mortgages-slider__btn_prev {
-  left: -64px;
+  left: -92px;
 }
-@media screen and (max-width: 1199.98px) {
+@media screen and (max-width: 1365.98px) {
   .mortgages-slider__btn_prev {
     left: 32px;
     top: 85px;
   }
 }
 .mortgages-slider__btn_next {
-  right: -64px;
+  right: -92px;
 }
-@media screen and (max-width: 1199.98px) {
+@media screen and (max-width: 1365.98px) {
   .mortgages-slider__btn_next {
     right: 32px;
     top: 85px;
@@ -3671,7 +3678,8 @@ input.input:hover {
 .showcase-aside {
   flex: 0 0 260px;
   max-width: 260px;
-  padding-bottom: 80px;
+  position: sticky;
+  top: 100px;
 }
 @media screen and (max-width: 991.98px) {
   .showcase-aside {
@@ -3694,8 +3702,6 @@ input.input:hover {
 }
 .showcase-aside__wrapper {
   width: 100%;
-  position: sticky;
-  top: 100px;
 }
 @media screen and (max-width: 991.98px) {
   .showcase-aside__wrapper {

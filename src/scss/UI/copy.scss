@@ -5,10 +5,14 @@
     cursor: pointer;
     max-width: fit-content;
 
-    &::after {
-        content: '';
-        width: 16px;
-        height: 16px;
-        background: url("../img/copy/icon.svg") center center / contain no-repeat;
+    &_with_icon {
+
+        &::after {
+            content: '';
+            width: 16px;
+            height: 16px;
+            background: url("../img/copy/icon.svg") center center / contain no-repeat;
+        }
     }
+
 }

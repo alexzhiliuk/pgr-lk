@@ -8,21 +8,17 @@
         @@include('html/loader.html')
         
         <!-- Sidebars -->
-        @@include('html/sidebar/notifications.html')
-        @@include('html/sidebar/regular-payment.html')
-        @@include('html/sidebar/early-payment.html')
-        @@include('html/sidebar/profile.html')
+        @@include('html/sidebar/investor/notifications.html')
+        @@include('html/sidebar/withdraw.html')
+        @@include('html/sidebar/investor/profile.html')
 
         <!-- Header -->
         @@include('html/investor/header.html')
 
         <main>            
             @@include('html/investor/info.html')
-            @@include('html/investor/details/loan.html')
+            @@include('html/investor/details/mortgages.html')
             @@include('html/promo.html')
-            <!-- @@include('html/borrower/credits.html')
-            @@include('html/borrower/notifications.html')
-            @@include('html/borrower/details/payments.html') -->
         </main>
 
         <script src="js/app.min.js"></script>

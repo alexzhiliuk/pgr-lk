@@ -1,9 +1,18 @@
 $(".copy").click(function() {
-    $(this).find(".tooltip").text("Скопировано")
+    let tooltip;
 
+    if ($(this).hasClass("tooltip-item_absolute")) {
+        let tooltipId = $(this).attr("data-tooltip-id")
+        tooltip = $('.tooltip[data-tooltip-id=' + tooltipId +  ']')
+    } else {
+        tooltip = $(this).find(".tooltip")
+    }
+
+    tooltip.text("Скопировано")
     window.navigator.clipboard.writeText($(this).attr("data-copy"))
-
     setTimeout(() => {
-        $(this).find(".tooltip").text("Копировать")
+        tooltip.text("Копировать")
     }, 1000)
+
+    
 })

@@ -481,7 +481,9 @@
 .showcase-aside {
     flex: 0 0 260px;
     max-width: 260px;
-    padding-bottom: 80px;
+
+    position: sticky;
+    top: 100px;
 
 
     @media screen and (max-width: $breakpoint992) {
@@ -505,8 +507,6 @@
 
     &__wrapper {
         width: 100%;
-        position: sticky;
-        top: 100px;
 
         @media screen and (max-width: $breakpoint992) {
             padding: 16px;

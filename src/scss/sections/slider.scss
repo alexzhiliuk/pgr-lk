@@ -132,9 +132,9 @@
 
         // .mortgages-slider__btn_prev
         &_prev {
-            left: -64px;
+            left: -92px;
 
-            @media screen and (max-width: $breakpoint1200) { 
+            @media screen and (max-width: $breakpoint1366) { 
                 left: 32px;
                 top: calc(170px / 2);
             }
@@ -142,8 +142,8 @@
 
         // .mortgages-slider__btn_next
         &_next {
-            right: -64px;
-            @media screen and (max-width: $breakpoint1200) { 
+            right: -92px;
+            @media screen and (max-width: $breakpoint1366) { 
                 right: 32px;
                 top: calc(170px / 2);
             }

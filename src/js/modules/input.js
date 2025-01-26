@@ -69,10 +69,8 @@ $(".input_secret .input__icon").click(function() {
 $('[data-dynamic-select]').change(function() {
     var selectedValue = $(this).val();
     var selectId = $(this).attr("data-dynamic-select");
-
-    console.log(selectedValue, selectId)
     
     $('[data-parent-select=' + selectId + ']').parent().hide();
-    $('[data-select=' + selectedValue + ']').parent().show();
+    $('[data-parent-select=' + selectId + '][data-select=' + selectedValue + ']').parent().show();
     
 });

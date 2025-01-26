@@ -9,23 +9,23 @@
         <div class="sidebar__body">
             <div class="sidebar__form">
                 <label class="input input_select text-m">
-                    <select data-dynamic-select="notifications">
+                    <select data-dynamic-select="sidebar-notifications">
                         <option value="all" selected>Все</option>
                         <option value="mortgage">Закладные</option>
                         <option value="loan">Заём</option>
                     </select>
                 </label>
-                <label class="input input_select text-m" data-placeholder="Выберите закладную" style="display: none;">
-                    <select data-parent-select="notifications" data-select="mortgage">
-                        <option value=""></option>
+                <label class="input input_select text-m" style="display: none;">
+                    <select data-parent-select="sidebar-notifications" data-select="mortgage">
+                        <option value="">Выберите закладную</option>
                         <option value="">050–310</option>
                         <option value="">050–311</option>
                         <option value="">050–312</option>
                     </select>
                 </label>
-                <label class="input input_select text-m" data-placeholder="Выберите заём" style="display: none;">
-                    <select data-parent-select="notifications" data-select="loan">
-                        <option value=""></option>
+                <label class="input input_select text-m" style="display: none;">
+                    <select data-parent-select="sidebar-notifications" data-select="loan">
+                        <option value="">Выберите заём</option>
                         <option value="">№ 100–108</option>
                         <option value="">№ 100–109</option>
                         <option value="">№ 100–110</option>

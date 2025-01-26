@@ -154,6 +154,10 @@
         margin: -20px;
         height: 100%;
 
+        &:not(:first-child) {
+            margin-top: 0;
+        }
+
         .notification {
 
             background: none;
