@@ -3776,6 +3776,7 @@ input.input:hover {
 .showcase__header {
   display: flex;
   flex-direction: column;
+  gap: 24px;
 }
 @media screen and (min-width: 991.98px) {
   .showcase__header.desktop-hidden {
@@ -3818,6 +3819,7 @@ input.input:hover {
   bottom: 16px;
   translate: -50% 0;
   filter: drop-shadow(0px 100px 80px rgba(48, 48, 48, 0.07)) drop-shadow(0px 23px 31px rgba(48, 48, 48, 0.05)) drop-shadow(0px 8px 12px rgba(48, 48, 48, 0.04)) drop-shadow(0px 3px 3px rgba(48, 48, 48, 0.03));
+  background: #F4F4F4;
 }
 .showcase__sorting {
   color: #303345;
@@ -3826,7 +3828,6 @@ input.input:hover {
   flex-wrap: wrap;
   gap: 24px;
   align-items: center;
-  margin-top: 24px;
 }
 @media screen and (max-width: 991.98px) {
   .showcase__sorting {
