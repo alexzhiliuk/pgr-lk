@@ -8,6 +8,16 @@ function toggleItems(i, el) {
 }
 $("[data-check-toggle]").each(toggleItems)
 
+function toggleItemsByClass(i, el) {
+    let toggleItemClass = $(this).attr("data-check-class-toggle")
+    if ($(el).is(":checked")) {
+        $(`.${toggleItemClass}`).show()
+    } else {
+        $(`.${toggleItemClass}`).hide()
+    }
+}
+$("[data-check-class-toggle]").each(toggleItemsByClass)
+
 function toggleAnyItems() {
     let toggleItems = []
     $("[data-check-any-toggle]").each(function() {
@@ -28,5 +38,6 @@ toggleAnyItems()
 
 $("[type='radio'], [type='checkbox']").change(function() {
     $("[data-check-toggle]").each(toggleItems)
+    $("[data-check-class-toggle]").each(toggleItemsByClass)
     toggleAnyItems()
 })

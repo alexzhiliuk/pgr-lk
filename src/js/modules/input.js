@@ -34,15 +34,18 @@ $("[data-disable-check]").on("input change", function() {
 
     $(`[data-disable-check=${disabledItemId}]`).each(function(i, el) {
         
-        if (($(el).is('input[type="radio"]') || $(el).is('input[type="checkbox"]')) && !$(el).is(':checked')) {
-            isDisabled = true;
-            return;
+        if ($(el).is(":visible")) {
+            if (($(el).is('input[type="radio"]') || $(el).is('input[type="checkbox"]')) && !$(el).is(':checked')) {
+                isDisabled = true;
+                return;
+            }
+    
+            if ($(el).val().trim() === '') {
+                isDisabled = true;
+                return;
+            }
         }
 
-        if ($(el).val().trim() === '') {
-            isDisabled = true;
-            return;
-        }
 
     })
 

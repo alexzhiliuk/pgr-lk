@@ -11,23 +11,23 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@200;400;500;700&display=swap&_v=20250126202926" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap&_v=20250126202926" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@200;400;500;700&display=swap&_v=20250127182855" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap&_v=20250127182855" rel="stylesheet">
     
 
     <!-- CSS -->
-    <link rel="stylesheet" href="css/style.min.css?_v=20250126202926">
+    <link rel="stylesheet" href="css/style.min.css?_v=20250127182855">
 
     <link
       rel="stylesheet"
-      href="https://unpkg.com/swiper/swiper-bundle.min.css?_v=20250126202926"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css?_v=20250127182855"
     />
 
     <!-- JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js?_v=20250126202926"></script>
-    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js?_v=20250126202926"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js?_v=20250127182855"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js?_v=20250127182855"></script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js?_v=20250126202926"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js?_v=20250127182855"></script>
 
     <title>Главная</title>
 </head>
@@ -300,33 +300,31 @@
                         <div class="radio-inputs__title text-s color-text-2">Тип досрочного погашения</div>
                         <div class="radio-inputs__items text-m color-text-1">
                             <label class="radio">
-                                <input type="radio" name="type" checked>
+                                <input type="radio" name="type" checked data-check-class-toggle="js-check-partly">
                                 Частичный
                             </label>
                             <label class="radio">
-                                <input type="radio" name="type">
+                                <input type="radio" name="type" data-check-class-toggle="js-check-full">
                                 Полный
                             </label>
                         </div>
                     </div>
+                    
                     <label class="input input_select text-m" data-placeholder="Куда">
-                        <select>
-                            <option value="" selected>Кредит наличными 439 550 ₽</option>
-                            <option value="">Кредит наличными 1 500 000 ₽</option>
-                        </select>
+                            <select>
+                                <option value="" selected>Кредит наличными 439 550 ₽</option>
+                                <option value="">Кредит наличными 1 500 000 ₽</option>
+                            </select>
                     </label>
-                    <label class="input input_date text-m" data-placeholder="Дата погашения">
-                        <div class="input__wrapper">
-                            <input type="date" class="login-form__input text-m" placeholder="Дата погашения"> 
-                        </div>
-                        <p class="input__caption text-s color-text-2">
-                            После этой даты документы для платежа аннулируются
-                        </p>
-                    </label>
-                    <div class="input text-m" data-placeholder="Сумма досрочного платежа">
-                        <input type="text" class="login-form__input text-m" placeholder="Сумма досрочного платежа" data-ruble-input data-disable-check="earlyPeymentToStep2"> 
+                    <div class="js-check-partly input text-m" data-placeholder="Сумма досрочного платежа">
+                        <input type="text" class="login-form__input text-m" placeholder="Сумма досрочного платежа" data-ruble-input data-disable-check="earlyPaymentToStep2"> 
                     </div>
-                    <div class="radio-inputs">
+                    <div class="js-check-partly notification">
+                        <div class="notification__body">
+                            <div class="notification__title text-m">Новый срок кредита составит 12 мес. вместо 15 мес.</div>
+                        </div>
+                    </div>
+                    <!-- <div class="radio-inputs">
                         <div class="radio-inputs__title text-s color-text-2">Порядок погашения</div>
                         <div class="radio-inputs__items text-m color-text-1">
                             <label class="radio">
@@ -338,8 +336,8 @@
                                 Уменьшить срок
                             </label>
                         </div>
-                    </div>
-                    <div class="notification" id="notificationForPayment">
+                    </div> -->
+                    <!-- <div class="notification" id="notificationForPayment">
                         <div class="notification__body">
                             <div class="notification__title text-m">Сейчас вы платите 20 746,54 ₽ в месяц</div>
                             <p class="notification__text text-s">
@@ -354,10 +352,23 @@
                                 Введите сумму, и мы покажем, как изменятся платежи.
                             </p>
                         </div>
+                    </div> -->
+                    <label class="js-check-full input input_date text-m" data-placeholder="Дата погашения">
+                        <div class="input__wrapper">
+                            <input type="date" class="login-form__input text-m" placeholder="Дата погашения" data-disable-check="earlyPaymentToStep2"> 
+                        </div>
+                        <p class="input__caption text-s color-text-2">
+                            После этой даты документы для платежа аннулируются
+                        </p>
+                    </label>
+                    <div class="js-check-full notification">
+                        <div class="notification__body">
+                            <div class="notification__title text-m">Досрочный платеж можно будет внести после согласования в день реглярного платежа</div>
+                        </div>
                     </div>
-                    <button id="earlyPeymentToStep2" data-next-step="2" type="button" class="form__btn btn text-m text-m_bold" disabled>Продолжить</button>
+                    <button id="earlyPaymentToStep2" data-next-step="2" type="button" class="form__btn btn text-m text-m_bold" disabled>Продолжить</button>
                 </div>
-                <div class="form__step" data-step="2" style="display: none;">
+                <div class="form__step" data-step="3" style="display: none;">
                     <div class="properties text-m">
                         <div class="properties__item">
                             <div class="properties__title">Формат </div>
@@ -420,7 +431,7 @@
                         </button>
                     </div>
                 </div>
-                <div class="form__step" data-step="3" style="display: none;">
+                <div class="form__step" data-step="4" style="display: none;">
                     <p class="text-m text-with-img color-text-1">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M2.3999 5.22412L5.3063 10.4191V13.5879L2.4033 18.7727L2.3999 5.22412Z" fill="#5B57A2"/>
@@ -494,10 +505,11 @@
                         </button>
                     </div>
                 </div>
-                <div class="form__step form__success" data-step="4" style="display: none;">
+                <div class="form__step form__success" data-step="2" style="display: none;">
                     <img src="img/sidebar/form/success.svg" alt="">
                     <div class="form__success-text">
                         <p class="text-m text-m_bold">Платёж успешно внесён</p>
+                        <p class="text-m color-text-2">После проверки вам придет уведомление о решении. В случае одобрения вы сможете внести досрочный платеж в день основного платежа</p>
                     </div>
                     <button type="button" class="btn text-m text-m_bold js-sidebar-close">Готово</button>
                 </div>
@@ -983,6 +995,6 @@
 
         </main>
 
-        <script src="js/app.min.js?_v=20250126202926"></script>
+        <script src="js/app.min.js?_v=20250127182855"></script>
     </body>
 </html>
