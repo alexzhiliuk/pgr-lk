@@ -119,6 +119,12 @@
         }
     }
 
+    &__inputs {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
     &__btns {
         display: flex;
         flex-direction: column;

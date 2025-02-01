@@ -8,17 +8,17 @@
         @@include('html/loader.html')
         
         <!-- Sidebars -->
-        @@include('html/sidebar/notifications.html')
+        @@include('html/sidebar/investor/notifications.html')
         @@include('html/sidebar/withdraw.html')
         @@include('html/sidebar/investor/profile.html')
 
         <!-- Header -->
         @@include('html/investor/header.html', {
-            "activeItem": "fav"
+            "activeItem": "history"
         })
 
         <main>            
-            @@include('html/favourites/loan.html')
+            @@include('html/investor/history-borrowers.html')
             @@include('html/promo.html')
         </main>
 

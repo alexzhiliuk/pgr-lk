@@ -6,16 +6,16 @@
         <nav class="header__nav">
             <ul class="header__menu text-m color-text-2">
                 <li>
-                    <a href="portfolio.html" class="active">Портфель</a>
+                    <a href="investor-index.html" @@if (activeItem === 'portfolio') { class="active" }>Портфель</a>
                 </li>
                 <li>
-                    <a href="showcase-mortgages.html">Что купить</a>
+                    <a href="showcase-mortgages.html" @@if (activeItem === 'showcase') { class="active" }>Что купить</a>
                 </li>
                 <li>
-                    <a href="favourites.html">Избранные</a>
+                    <a href="favourites.html" @@if (activeItem === 'fav') { class="active" }>Избранные</a>
                 </li>
                 <li>
-                    <a href="investor-history.html">История операций</a>
+                    <a href="investor-history.html" @@if (activeItem === 'history') { class="active" }>История операций</a>
                 </li>
             </ul>
         </nav>

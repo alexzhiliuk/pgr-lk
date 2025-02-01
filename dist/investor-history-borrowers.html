@@ -11,23 +11,23 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@200;400;500;700&display=swap&_v=20250126194055" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap&_v=20250126194055" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@200;400;500;700&display=swap&_v=20250201145310" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap&_v=20250201145310" rel="stylesheet">
     
 
     <!-- CSS -->
-    <link rel="stylesheet" href="css/style.min.css?_v=20250126194055">
+    <link rel="stylesheet" href="css/style.min.css?_v=20250201145310">
 
     <link
       rel="stylesheet"
-      href="https://unpkg.com/swiper/swiper-bundle.min.css?_v=20250126194055"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css?_v=20250201145310"
     />
 
     <!-- JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js?_v=20250126194055"></script>
-    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js?_v=20250126194055"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js?_v=20250201145310"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js?_v=20250201145310"></script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js?_v=20250126194055"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js?_v=20250201145310"></script>
 
     <title>Портфель</title>
 </head>
@@ -50,29 +50,96 @@
         </div>
         <div class="sidebar__body">
             <div class="sidebar__form">
-                <label class="input input_select text-m">
-                    <select data-dynamic-select="notifications">
-                        <option value="all" selected>Все</option>
-                        <option value="mortgage">Закладные</option>
-                        <option value="loan">Заём</option>
-                    </select>
-                </label>
-                <label class="input input_select text-m" data-placeholder="Выберите закладную" style="display: none;">
-                    <select data-parent-select="notifications" data-select="mortgage">
-                        <option value=""></option>
-                        <option value="">050–310</option>
-                        <option value="">050–311</option>
-                        <option value="">050–312</option>
-                    </select>
-                </label>
-                <label class="input input_select text-m" data-placeholder="Выберите заём" style="display: none;">
-                    <select data-parent-select="notifications" data-select="loan">
-                        <option value=""></option>
-                        <option value="">№ 100–108</option>
-                        <option value="">№ 100–109</option>
-                        <option value="">№ 100–110</option>
-                    </select>
-                </label>
+                <div class="sidebar__inputs">
+                    <div class="select select_form">
+                        <span>
+                            <span class="select__title text-m">Все</span>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M5.29289 9.29607C5.68342 8.90131 6.31658 8.90131 6.70711 9.29607L12 14.5596L17.2929 9.29607C17.6834 8.90131 18.3166 8.90131 18.7071 9.29607C19.0976 9.69083 19.0976 10.3309 18.7071 10.7256L12.7071 16.7039C12.3166 17.0987 11.6834 17.0987 11.2929 16.7039L5.29289 10.7256C4.90237 10.3309 4.90237 9.69083 5.29289 9.29607Z" fill="#1B1F3B" fill-opacity="0.4"/>
+                            </svg>                                                               
+                        </span>
+                            
+                        <ul class="select__droplist text-s">
+                            <li class="select__item"><a href="javascript:void(0)" data-value="all">Все</a></li>
+                            <li class="select__item"><a href="javascript:void(0)" data-value="mortgage">Закладные</a></li>
+                            <li class="select__item"><a href="javascript:void(0)" data-value="loan">Заём</a></li>
+                        </ul>
+                        
+                        <select hidden data-dynamic-select="sidebar-notifications">
+                            <option value="all">Все</option>
+                            <option value="mortgage">Закладные</option>
+                            <option value="loan">Заём</option>
+                        </select>
+                    </div>
+                    <div class="select select_form" style="display: none;">
+                        <span>
+                            <span class="select__title text-m">Выберите закладную</span>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M5.29289 9.29607C5.68342 8.90131 6.31658 8.90131 6.70711 9.29607L12 14.5596L17.2929 9.29607C17.6834 8.90131 18.3166 8.90131 18.7071 9.29607C19.0976 9.69083 19.0976 10.3309 18.7071 10.7256L12.7071 16.7039C12.3166 17.0987 11.6834 17.0987 11.2929 16.7039L5.29289 10.7256C4.90237 10.3309 4.90237 9.69083 5.29289 9.29607Z" fill="#1B1F3B" fill-opacity="0.4"/>
+                            </svg>                                                               
+                        </span>
+                            
+                        <ul class="select__droplist text-s">
+                            <li class="select__item"><a href="javascript:void(0)" data-value="1">Выберите закладную</a></li>
+                            <li class="select__item"><a href="javascript:void(0)" data-value="2">050–310</a></li>
+                            <li class="select__item"><a href="javascript:void(0)" data-value="3">050–311</a></li>
+                            <li class="select__item"><a href="javascript:void(0)" data-value="4">050–312</a></li>
+                        </ul>
+                        
+                        <select hidden data-parent-select="sidebar-notifications" data-select="mortgage">
+                            <option value="1">Выберите закладную</option>
+                            <option value="2">050–310</option>
+                            <option value="3">050–311</option>
+                            <option value="4">050–312</option>
+                        </select>
+                    </div>
+                    <div class="select select_form" style="display: none;">
+                        <span>
+                            <span class="select__title text-m">Выберите заём</span>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M5.29289 9.29607C5.68342 8.90131 6.31658 8.90131 6.70711 9.29607L12 14.5596L17.2929 9.29607C17.6834 8.90131 18.3166 8.90131 18.7071 9.29607C19.0976 9.69083 19.0976 10.3309 18.7071 10.7256L12.7071 16.7039C12.3166 17.0987 11.6834 17.0987 11.2929 16.7039L5.29289 10.7256C4.90237 10.3309 4.90237 9.69083 5.29289 9.29607Z" fill="#1B1F3B" fill-opacity="0.4"/>
+                            </svg>                                                               
+                        </span>
+                            
+                        <ul class="select__droplist text-s">
+                            <li class="select__item"><a href="javascript:void(0)" data-value="1">Выберите заём</a></li>
+                            <li class="select__item"><a href="javascript:void(0)" data-value="2">№ 100–108</a></li>
+                            <li class="select__item"><a href="javascript:void(0)" data-value="3">№ 100–109</a></li>
+                            <li class="select__item"><a href="javascript:void(0)" data-value="4">№ 100–110</a></li>
+                        </ul>
+                        
+                        <select hidden data-parent-select="sidebar-notifications" data-select="loan">
+                            <option value="1">Выберите заём</option>
+                            <option value="2">№ 100–108</option>
+                            <option value="3">№ 100–109</option>
+                            <option value="4">№ 100–110</option>
+                        </select>
+                    </div>
+                    <!-- <label class="input input_select text-m" style="display: none;">
+                        <select data-parent-select="sidebar-notifications" data-select="loan">
+                            <option value="">Выберите заём</option>
+                            <option value="">№ 100–108</option>
+                            <option value="">№ 100–109</option>
+                            <option value="">№ 100–110</option>
+                        </select>
+                    </label> -->
+                    <!-- <label class="input input_select text-m">
+                        <select data-dynamic-select="sidebar-notifications">
+                            <option value="all" selected>Все</option>
+                            <option value="mortgage">Закладные</option>
+                            <option value="loan">Заём</option>
+                        </select>
+                    </label>
+                    <label class="input input_select text-m" style="display: none;">
+                        <select data-parent-select="sidebar-notifications" data-select="mortgage">
+                            <option value="">Выберите закладную</option>
+                            <option value="">050–310</option>
+                            <option value="">050–311</option>
+                            <option value="">050–312</option>
+                        </select>
+                    </label> -->
+                </div>
+                
                 <div class="notifications">
                     <div class="notification notification_with_icon">
                         <div class="notification__icon notification__icon_error">
@@ -262,22 +329,22 @@
         <!-- Header -->
         <header class="header">
     <div class="header__inner">
-        <a href="index.html" class="header__logo">
+        <a href="investor-index.html" class="header__logo">
             <img src="img/header/logo.svg" alt="">
         </a>
         <nav class="header__nav">
             <ul class="header__menu text-m color-text-2">
                 <li>
-                    <a href="portfolio.html" class="active">Портфель</a>
+                    <a href="investor-index.html" >Портфель</a>
                 </li>
                 <li>
-                    <a href="showcase-mortgages.html">Что купить</a>
+                    <a href="showcase-mortgages.html" >Что купить</a>
                 </li>
                 <li>
-                    <a href="favourites.html">Избранные</a>
+                    <a href="favourites.html" >Избранные</a>
                 </li>
                 <li>
-                    <a href="investor-history.html">История операций</a>
+                    <a href="investor-history.html"  class="active" >История операций</a>
                 </li>
             </ul>
         </nav>
@@ -309,244 +376,198 @@
 
         <main>            
             <div class="container">
-    <div class="info" style="background: url(img/info/investors/bg-1.png) center center / cover no-repeat;">
-        <div class="info__left">
-            <div class="info__sum-block">
-                <div class="info__title text-l">
-                    Кредит наличными
-                </div>
-                <div class="info__sum h2">2 000 000<span>,00 ₽</span></div>
-            </div>
-            <div class="info__btns">
-                <button class="btn btn_l btn_transparent text-m text-m_bold" data-sidebar-open="topup">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12 1C5.92487 1 1 5.92487 1 12C1 18.0751 5.92487 23 12 23C18.0751 23 23 18.0751 23 12C23 5.92487 18.0751 1 12 1ZM12 7C12.5523 7 13 7.44772 13 8V11H16C16.5523 11 17 11.4477 17 12C17 12.5523 16.5523 13 16 13H13V16C13 16.5523 12.5523 17 12 17C11.4477 17 11 16.5523 11 16V13H8C7.44772 13 7 12.5523 7 12C7 11.4477 7.44772 11 8 11H11V8C11 7.44772 11.4477 7 12 7Z" fill="white"/>
-                    </svg>
-                    Пополнить
-                </button>
-                <button class="btn btn_l btn_transparent text-m text-m_bold" data-sidebar-open="withdraw">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12 1C5.92487 1 1 5.92487 1 12C1 18.0751 5.92487 23 12 23C18.0751 23 23 18.0751 23 12C23 5.92487 18.0751 1 12 1ZM12 7C12.5523 7 13 7.44772 13 8V13.5858L15.2929 11.2929C15.6834 10.9024 16.3166 10.9024 16.7071 11.2929C17.0976 11.6834 17.0976 12.3166 16.7071 12.7071L12.7071 16.7071C12.3166 17.0976 11.6834 17.0976 11.2929 16.7071L7.29289 12.7071C6.90237 12.3166 6.90237 11.6834 7.29289 11.2929C7.68342 10.9024 8.31658 10.9024 8.70711 11.2929L11 13.5858V8C11 7.44772 11.4477 7 12 7Z" fill="white"/>
-                    </svg>                                          
-                    Вывести
-                </button>
-            </div>
-        </div>
-        <div class="info__right">
-            <div class="info__sum-block">
-                <div class="info__title text-l">
-                    Инвестированно
-                </div>
-                <div class="info__sum h2">4 000 000<span>,00 ₽</span></div>
-            </div>
-            <div class="info__properties info__properties_wide properties text-m">
-                <div class="properties__item">
-                    <div class="properties__title">Доходность</div>
-                    <div class="properties__line"></div>
-                    <div class="properties__value">+ 200 000,00 ₽</div>
-                </div>
-                <div class="properties__item">
-                    <div class="properties__title">Средняя ставка</div>
-                    <div class="properties__line"></div>
-                    <div class="properties__value">12%</div>
-                </div>
-                <div class="properties__item">
-                    <div class="properties__title">Прогноз годовой доходности</div>
-                    <div class="properties__line"></div>
-                    <div class="properties__value">400 000,00 ₽</div>
-                </div>
-                <div class="properties__item">
-                    <div class="properties__title">Прогноз по ставке</div>
-                    <div class="properties__line"></div>
-                    <div class="properties__value">24%</div>
-                </div>
-               
-            </div>
-        </div>
-    </div>
-</div>
-            <div class="container">
     <div class="details">
         <div class="details__tabs text-s color-text-2 draggable">
-            <a href="portfolio.html" class="details__tab details__tab_active">Закладные</a>
-            <a href="portfolio-loan.html" class="details__tab">Заём</a>
+            <a href="investor-history.html" class="details__tab">Мои</a>
+            <a href="investor-history-borrowers.html" class="details__tab details__tab_active">Заёмщики</a>
         </div>
         <div class="details__nav">
-            <div class="details__filters draggable">
-                <a href="#" class="text-s filter-btn filter-btn_active">Активные</a>
-                <a href="#" class="text-s filter-btn">Завершённые</a>
-                <a href="#" class="text-s filter-btn" data-count="2">На согласовании</a>
+            <div class="details__selects">
+                <div class="select select_form">
+                    <span>
+                        <span class="select__title text-m">Все</span>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M5.29289 9.29607C5.68342 8.90131 6.31658 8.90131 6.70711 9.29607L12 14.5596L17.2929 9.29607C17.6834 8.90131 18.3166 8.90131 18.7071 9.29607C19.0976 9.69083 19.0976 10.3309 18.7071 10.7256L12.7071 16.7039C12.3166 17.0987 11.6834 17.0987 11.2929 16.7039L5.29289 10.7256C4.90237 10.3309 4.90237 9.69083 5.29289 9.29607Z" fill="#1B1F3B" fill-opacity="0.4"/>
+                        </svg>                                                               
+                    </span>
+                        
+                    <ul class="select__droplist text-s">
+                        <li class="select__item"><a href="javascript:void(0)" data-value="all">Все</a></li>
+                        <li class="select__item"><a href="javascript:void(0)" data-value="mortgage">Закладные</a></li>
+                        <li class="select__item"><a href="javascript:void(0)" data-value="loan">Заём</a></li>
+                    </ul>
+                    
+                    <select hidden data-dynamic-select="notifications">
+                        <option value="all">Все</option>
+                        <option value="mortgage">Закладные</option>
+                        <option value="loan">Заём</option>
+                    </select>
+                </div>
+                <div class="select select_form" style="display: none;">
+                    <span>
+                        <span class="select__title text-m">Выберите закладную</span>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M5.29289 9.29607C5.68342 8.90131 6.31658 8.90131 6.70711 9.29607L12 14.5596L17.2929 9.29607C17.6834 8.90131 18.3166 8.90131 18.7071 9.29607C19.0976 9.69083 19.0976 10.3309 18.7071 10.7256L12.7071 16.7039C12.3166 17.0987 11.6834 17.0987 11.2929 16.7039L5.29289 10.7256C4.90237 10.3309 4.90237 9.69083 5.29289 9.29607Z" fill="#1B1F3B" fill-opacity="0.4"/>
+                        </svg>                                                               
+                    </span>
+                        
+                    <ul class="select__droplist text-s">
+                        <li class="select__item"><a href="javascript:void(0)" data-value="1">Выберите закладную</a></li>
+                        <li class="select__item"><a href="javascript:void(0)" data-value="2">050–310</a></li>
+                        <li class="select__item"><a href="javascript:void(0)" data-value="3">050–311</a></li>
+                        <li class="select__item"><a href="javascript:void(0)" data-value="4">050–312</a></li>
+                    </ul>
+                    
+                    <select hidden data-parent-select="notifications" data-select="mortgage">
+                        <option value="1">Выберите закладную</option>
+                        <option value="2">050–310</option>
+                        <option value="3">050–311</option>
+                        <option value="4">050–312</option>
+                    </select>
+                </div>
+                <div class="select select_form" style="display: none;">
+                    <span>
+                        <span class="select__title text-m">Выберите заём</span>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M5.29289 9.29607C5.68342 8.90131 6.31658 8.90131 6.70711 9.29607L12 14.5596L17.2929 9.29607C17.6834 8.90131 18.3166 8.90131 18.7071 9.29607C19.0976 9.69083 19.0976 10.3309 18.7071 10.7256L12.7071 16.7039C12.3166 17.0987 11.6834 17.0987 11.2929 16.7039L5.29289 10.7256C4.90237 10.3309 4.90237 9.69083 5.29289 9.29607Z" fill="#1B1F3B" fill-opacity="0.4"/>
+                        </svg>                                                               
+                    </span>
+                        
+                    <ul class="select__droplist text-s">
+                        <li class="select__item"><a href="javascript:void(0)" data-value="1">Выберите заём</a></li>
+                        <li class="select__item"><a href="javascript:void(0)" data-value="2">№ 100–108</a></li>
+                        <li class="select__item"><a href="javascript:void(0)" data-value="3">№ 100–109</a></li>
+                        <li class="select__item"><a href="javascript:void(0)" data-value="4">№ 100–110</a></li>
+                    </ul>
+                    
+                    <select hidden data-parent-select="notifications" data-select="loan">
+                        <option value="1">Выберите заём</option>
+                        <option value="2">№ 100–108</option>
+                        <option value="3">№ 100–109</option>
+                        <option value="4">№ 100–110</option>
+                    </select>
+                </div>
+                <!-- <label class="input input_select text-m">
+                    <select data-dynamic-select="notifications">
+                        <option value="all" selected>Все</option>
+                        <option value="mortgage">Закладные</option>
+                        <option value="loan">Заём</option>
+                    </select>
+                </label>
+                <label class="input input_select text-m" style="display: none;">
+                    <select data-parent-select="notifications" data-select="mortgage">
+                        <option value="">Выберите закладную</option>
+                        <option value="">050–310</option>
+                        <option value="">050–311</option>
+                        <option value="">050–312</option>
+                    </select>
+                </label>
+                <label class="input input_select text-m" style="display: none;">
+                    <select data-parent-select="notifications" data-select="loan">
+                        <option value="">Выберите заем</option>
+                        <option value="">№ 100–108</option>
+                        <option value="">№ 100–109</option>
+                        <option value="">№ 100–110</option>
+                    </select>
+                </label> -->
             </div>
-            
+            <div class="details__btns">
+                <a href="#" class="btn btn_secondary btn_s text-s text-s_bold">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8.66634 2.00016C8.66634 1.63197 8.36786 1.3335 7.99967 1.3335C7.63148 1.3335 7.33301 1.63197 7.33301 2.00016V8.39069L5.13775 6.19543C4.8774 5.93508 4.45529 5.93508 4.19494 6.19543C3.93459 6.45577 3.93459 6.87788 4.19494 7.13823L7.52827 10.4716C7.78862 10.7319 8.21073 10.7319 8.47108 10.4716L11.8044 7.13823C12.0648 6.87788 12.0648 6.45577 11.8044 6.19543C11.5441 5.93508 11.122 5.93508 10.8616 6.19543L8.66634 8.39069V2.00016Z" fill="black"/>
+                        <path d="M1.99968 9.3335C2.36787 9.3335 2.66634 9.63197 2.66634 10.0002V10.8002C2.66634 11.3712 2.66686 11.7594 2.69138 12.0595C2.71526 12.3517 2.75854 12.5012 2.81167 12.6055C2.9395 12.8564 3.14347 13.0603 3.39435 13.1882C3.49862 13.2413 3.64809 13.2846 3.94037 13.3085C4.24043 13.333 4.62862 13.3335 5.19968 13.3335H10.7997C11.3707 13.3335 11.7589 13.333 12.059 13.3085C12.3513 13.2846 12.5007 13.2413 12.605 13.1882C12.8559 13.0603 13.0599 12.8564 13.1877 12.6055C13.2408 12.5012 13.2841 12.3517 13.308 12.0595C13.3325 11.7594 13.333 11.3712 13.333 10.8002V10.0002C13.333 9.63197 13.6315 9.3335 13.9997 9.3335C14.3679 9.3335 14.6663 9.63197 14.6663 10.0002V10.8277C14.6663 11.3644 14.6664 11.8073 14.6369 12.168C14.6063 12.5428 14.5406 12.8872 14.3757 13.2108C14.12 13.7126 13.7121 14.1205 13.2103 14.3762C12.8868 14.541 12.5423 14.6068 12.1676 14.6374C11.8068 14.6668 11.3639 14.6668 10.8272 14.6668H5.17214C4.63549 14.6668 4.19259 14.6668 3.83179 14.6374C3.45706 14.6068 3.11259 14.541 2.78903 14.3762C2.28727 14.1205 1.87932 13.7126 1.62366 13.2108C1.4588 12.8872 1.39309 12.5428 1.36247 12.168C1.33299 11.8073 1.333 11.3643 1.33301 10.8277V10.0002C1.33301 9.63197 1.63149 9.3335 1.99968 9.3335Z" fill="black"/>
+                    </svg>
+                    Скачать        
+                </a>
+            </div>
         </div>
 
         <div class="details__table details-table-wrapper">
             <table class="details-table text-s">
                 <thead>
                     <tr>
-                        <th>Закладная</th>
-                        <th>Стоимость закладной</th>
-                        <th>Выплачено</th>
-                        <th>Доходность</th>
-                        <th>Следующий платёж</th>
-                        <th>Статус</th>
+                        <th>Дата</th>
+                        <th>Тип операции</th>
+                        <th>Сумма</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>
-                            <a href="mortgage.html" class="details-table__mortgage">
-                                <img src="img/mortgage/table-row-img.png" alt="">
-                                <div class="property">
-                                    <div class="property__title">Номер</div>
-                                    <div class="property__value">050–310</div>
-                                </div>
-                            </a>
-                        </td>
-                        <td>
-                            <a href="mortgage.html">25 000 000,00 ₽</a>
-                        </td>
-                        <td>
-                            <a href="mortgage.html">
-                                <div class="property">
-                                    <div class="property__title">10 платежей</div>
-                                    <div class="property__value">500 000,00 ₽</div>
-                                </div>
-                            </a>
-                        </td>
-                        <td><a href="mortgage.html">24%</a></td>
-                        <td>
-                            <a href="mortgage.html">
-                                <div class="property">
-                                    <div class="property__title">17 августа</div>
-                                    <div class="property__value">50 000,00 ₽</div>
-                                </div>
-                            </a>
-                        </td>
-                        <td>
-                            <a href="mortgage.html">
-                                <div class="progress" style="--progress-width: 50%; --progress-color: #FFC700;">
-                                    <div class="progress__title">Просрочено 2 дня</div>
-                                    <div class="progress__bar"></div>
-                                </div>
-                            </a>
-                        </td>
+                        <td>10 Мая 2024</td>
+                        <td>Регулярный платеж</td>
+                        <td>20 746,00 ₽</td>
                     </tr>
+                    <tr>
+                        <td>10 Мая 2024</td>
+                        <td>Регулярный платеж</td>
+                        <td>20 746,00 ₽</td>
+                    </tr>
+                    <tr>
+                        <td>10 Мая 2024</td>
+                        <td>Регулярный платеж</td>
+                        <td>20 746,00 ₽</td>
+                    </tr>
+                    <tr>
+                        <td>10 Мая 2024</td>
+                        <td>Регулярный платеж</td>
+                        <td>20 746,00 ₽</td>
+                    </tr>
+
                 </tbody>
             </table>
         </div>
-        <!-- <div class="details__empty text-s color-text-2">
-            Здесь пока ничего нет
-        </div> -->
-        <div class="details__property-accordeons property-accordeons">
-            <div class="property-accordeon property-accordeon_open property-accordeon_warning">
-                <div class="property-accordeon__header">
-                    <div class="property-accordeon__num">
-                        <img src="img/mortgage/table-row-img.png" alt="">
-                    </div>
-                    <div class="property-accordeon__desc">
-                        <p class="text-s property-accordeon__date">Следующий платёж 17 августа 2024</p>
-                        <p class="text-m property-accordeon__sum">Сумма 50 000, 00 ₽</p>
-                    </div>
+        <div class="details__history history">
+            <div class="history__item">
+                <div class="history__left">
+                    <div class="history__title text-s">10 мая 2024</div>
+                    <div class="history__value text-m">Покупка закладной</div>
                 </div>
-                <div class="property-accordeon__body">
-                    <div class="property-accordeon__properties">
-                        <div class="property-accordeon__property">
-                            <p class="property-accordeon__property-title text-s">Номер закладной </p>
-                            <p class="property-accordeon__property-value text-m">050–310</p>
-                        </div>
-                        <div class="property-accordeon__property">
-                            <p class="property-accordeon__property-title text-s">Стоимость закладной</p>
-                            <p class="property-accordeon__property-value text-m">25 000 000,00 ₽</p>
-                        </div>
-                        <div class="property-accordeon__property">
-                            <p class="property-accordeon__property-title text-s">Выплачено</p>
-                            <p class="property-accordeon__property-value text-m">500 000 ₽ • 10 платежей</p>
-                        </div>
-                        <div class="property-accordeon__property">
-                            <p class="property-accordeon__property-title text-s">Доходность</p>
-                            <p class="property-accordeon__property-value text-m">24%</p>
-                        </div>
-                        <div class="property-accordeon__property">
-                            <p class="property-accordeon__property-title text-s">Статус</p>
-                            <p class="property-accordeon__property-value property-accordeon__property-value_overdue text-m">Просрочен</p>
-                        </div>
-                    </div>
+                <div class="history__right">
+                    <div class="history__title text-s">СБП</div>
+                    <div class="history__value text-m">20 746,00 ₽</div>
                 </div>
             </div>
-            <div class="property-accordeon  ">
-                <div class="property-accordeon__header">
-                    <div class="property-accordeon__num">
-                        <img src="img/mortgage/table-row-img.png" alt="">
-                    </div>
-                    <div class="property-accordeon__desc">
-                        <p class="text-s property-accordeon__date">Следующий платёж 17 августа 2024</p>
-                        <p class="text-m property-accordeon__sum">Сумма 50 000, 00 ₽</p>
-                    </div>
+            <div class="history__item">
+                <div class="history__left">
+                    <div class="history__title text-s">10 мая 2024</div>
+                    <div class="history__value text-m">Покупка закладной</div>
                 </div>
-                <div class="property-accordeon__body">
-                    <div class="property-accordeon__properties">
-                        <div class="property-accordeon__property">
-                            <p class="property-accordeon__property-title text-s">Номер закладной </p>
-                            <p class="property-accordeon__property-value text-m">050–310</p>
-                        </div>
-                        <div class="property-accordeon__property">
-                            <p class="property-accordeon__property-title text-s">Стоимость закладной</p>
-                            <p class="property-accordeon__property-value text-m">25 000 000,00 ₽</p>
-                        </div>
-                        <div class="property-accordeon__property">
-                            <p class="property-accordeon__property-title text-s">Выплачено</p>
-                            <p class="property-accordeon__property-value text-m">500 000 ₽ • 10 платежей</p>
-                        </div>
-                        <div class="property-accordeon__property">
-                            <p class="property-accordeon__property-title text-s">Доходность</p>
-                            <p class="property-accordeon__property-value text-m">24%</p>
-                        </div>
-                        <div class="property-accordeon__property">
-                            <p class="property-accordeon__property-title text-s">Статус</p>
-                            <p class="property-accordeon__property-value text-m">Нет просрочек</p>
-                        </div>
-                    </div>
+                <div class="history__right">
+                    <div class="history__title text-s">СБП</div>
+                    <div class="history__value text-m">20 746,00 ₽</div>
                 </div>
             </div>
-            <div class="property-accordeon  ">
-                <div class="property-accordeon__header">
-                    <div class="property-accordeon__num">
-                        <img src="img/mortgage/table-row-img.png" alt="">
-                    </div>
-                    <div class="property-accordeon__desc">
-                        <p class="text-s property-accordeon__date">Следующий платёж 17 августа 2024</p>
-                        <p class="text-m property-accordeon__sum">Сумма 50 000, 00 ₽</p>
-                    </div>
+            <div class="history__item">
+                <div class="history__left">
+                    <div class="history__title text-s">10 мая 2024</div>
+                    <div class="history__value text-m">Покупка закладной</div>
                 </div>
-                <div class="property-accordeon__body">
-                    <div class="property-accordeon__properties">
-                        <div class="property-accordeon__property">
-                            <p class="property-accordeon__property-title text-s">Номер закладной </p>
-                            <p class="property-accordeon__property-value text-m">050–310</p>
-                        </div>
-                        <div class="property-accordeon__property">
-                            <p class="property-accordeon__property-title text-s">Стоимость закладной</p>
-                            <p class="property-accordeon__property-value text-m">25 000 000,00 ₽</p>
-                        </div>
-                        <div class="property-accordeon__property">
-                            <p class="property-accordeon__property-title text-s">Выплачено</p>
-                            <p class="property-accordeon__property-value text-m">500 000 ₽ • 10 платежей</p>
-                        </div>
-                        <div class="property-accordeon__property">
-                            <p class="property-accordeon__property-title text-s">Доходность</p>
-                            <p class="property-accordeon__property-value text-m">24%</p>
-                        </div>
-                        <div class="property-accordeon__property">
-                            <p class="property-accordeon__property-title text-s">Статус</p>
-                            <p class="property-accordeon__property-value text-m">Просрочек нет</p>
-                        </div>
-                    </div>
+                <div class="history__right">
+                    <div class="history__title text-s">СБП</div>
+                    <div class="history__value text-m">20 746,00 ₽</div>
                 </div>
             </div>
-
+            <div class="history__item">
+                <div class="history__left">
+                    <div class="history__title text-s">10 мая 2024</div>
+                    <div class="history__value text-m">Покупка закладной</div>
+                </div>
+                <div class="history__right">
+                    <div class="history__title text-s">СБП</div>
+                    <div class="history__value text-m">20 746,00 ₽</div>
+                </div>
+            </div>
+            <div class="history__item">
+                <div class="history__left">
+                    <div class="history__title text-s">10 мая 2024</div>
+                    <div class="history__value text-m">Покупка закладной</div>
+                </div>
+                <div class="history__right">
+                    <div class="history__title text-s">СБП</div>
+                    <div class="history__value text-m">20 746,00 ₽</div>
+                </div>
+            </div>
         </div>
-
     </div>
 </div>
             <div class="container">
@@ -558,7 +579,7 @@
             <p class="text-s color-text-2">Получите денежный бонус</p>
             <p class="text-m color-text-1">Отправьте другу для регистрации промокод DGH74H и получите 5 000 ₽</p>
         </div>
-        <a href="#" class="promo__btn btn btn_secondary btn_s text-s text-s_bold copy tooltip-item" data-copy="promocode1234">                 
+        <a href="#" class="promo__btn btn btn_secondary btn_s text-s text-s_bold copy copy_with_icon tooltip-item" data-copy="promocode1234">                 
             Копировать промокод
             <div class="tooltip tooltip_top">
                 Копировать
@@ -569,6 +590,6 @@
 </div>
         </main>
 
-        <script src="js/app.min.js?_v=20250126194055"></script>
+        <script src="js/app.min.js?_v=20250201145310"></script>
     </body>
 </html>

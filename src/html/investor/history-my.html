@@ -1,13 +1,32 @@
 <div class="container">
     <div class="details">
         <div class="details__tabs text-s color-text-2 draggable">
-            <a href="" class="details__tab details__tab_active">Все операции</a>
-            <a href="" class="details__tab">Мои</a>
-            <a href="" class="details__tab">Заёмщики</a>
+            <a href="investor-history.html" class="details__tab details__tab_active">Мои</a>
+            <a href="investor-history-borrowers.html" class="details__tab">Заёмщики</a>
         </div>
         <div class="details__nav">
             <div class="details__selects">
-                <label class="input input_select text-m">
+                <div class="select select_form">
+                    <span>
+                        <span class="select__title text-m">Тип операции</span>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M5.29289 9.29607C5.68342 8.90131 6.31658 8.90131 6.70711 9.29607L12 14.5596L17.2929 9.29607C17.6834 8.90131 18.3166 8.90131 18.7071 9.29607C19.0976 9.69083 19.0976 10.3309 18.7071 10.7256L12.7071 16.7039C12.3166 17.0987 11.6834 17.0987 11.2929 16.7039L5.29289 10.7256C4.90237 10.3309 4.90237 9.69083 5.29289 9.29607Z" fill="#1B1F3B" fill-opacity="0.4"/>
+                        </svg>                                                               
+                    </span>
+                        
+                    <ul class="select__droplist text-s">
+                        <li class="select__item"><a href="javascript:void(0)" data-value="buy">Покупка</a></li>
+                        <li class="select__item"><a href="javascript:void(0)" data-value="sell">Продажа</a></li>
+                        <li class="select__item"><a href="javascript:void(0)" data-value="get">Получение средств</a></li>
+                    </ul>
+                    
+                    <select hidden>
+                        <option value="buy">Покупка</option>
+                        <option value="sell">Продажа</option>
+                        <option value="get">Получение средств</option>
+                    </select>
+                </div>
+                <!-- <label class="input input_select text-m">
                     <select data-dynamic-select="notifications">
                         <option value="all" selected>Все</option>
                         <option value="mortgage">Закладные</option>
@@ -29,7 +48,7 @@
                         <option value="">№ 100–109</option>
                         <option value="">№ 100–110</option>
                     </select>
-                </label>
+                </label> -->
             </div>
             <div class="details__btns">
                 <a href="#" class="btn btn_secondary btn_s text-s text-s_bold">
@@ -48,33 +67,23 @@
                     <tr>
                         <th>Дата</th>
                         <th>Тип операции</th>
-                        <th>Назначение</th>
                         <th>Сумма</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td>10 Мая 2024</td>
-                        <td>СБП</td>
-                        <td>Покупка закладной</td>
+                        <td>Покупка</td>
                         <td>20 746,00 ₽</td>
                     </tr>
                     <tr>
                         <td>10 Мая 2024</td>
-                        <td>СБП</td>
-                        <td>Покупка закладной</td>
+                        <td>Продажа</td>
                         <td>20 746,00 ₽</td>
                     </tr>
                     <tr>
                         <td>10 Мая 2024</td>
-                        <td>СБП</td>
-                        <td>Покупка закладной</td>
-                        <td>20 746,00 ₽</td>
-                    </tr>
-                    <tr>
-                        <td>10 Мая 2024</td>
-                        <td>СБП</td>
-                        <td>Покупка закладной</td>
+                        <td>Получение средств</td>
                         <td>20 746,00 ₽</td>
                     </tr>
                 </tbody>

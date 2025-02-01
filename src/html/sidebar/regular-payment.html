@@ -9,12 +9,30 @@
         <div class="sidebar__body">
             <form action="" class="sidebar__form form">
                 <div class="form__step" data-step="1">
-                    <label class="input input_select text-m" data-placeholder="Куда">
+                    <div class="select select_form" data-placeholder="Куда">
+                        <span>
+                            <span class="select__title text-m">Кредит наличными 439 550 ₽</span>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M5.29289 9.29607C5.68342 8.90131 6.31658 8.90131 6.70711 9.29607L12 14.5596L17.2929 9.29607C17.6834 8.90131 18.3166 8.90131 18.7071 9.29607C19.0976 9.69083 19.0976 10.3309 18.7071 10.7256L12.7071 16.7039C12.3166 17.0987 11.6834 17.0987 11.2929 16.7039L5.29289 10.7256C4.90237 10.3309 4.90237 9.69083 5.29289 9.29607Z" fill="#1B1F3B" fill-opacity="0.4"/>
+                            </svg>                                                               
+                        </span>
+                            
+                        <ul class="select__droplist text-s">
+                            <li class="select__item"><a href="javascript:void(0)" data-value="1">Кредит наличными 439 550 ₽</a></li>
+                            <li class="select__item"><a href="javascript:void(0)" data-value="2">Кредит наличными 1 500 000 ₽</a></li>
+                        </ul>
+                        
+                        <select name="credit" id="" hidden>
+                            <option value="1"></option>
+                            <option value="2"></option>
+                        </select>
+                    </div>
+                    <!-- <label class="input input_select text-m" data-placeholder="Куда">
                         <select>
                             <option value="" selected>Кредит наличными 439 550 ₽</option>
                             <option value="">Кредит наличными 1 500 000 ₽</option>
                         </select>
-                    </label>
+                    </label> -->
                     <div class="input text-m" data-placeholder="Сумма">
                         <input type="text" class="login-form__input text-m" value="20 746,54 ₽" disabled placeholder="Сумма"> 
                     </div>

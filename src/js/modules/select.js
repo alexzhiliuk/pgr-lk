@@ -23,10 +23,10 @@ $(".select").click(function(e) {
 
         } else {
 
-            let top = $(this).outerHeight() + $(this).offset().top + 4,
+            let top = $(this).outerHeight() + $(this).offset().top + 8,
                 left = $(this).offset().left
             
-                $droplist.css("display", "flex").css("top", `${top}px`).css("left", `${left}px`).addClass("select__droplist_active")
+                $droplist.css("display", "flex").css("min-width", `${$(this).outerWidth()}px`).css("top", `${top}px`).css("left", `${left}px`).addClass("select__droplist_active")
     
             $("body").append($droplist)
 
@@ -54,4 +54,17 @@ $(".select_form .select__item a").click(function(e) {
     select.find(`option[value=${value}]`).attr("selected", "selected")
     select.find(".select__title").html(text)
     select.addClass("select_selected")
+
+    // Создаем и вызываем событие change
+    const event = new Event('change', { bubbles: true });
+    select.find("select")[0].dispatchEvent(event);
 })
+
+$(window).click(function() {
+    $(".select").removeClass("select_active")
+    $(".select__droplist").removeClass("select__droplist_active")
+    $(`.select__droplist_absolute`).css("display", "none").removeClass("select__droplist_active")
+});
+$('.select').click(function(event){
+    event.stopPropagation();
+});

@@ -34,43 +34,53 @@
     &.select_form {
         justify-content: space-between;
 
+        padding: 16px;
+        border-radius: 12px;
+        border: 1px solid $colorBorder;
+        background: $colorWhite;
+
+        &[data-placeholder]::before {
+            content: attr(data-placeholder);
+            z-index: 1;
+            position: absolute;
+            left: 16px;
+            top: 50%;
+            translate: 0 -50%;
+            color: $colorText2;
+            pointer-events: none;
+    
+        }
+    
+        &[data-placeholder],
+        &[data-placeholder]{
+            &::before {
+                top: 6px;
+                translate: none;
+                font-size: 13px;
+                line-height: 1.6;
+                font-weight: 400;
+            }
+    
+            padding-top: 26px;
+            padding-bottom: 6px;
+
+        }
+
         & > span {
             justify-content: space-between;
             width: 100%;
+            padding-right: 24px;
+            @include textOverflow(1);
 
             svg {
-                opacity: .4;
+                position: absolute;
+                top: 50%;
+                translate: 0 -50%;
+                right: 12px;
             }
         }
 
-        .select__title {
-            color: #2C3136;
-            opacity: .4;
-            transition: all 120ms ease-out;
-        }
-
-        &.select_selected {
-            & > span {
-                svg {
-                    opacity: 1;
-                }
-            }
-
-            .select__title {
-                opacity: 1;
-            }
-        }
-
-        @media (hover: hover) {
-            &:hover {
-                // background-color: $surfaceSecondary;
-            }
-        }
-        &:active,
-        &.select_active {
-            // background-color: $surfacePrimary;
-            border-color: rgba(29, 36, 51, 0.2);
-        }
+        
     }
 
 
@@ -88,9 +98,10 @@
         position: absolute;
         z-index: 2;
         width: max-content;
-        max-width: calc(100vw - 2 * 16px);
+        min-width: 100%;
+        max-width: min(250%, calc(100vw - 32px));
         left: 0;
-        top: calc(100% + 4px);
+        top: calc(100% + 8px);
 
         background-color: $colorWhite;
         box-shadow: 0px 100px 80px rgba(48, 48, 48, 0.07), 0px 23px 31px rgba(48, 48, 48, 0.05), 0px 8px 12px rgba(48, 48, 48, 0.04), 0px 3px 3px rgba(48, 48, 48, 0.03);
@@ -109,6 +120,7 @@
 
         &_absolute {
             @extend .select__droplist;
+            min-width: unset;
         }
 
         &_right {
@@ -137,7 +149,7 @@
         border-radius: 4px;
         transition: all 120ms ease-out;
 
-        a {
+        a, button {
             padding: 10px 8px;
             display: flex;
             align-items: center;

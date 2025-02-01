@@ -557,27 +557,47 @@ button {
 }
 .select.select_form {
   justify-content: space-between;
+  padding: 16px;
+  border-radius: 12px;
+  border: 1px solid #E0E0E0;
+  background: #FFFFFF;
+}
+.select.select_form[data-placeholder]::before {
+  content: attr(data-placeholder);
+  z-index: 1;
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  translate: 0 -50%;
+  color: #6B6D80;
+  pointer-events: none;
+}
+.select.select_form[data-placeholder], .select.select_form[data-placeholder] {
+  padding-top: 26px;
+  padding-bottom: 6px;
+}
+.select.select_form[data-placeholder]::before, .select.select_form[data-placeholder]::before {
+  top: 6px;
+  translate: none;
+  font-size: 13px;
+  line-height: 1.6;
+  font-weight: 400;
 }
 .select.select_form > span {
   justify-content: space-between;
   width: 100%;
+  padding-right: 24px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
 }
 .select.select_form > span svg {
-  opacity: 0.4;
-}
-.select.select_form .select__title {
-  color: #2C3136;
-  opacity: 0.4;
-  transition: all 120ms ease-out;
-}
-.select.select_form.select_selected > span svg {
-  opacity: 1;
-}
-.select.select_form.select_selected .select__title {
-  opacity: 1;
-}
-.select.select_form:active, .select.select_form.select_active {
-  border-color: rgba(29, 36, 51, 0.2);
+  position: absolute;
+  top: 50%;
+  translate: 0 -50%;
+  right: 12px;
 }
 .select > span {
   display: flex;
@@ -590,9 +610,10 @@ button {
   position: absolute;
   z-index: 2;
   width: max-content;
-  max-width: calc(100vw - 32px);
+  min-width: 100%;
+  max-width: min(250%, 100vw - 32px);
   left: 0;
-  top: calc(100% + 4px);
+  top: calc(100% + 8px);
   background-color: #FFFFFF;
   box-shadow: 0px 100px 80px rgba(48, 48, 48, 0.07), 0px 23px 31px rgba(48, 48, 48, 0.05), 0px 8px 12px rgba(48, 48, 48, 0.04), 0px 3px 3px rgba(48, 48, 48, 0.03);
   border-radius: 12px;
@@ -605,6 +626,9 @@ button {
 }
 .select__droplist_active {
   display: flex;
+}
+.select__droplist_absolute {
+  min-width: unset;
 }
 .select__droplist_right {
   left: unset;
@@ -624,7 +648,7 @@ button {
   border-radius: 4px;
   transition: all 120ms ease-out;
 }
-.select__item a {
+.select__item a, .select__item button {
   padding: 10px 8px;
   display: flex;
   align-items: center;
@@ -3005,6 +3029,11 @@ input.input:hover {
   .sidebar__form .form__success > *:first-child {
     margin-top: auto;
   }
+}
+.sidebar__inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 .sidebar__btns {
   display: flex;

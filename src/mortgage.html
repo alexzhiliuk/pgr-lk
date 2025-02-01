@@ -9,10 +9,12 @@
         
         <!-- Sidebars -->
         @@include('html/sidebar/notifications.html')
-        @@include('html/sidebar/profile.html')
+        @@include('html/sidebar/investor/profile.html')
 
         <!-- Header -->
-        @@include('html/investor/header.html')
+        @@include('html/investor/header.html', {
+            "activeItem": "portfolio"
+        })
 
         <main>            
             @@include('html/back.html')

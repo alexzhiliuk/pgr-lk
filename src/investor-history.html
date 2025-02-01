@@ -13,10 +13,12 @@
         @@include('html/sidebar/investor/profile.html')
 
         <!-- Header -->
-        @@include('html/investor/header.html')
+        @@include('html/investor/header.html', {
+            "activeItem": "history"
+        })
 
         <main>            
-            @@include('html/investor/history.html')
+            @@include('html/investor/history-my.html')
             @@include('html/promo.html')
         </main>
 

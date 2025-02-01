@@ -13,26 +13,44 @@
                         <div class="radio-inputs__title text-s color-text-2">Тип досрочного погашения</div>
                         <div class="radio-inputs__items text-m color-text-1">
                             <label class="radio">
-                                <input type="radio" name="type" checked data-check-class-toggle="js-check-partly">
+                                <input type="radio" name="type" checked data-check-class-toggle="js-check-partly1">
                                 Частичный
                             </label>
                             <label class="radio">
-                                <input type="radio" name="type" data-check-class-toggle="js-check-full">
+                                <input type="radio" name="type" data-check-class-toggle="js-check-full1">
                                 Полный
                             </label>
                         </div>
                     </div>
                     
-                    <label class="input input_select text-m" data-placeholder="Куда">
+                    <!-- <label class="input input_select text-m" data-placeholder="Куда">
                             <select>
                                 <option value="" selected>Кредит наличными 439 550 ₽</option>
                                 <option value="">Кредит наличными 1 500 000 ₽</option>
                             </select>
-                    </label>
-                    <div class="js-check-partly input text-m" data-placeholder="Сумма досрочного платежа">
-                        <input type="text" class="login-form__input text-m" placeholder="Сумма досрочного платежа" data-ruble-input data-disable-check="earlyPaymentToStep2"> 
+                    </label> -->
+                    <div class="select select_form" data-placeholder="Куда">
+                        <span>
+                            <span class="select__title text-m">Кредит наличными 439 550 ₽</span>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M5.29289 9.29607C5.68342 8.90131 6.31658 8.90131 6.70711 9.29607L12 14.5596L17.2929 9.29607C17.6834 8.90131 18.3166 8.90131 18.7071 9.29607C19.0976 9.69083 19.0976 10.3309 18.7071 10.7256L12.7071 16.7039C12.3166 17.0987 11.6834 17.0987 11.2929 16.7039L5.29289 10.7256C4.90237 10.3309 4.90237 9.69083 5.29289 9.29607Z" fill="#1B1F3B" fill-opacity="0.4"/>
+                            </svg>                                                               
+                        </span>
+                            
+                        <ul class="select__droplist text-s">
+                            <li class="select__item"><a href="javascript:void(0)" data-value="1">Кредит наличными 439 550 ₽</a></li>
+                            <li class="select__item"><a href="javascript:void(0)" data-value="2">Кредит наличными 1 500 000 ₽</a></li>
+                        </ul>
+                        
+                        <select name="credit" id="" hidden>
+                            <option value="1"></option>
+                            <option value="2"></option>
+                        </select>
                     </div>
-                    <div class="js-check-partly notification">
+                    <div class="js-check-partly1 input text-m" data-placeholder="Сумма досрочного платежа">
+                        <input type="text" class="login-form__input text-m" placeholder="Сумма досрочного платежа" data-ruble-input> 
+                    </div>
+                    <div class="js-check-partly1 notification">
                         <div class="notification__body">
                             <div class="notification__title text-m">Новый срок кредита составит 12 мес. вместо 15 мес.</div>
                         </div>
@@ -66,7 +84,7 @@
                             </p>
                         </div>
                     </div> -->
-                    <label class="js-check-full input input_date text-m" data-placeholder="Дата погашения">
+                    <label class="js-check-full1 input input_date text-m" data-placeholder="Дата погашения">
                         <div class="input__wrapper">
                             <input type="date" class="login-form__input text-m" placeholder="Дата погашения" data-disable-check="earlyPaymentToStep2"> 
                         </div>
@@ -74,14 +92,76 @@
                             После этой даты документы для платежа аннулируются
                         </p>
                     </label>
-                    <div class="js-check-full notification">
+                    <div class="js-check-full1 notification">
                         <div class="notification__body">
                             <div class="notification__title text-m">Досрочный платеж можно будет внести после согласования в день реглярного платежа</div>
                         </div>
                     </div>
-                    <button id="earlyPaymentToStep2" data-next-step="2" type="button" class="form__btn btn text-m text-m_bold" disabled>Продолжить</button>
+                    <button data-next-step="2" type="button" class="form__btn btn text-m text-m_bold">Рассчитать изменение платежей</button>
                 </div>
-                <div class="form__step" data-step="3" style="display: none;">
+                <div class="form__step" data-step="2" style="display: none;">
+                    <div class="radio-inputs">
+                        <div class="radio-inputs__title text-s color-text-2">Тип досрочного погашения</div>
+                        <div class="radio-inputs__items text-m color-text-1">
+                            <label class="radio">
+                                <input type="radio" name="type2" checked data-check-class-toggle="js-check-partly2">
+                                Частичный
+                            </label>
+                            <label class="radio">
+                                <input type="radio" name="type2" data-check-class-toggle="js-check-full2">
+                                Полный
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <!-- <label class="input input_select text-m" data-placeholder="Куда">
+                            <select>
+                                <option value="" selected>Кредит наличными 439 550 ₽</option>
+                                <option value="">Кредит наличными 1 500 000 ₽</option>
+                            </select>
+                    </label> -->
+                    <div class="select select_form" data-placeholder="Куда">
+                        <span>
+                            <span class="select__title text-m">Кредит наличными 439 550 ₽</span>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M5.29289 9.29607C5.68342 8.90131 6.31658 8.90131 6.70711 9.29607L12 14.5596L17.2929 9.29607C17.6834 8.90131 18.3166 8.90131 18.7071 9.29607C19.0976 9.69083 19.0976 10.3309 18.7071 10.7256L12.7071 16.7039C12.3166 17.0987 11.6834 17.0987 11.2929 16.7039L5.29289 10.7256C4.90237 10.3309 4.90237 9.69083 5.29289 9.29607Z" fill="#1B1F3B" fill-opacity="0.4"/>
+                            </svg>                                                               
+                        </span>
+                            
+                        <ul class="select__droplist text-s">
+                            <li class="select__item"><a href="javascript:void(0)" data-value="1">Кредит наличными 439 550 ₽</a></li>
+                            <li class="select__item"><a href="javascript:void(0)" data-value="2">Кредит наличными 1 500 000 ₽</a></li>
+                        </ul>
+                        
+                        <select name="credit" id="" hidden>
+                            <option value="1"></option>
+                            <option value="2"></option>
+                        </select>
+                    </div>
+                    <div class="js-check-partly2 input text-m" data-placeholder="Сумма досрочного платежа">
+                        <input type="text" class="login-form__input text-m" value="50 000  ₽" placeholder="Сумма досрочного платежа" data-ruble-input > 
+                    </div>
+                    <div class="js-check-partly2 notification">
+                        <div class="notification__body">
+                            <div class="notification__title text-m">Новый срок кредита составит 12 мес. вместо 15 мес.</div>
+                        </div>
+                    </div>
+                    <label class="js-check-full2 input input_date text-m" data-placeholder="Дата погашения">
+                        <div class="input__wrapper">
+                            <input type="date" class="login-form__input text-m" placeholder="Дата погашения" data-disable-check="earlyPaymentToStep2"> 
+                        </div>
+                        <p class="input__caption text-s color-text-2">
+                            После этой даты документы для платежа аннулируются
+                        </p>
+                    </label>
+                    <div class="js-check-full2 notification">
+                        <div class="notification__body">
+                            <div class="notification__title text-m">Досрочный платеж можно будет внести после согласования в день реглярного платежа</div>
+                        </div>
+                    </div>
+                    <button data-next-step="3" type="button" class="form__btn btn text-m text-m_bold">Отправить заявление</button>
+                </div>
+                <div class="form__step" data-step="4" style="display: none;">
                     <div class="properties text-m">
                         <div class="properties__item">
                             <div class="properties__title">Формат </div>
@@ -218,7 +298,7 @@
                         </button>
                     </div>
                 </div>
-                <div class="form__step form__success" data-step="2" style="display: none;">
+                <div class="form__step form__success" data-step="3" style="display: none;">
                     <img src="@img/sidebar/form/success.svg" alt="">
                     <div class="form__success-text">
                         <p class="text-m text-m_bold">Платёж успешно внесён</p>
