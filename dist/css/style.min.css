@@ -2110,6 +2110,13 @@ input.input:hover {
     width: 24px;
     height: auto;
   }
+  .details__btns > * {
+    max-width: 100%;
+    width: 100%;
+  }
+  .details__btns .copy .btn {
+    width: 100%;
+  }
 }
 .details__empty {
   display: flex;
