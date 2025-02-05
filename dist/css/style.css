@@ -814,6 +814,10 @@ input.input:hover {
   display: block;
   cursor: pointer;
 }
+.input__error {
+  color: #F45725;
+  margin-top: 4px;
+}
 .input input, .input select {
   padding: 16px;
   border-radius: 12px;
@@ -897,6 +901,10 @@ input.input:hover {
   top: 50%;
   translate: 0 -50%;
 }
+.input_error input {
+  border-color: #F45725;
+}
+
 .tooltip-item {
   position: relative;
 }

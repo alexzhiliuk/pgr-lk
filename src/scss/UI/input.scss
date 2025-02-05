@@ -31,6 +31,10 @@ input.input {
         display: block;
         cursor: pointer;
     }
+    &__error {
+        color: $colorError;
+        margin-top: 4px;
+    }
 
     input, select {
         padding: 16px;
@@ -146,6 +150,12 @@ input.input {
 
     &_secret {
         
+    }
+
+    &_error {
+        input {
+            border-color: $colorError;
+        }
     }
 
 }
