@@ -14,8 +14,7 @@ function fillCalendar(year, month, isInitial=false) {
     const selectedValue = calendarBody.parents(".input").find("input[type='date']").val()
     
     calendarBody.attr("data-selected", selectedValue)
-    calendarOutput.val(selectedValue)
-    calendarOutput[0].readOnly = true
+    calendarOutput.val(selectedValue).prop("readonly", true)
     calendarBody.empty(); // Очищаем календарь
 
     if (isInitial && selectedValue) {
