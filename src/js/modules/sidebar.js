@@ -31,3 +31,15 @@ $("[data-prev-step]").on("click", function(e) {
 
     $(this).parents("[data-step]").hide().parents(".form").find(`[data-step='${prevStep}']`).show()
 })
+
+$(window).click(function() {
+    $(".sidebar-wrapper").removeClass("sidebar-wrapper_open")
+});
+$(document).keyup(function(e) {
+    if (e.key === "Escape") { 
+        $(".sidebar-wrapper").removeClass("sidebar-wrapper_open")
+    }
+});
+$('.sidebar, [data-sidebar-open]').click(function(event){
+    event.stopPropagation();
+});

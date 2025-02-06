@@ -891,6 +891,11 @@ input.input:hover {
   padding-top: 26px;
   padding-bottom: 6px;
 }
+.input_date input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
 .input_date input::-webkit-inner-spin-button, .input_date input::-webkit-calendar-picker-indicator {
   cursor: pointer;
   width: 24px;
@@ -900,9 +905,102 @@ input.input:hover {
   right: 16px;
   top: 50%;
   translate: 0 -50%;
+  display: none;
 }
 .input_error input {
   border-color: #F45725;
+}
+
+.input .calendar {
+  display: none;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  max-width: 260px;
+  top: calc(100% + 4px);
+  padding: 4px;
+  background: #FFFFFF;
+  border-radius: 16px;
+  border: 1px solid #E0E0E0;
+  z-index: 999;
+}
+.input .calendar.active {
+  display: block;
+}
+.input .calendar__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 0;
+}
+.input .calendar__month {
+  color: rgba(25, 28, 48, 0.9);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 1.6;
+}
+.input .calendar__year {
+  color: #6B6D80;
+}
+.input .calendar__arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+}
+.input .calendar__arrow:hover {
+  background: rgba(0, 0, 0, 0.04);
+}
+.input .calendar__arrow svg {
+  width: 16px;
+  height: auto;
+  display: block;
+}
+.input .calendar__body {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.input .calendar__row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px;
+  text-align: center;
+}
+.input .calendar__row > * {
+  flex: 0 0 calc(14.2857142857% - 1.7142857143px);
+}
+.input .calendar__row > * {
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+}
+.input .calendar__day {
+  cursor: pointer;
+  color: rgba(25, 28, 48, 0.9);
+}
+.input .calendar__day:hover {
+  background: rgba(0, 0, 0, 0.04);
+}
+.input .calendar__day_today {
+  text-decoration: underline;
+}
+.input .calendar__day_selected {
+  background: #F4F4F4;
+}
+.input .calendar__day_out-of-month {
+  color: rgba(25, 28, 48, 0.4);
+}
+.input .calendar__day.calendar__weekend {
+  color: #E02D3C;
+}
+.input .calendar__day.calendar__weekend.calendar__day_out-of-month {
+  color: rgba(224, 45, 60, 0.4);
 }
 
 .tooltip-item {

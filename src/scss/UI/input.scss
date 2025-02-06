@@ -134,6 +134,10 @@ input.input {
 
     &_date {
         input {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+
             &::-webkit-inner-spin-button,
             &::-webkit-calendar-picker-indicator {
                 cursor: pointer;
@@ -144,6 +148,7 @@ input.input {
                 position: absolute;
                 right: 16px; top: 50%;
                 translate: 0 -50%;
+                display: none;
             }
         }
     }
@@ -157,5 +162,111 @@ input.input {
             border-color: $colorError;
         }
     }
+}
 
+
+// Calendar
+.input {
+    .calendar {
+        display: none;
+        &.active {
+            display: block;
+        }
+
+        position: absolute;
+        left: 0;
+        width: 100%;
+        max-width: 260px;
+        top: calc(100% + 4px);
+        padding: 4px;
+
+        background: $colorWhite;
+        border-radius: 16px;
+        border: 1px solid $colorBorder;
+        z-index: 999;
+
+        &__header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 12px 0;
+        }
+
+        &__month {
+            color: $colorText1;
+            @include text-m;
+        }
+
+        &__year {
+            color: $colorText2;
+        }
+
+        &__arrow {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 24px;
+            height: 24px;
+            border-radius: 4px;
+
+            &:hover {
+                background: $colorBlack004;
+            }
+
+            svg {
+                width: 16px;
+                height: auto;
+                display: block;
+            }
+        }
+
+        &__body {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        &__row {
+            @include flexColumns(7, 2px);
+            
+            text-align: center;
+
+            & > * {
+                aspect-ratio: 1;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 12px;
+            }
+        }
+
+        &__day {
+            cursor: pointer;
+            color: $colorText1;
+
+            &:hover {
+                background: $colorBlack004;
+            }
+
+            &_today {
+                text-decoration: underline;
+            }
+
+            &_selected {
+                background: $colorSecondary;
+            }
+
+            &_out-of-month {
+                color: rgba($color: $colorText1, $alpha: .4);
+            }
+
+            &.calendar__weekend {
+                color: $colorRed;
+
+                &.calendar__day_out-of-month {
+                    color: rgba($color: $colorRed, $alpha: .4);
+                }
+            }
+        }
+    }
 }
