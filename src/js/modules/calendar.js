@@ -7,12 +7,22 @@ function formatDate(date) {
 
 
 // Функция для заполнения календаря
-function fillCalendar(year, month) {
+function fillCalendar(year, month, isInitial=false) {
     const calendarHeader = $('.calendar__header');
     const calendarBody = $('.calendar__body');
+    const calendarOutput = calendarBody.parents(".input").find("input[type='text']")
     const selectedValue = calendarBody.parents(".input").find("input[type='date']").val()
+    
     calendarBody.attr("data-selected", selectedValue)
+    calendarOutput.val(selectedValue)
+    calendarOutput[0].readOnly = true
     calendarBody.empty(); // Очищаем календарь
+
+    if (isInitial && selectedValue) {
+        let [selectedYear, selectedMonth, selectedDay] = selectedValue.split("-")
+        year = Number(selectedYear)
+        month = Number(selectedMonth) - 1
+    }
 
     const firstDay = new Date(year, month, 1); // Первый день месяца
     const lastDay = new Date(year, month + 1, 0); // Последний день месяца
@@ -29,31 +39,31 @@ function fillCalendar(year, month) {
 
     // Заполняем календарь (6 строк по 7 дней)
     for (let i = 0; i < 6; i++) {
-    html += '<div class="calendar__row">';
+        html += '<div class="calendar__row">';
 
-    for (let j = 1; j <= 7; j++) {
-        if (i === 0 && j < startDayOfWeek) {
-        // Дни предыдущего месяца
-        const prevMonthDate = new Date(year, month - 1, prevMonthDay);
-        const prevMonthDateString = formatDate(prevMonthDate);
-        html += `<div class="calendar__day ${j == 6 || j == 7 ? 'calendar__weekend' : ''} ${prevMonthDateString === selectedValue ? 'calendar__day_selected' : ''} ${formatDate(new Date()) === prevMonthDateString ? 'calendar__day_today' : ''} calendar__day_out-of-month" data-date="${prevMonthDateString}">${prevMonthDay}</div>`;
-        prevMonthDay++;
-        } else if (day > daysInMonth) {
-        // Дни следующего месяца
-        const nextMonthDate = new Date(year, month + 1, nextMonthDay);
-        const nextMonthDateString = formatDate(nextMonthDate);
-        html += `<div class="calendar__day ${j == 6 || j == 7 ? 'calendar__weekend' : ''} ${nextMonthDateString === selectedValue ? 'calendar__day_selected' : ''} ${formatDate(new Date()) === nextMonthDateString ? 'calendar__day_today' : ''} calendar__day_out-of-month" data-date="${nextMonthDateString}">${nextMonthDay}</div>`;
-        nextMonthDay++;
-        } else {
-        // Дни текущего месяца
-        const currentDate = new Date(year, month, day);
-        const currentDateString = formatDate(currentDate);
-        html += `<div class="calendar__day ${j == 6 || j == 7 ? 'calendar__weekend' : ''} ${currentDateString === selectedValue ? 'calendar__day_selected' : ''} ${formatDate(new Date()) === currentDateString ? 'calendar__day_today' : ''}" data-date="${currentDateString}">${day}</div>`;
-        day++;
+        for (let j = 1; j <= 7; j++) {
+            if (i === 0 && j < startDayOfWeek) {
+                // Дни предыдущего месяца
+                const prevMonthDate = new Date(year, month - 1, prevMonthDay);
+                const prevMonthDateString = formatDate(prevMonthDate);
+                html += `<div class="calendar__day ${j == 6 || j == 7 ? 'calendar__weekend' : ''} ${prevMonthDateString === selectedValue ? 'calendar__day_selected' : ''} ${formatDate(new Date()) === prevMonthDateString ? 'calendar__day_today' : ''} calendar__day_out-of-month" data-date="${prevMonthDateString}">${prevMonthDay}</div>`;
+                prevMonthDay++;
+            } else if (day > daysInMonth) {
+                // Дни следующего месяца
+                const nextMonthDate = new Date(year, month + 1, nextMonthDay);
+                const nextMonthDateString = formatDate(nextMonthDate);
+                html += `<div class="calendar__day ${j == 6 || j == 7 ? 'calendar__weekend' : ''} ${nextMonthDateString === selectedValue ? 'calendar__day_selected' : ''} ${formatDate(new Date()) === nextMonthDateString ? 'calendar__day_today' : ''} calendar__day_out-of-month" data-date="${nextMonthDateString}">${nextMonthDay}</div>`;
+                nextMonthDay++;
+            } else {
+                // Дни текущего месяца
+                const currentDate = new Date(year, month, day);
+                const currentDateString = formatDate(currentDate);
+                html += `<div class="calendar__day ${j == 6 || j == 7 ? 'calendar__weekend' : ''} ${currentDateString === selectedValue ? 'calendar__day_selected' : ''} ${formatDate(new Date()) === currentDateString ? 'calendar__day_today' : ''}" data-date="${currentDateString}">${day}</div>`;
+                day++;
+            }
         }
-    }
 
-    html += '</div>';
+        html += '</div>';
     }
 
     updateHeader(calendarHeader, year, month)
@@ -61,14 +71,15 @@ function fillCalendar(year, month) {
     calendarBody.html(html); // Вставляем HTML в таблицу
 
     $(".calendar__day").click(function() {
-    const value = $(this).attr("data-date")
-    $(".calendar__day").removeClass("calendar__day_selected")
-    $(this).addClass("calendar__day_selected").parents(".input").find("input[type='date']").val(value)
+        const value = $(this).attr("data-date")
+        $(".calendar__day").removeClass("calendar__day_selected")
+        $(this).addClass("calendar__day_selected").parents(".input").find("input[type='date']").val(value)
+        $(this).parents(".input").find("input[type='text']").val(value)
 
-    if ($(this).hasClass("calendar__day_out-of-month")) {
-        const [year, month, day] = $(this).attr("data-date").split("-")
-        fillCalendar(Number(year), Number(month) - 1)
-    }
+        if ($(this).hasClass("calendar__day_out-of-month")) {
+            const [year, month, day] = value.split("-")
+            fillCalendar(Number(year), Number(month) - 1)
+        }
     })
     
 }
@@ -86,10 +97,10 @@ function updateHeader(calendarHeader, year, month) {
 
 // Обновляем данные в стрелках
 function updateArrows(calendarHeader, year, month) {
-    console.log(year, month)
+    
     const prevMonth = new Date(year, month, 0)
     const nextMonth = new Date(year, month + 1, 1)
-    console.log(prevMonth, nextMonth)
+    
     calendarHeader.find(".calendar__arrow_prev").attr("data-month", `${prevMonth.getMonth()}-${prevMonth.getFullYear()}`)
     calendarHeader.find(".calendar__arrow_next").attr("data-month", `${nextMonth.getMonth()}-${nextMonth.getFullYear()}`)
 }
@@ -103,11 +114,17 @@ $(".calendar__arrow").click(function() {
     fillCalendar(Number(year), Number(month))
 })
 
+$(".input_date input[type='text']").on("keyup", function(e) {
+    if (e.key === "Enter") { 
+        $(".calendar").removeClass("active")
+    }
+})
+
 $(".input_date .input__icon").click(function() {
-    $(this).parents(".input").find(".calendar").addClass("active")
+    $(this).parents(".input").find(".calendar").toggleClass("active")
 
     const currentDate = new Date();
-    fillCalendar(currentDate.getFullYear(), currentDate.getMonth());
+    fillCalendar(currentDate.getFullYear(), currentDate.getMonth(), true);
 })
 
 $(window).click(function() {

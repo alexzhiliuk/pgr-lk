@@ -6,10 +6,13 @@ $("[data-sidebar-open]").click(function(e) {
 
 $(".sidebar__close, .js-sidebar-close").click(function() {
     $(this).parents(".sidebar-wrapper").removeClass("sidebar-wrapper_open")
-    
-    $(this).parents(".sidebar-wrapper").find("[data-step]").hide()
-    $(this).parents(".sidebar-wrapper").find("[data-step=1]").show()
+    resetSidebar()
 })
+
+function resetSidebar() {
+    $(".sidebar-wrapper").find("[data-step]").hide()
+    $(".sidebar-wrapper").find("[data-step=1]").show()
+}
 
 
 // Sidebar Form
@@ -32,14 +35,14 @@ $("[data-prev-step]").on("click", function(e) {
     $(this).parents("[data-step]").hide().parents(".form").find(`[data-step='${prevStep}']`).show()
 })
 
-$(window).click(function() {
+$(".sidebar-wrapper").click(function(e) {
+    if (!$(e.target).hasClass("sidebar-wrapper")) { return }
     $(".sidebar-wrapper").removeClass("sidebar-wrapper_open")
+    resetSidebar()
 });
 $(document).keyup(function(e) {
     if (e.key === "Escape") { 
         $(".sidebar-wrapper").removeClass("sidebar-wrapper_open")
+        resetSidebar()
     }
-});
-$('.sidebar, [data-sidebar-open]').click(function(event){
-    event.stopPropagation();
 });

@@ -895,17 +895,15 @@ input.input:hover {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  -moz-appearance: textfield;
 }
 .input_date input::-webkit-inner-spin-button, .input_date input::-webkit-calendar-picker-indicator {
-  cursor: pointer;
-  width: 24px;
-  height: 24px;
-  background: url(../img/datepicker/icon.svg) center center/contain no-repeat;
+  opacity: 0;
   position: absolute;
-  right: 16px;
-  top: 50%;
-  translate: 0 -50%;
-  display: none;
+  left: 0; /* Ensures the calendar still shows up */
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
 }
 .input_error input {
   border-color: #F45725;
@@ -951,7 +949,7 @@ input.input:hover {
   height: 24px;
   border-radius: 4px;
 }
-.input .calendar__arrow:hover {
+.input .calendar__arrow:hover, .input .calendar__arrow:focus, .input .calendar__arrow:focus-within {
   background: rgba(0, 0, 0, 0.04);
 }
 .input .calendar__arrow svg {
