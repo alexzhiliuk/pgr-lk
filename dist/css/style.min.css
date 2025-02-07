@@ -1368,6 +1368,9 @@ input.input:hover {
 .radio-inputs__items > *:not(:last-child), .check-inputs__items > *:not(:last-child) {
   border-bottom: 1px solid #E0E0E0;
 }
+.radio-inputs__items a input, .check-inputs__items a input {
+  pointer-events: none;
+}
 
 .radio, .check {
   padding: 16px;
@@ -3079,6 +3082,11 @@ input.input:hover {
   overscroll-behavior: contain;
   display: flex;
   flex-direction: column;
+}
+@media screen and (max-width: 575.98px) {
+  .sidebar {
+    width: 100vw;
+  }
 }
 .sidebar__header {
   display: flex;

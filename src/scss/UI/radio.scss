@@ -19,6 +19,12 @@
                 border-bottom: 1px solid $colorBorder;
             }
         }
+
+        a {
+            input {
+                pointer-events: none;
+            }
+        }
     }
 }
 

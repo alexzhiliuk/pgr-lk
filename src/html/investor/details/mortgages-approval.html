@@ -6,9 +6,9 @@
         </div>
         <div class="details__nav">
             <div class="details__filters draggable">
-                <a href="investor-index.html" class="text-s filter-btn filter-btn_active">Активные</a>
+                <a href="investor-index.html" class="text-s filter-btn">Активные</a>
                 <a href="investor-index-done.html" class="text-s filter-btn">Завершённые</a>
-                <a href="investor-index-approval.html" class="text-s filter-btn" data-count="2">На согласовании</a>
+                <a href="investor-index-approval.html" class="text-s filter-btn filter-btn_active" data-count="2">На согласовании</a>
             </div>
             
         </div>
@@ -26,6 +26,7 @@
                     </tr>
                 </thead>
                 <tbody>
+
                     <tr>
                         <td>
                             <a href="mortgage.html" class="details-table__mortgage">
@@ -58,9 +59,9 @@
                         </td>
                         <td>
                             <a href="mortgage.html">
-                                <div class="progress" style="--progress-width: 50%; --progress-color: #FFC700;">
-                                    <div class="progress__title">Просрочено 2 дня</div>
-                                    <div class="progress__bar"></div>
+                                <div class="property">
+                                    <div class="property__title">Заявка отправлена</div>
+                                    <div class="property__value">Ожидайте звонка</div>
                                 </div>
                             </a>
                         </td>
@@ -97,52 +98,14 @@
                         </td>
                         <td>
                             <a href="mortgage.html">
-                                <div class="progress" style="--progress-width: 20%; --progress-color: #3AA981;">
-                                    <div class="progress__title">Просрочек нет</div>
-                                    <div class="progress__bar"></div>
+                                <div class="property">
+                                    <div class="property__title">Заявка отправлена</div>
+                                    <div class="property__value">Ожидайте звонка</div>
                                 </div>
                             </a>
                         </td>
                     </tr>
-                    <tr>
-                        <td>
-                            <a href="mortgage.html" class="details-table__mortgage">
-                                <img src="@img/mortgage/table-row-img.png" alt="">
-                                <div class="property">
-                                    <div class="property__title">Номер</div>
-                                    <div class="property__value">050–310</div>
-                                </div>
-                            </a>
-                        </td>
-                        <td>
-                            <a href="mortgage.html">25 000 000,00 ₽</a>
-                        </td>
-                        <td>
-                            <a href="mortgage.html">
-                                <div class="property">
-                                    <div class="property__title">10 платежей</div>
-                                    <div class="property__value">500 000,00 ₽</div>
-                                </div>
-                            </a>
-                        </td>
-                        <td><a href="mortgage.html">24%</a></td>
-                        <td>
-                            <a href="mortgage.html">
-                                <div class="property">
-                                    <div class="property__title">17 августа</div>
-                                    <div class="property__value">50 000,00 ₽</div>
-                                </div>
-                            </a>
-                        </td>
-                        <td>
-                            <a href="mortgage.html">
-                                <div class="progress" style="--progress-width: 100%; --progress-color: #E02D3C;">
-                                    <div class="progress__title">Просрочено на 64 дня</div>
-                                    <div class="progress__bar"></div>
-                                </div>
-                            </a>
-                        </td>
-                    </tr>
+                   
                 </tbody>
             </table>
         </div>
@@ -150,7 +113,7 @@
             Здесь пока ничего нет
         </div> -->
         <div class="details__property-accordeons property-accordeons">
-            <div class="property-accordeon property-accordeon_open property-accordeon_warning">
+            <div class="property-accordeon  ">
                 <div class="property-accordeon__header">
                     <div class="property-accordeon__num">
                         <img src="@img/mortgage/table-row-img.png" alt="">
@@ -180,7 +143,7 @@
                         </div>
                         <div class="property-accordeon__property">
                             <p class="property-accordeon__property-title text-s">Статус</p>
-                            <p class="property-accordeon__property-value property-accordeon__property-value_overdue text-m">Просрочен</p>
+                            <p class="property-accordeon__property-value text-m">Заявка отправлена. Ожидайте звонка</p>
                         </div>
                     </div>
                 </div>
@@ -215,42 +178,7 @@
                         </div>
                         <div class="property-accordeon__property">
                             <p class="property-accordeon__property-title text-s">Статус</p>
-                            <p class="property-accordeon__property-value text-m">Нет просрочек</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="property-accordeon  ">
-                <div class="property-accordeon__header">
-                    <div class="property-accordeon__num">
-                        <img src="@img/mortgage/table-row-img.png" alt="">
-                    </div>
-                    <div class="property-accordeon__desc">
-                        <p class="text-s property-accordeon__date">Следующий платёж 17 августа 2024</p>
-                        <p class="text-m property-accordeon__sum">Сумма 50 000, 00 ₽</p>
-                    </div>
-                </div>
-                <div class="property-accordeon__body">
-                    <div class="property-accordeon__properties">
-                        <div class="property-accordeon__property">
-                            <p class="property-accordeon__property-title text-s">Номер закладной </p>
-                            <p class="property-accordeon__property-value text-m">050–310</p>
-                        </div>
-                        <div class="property-accordeon__property">
-                            <p class="property-accordeon__property-title text-s">Стоимость закладной</p>
-                            <p class="property-accordeon__property-value text-m">25 000 000,00 ₽</p>
-                        </div>
-                        <div class="property-accordeon__property">
-                            <p class="property-accordeon__property-title text-s">Выплачено</p>
-                            <p class="property-accordeon__property-value text-m">500 000 ₽ • 10 платежей</p>
-                        </div>
-                        <div class="property-accordeon__property">
-                            <p class="property-accordeon__property-title text-s">Доходность</p>
-                            <p class="property-accordeon__property-value text-m">24%</p>
-                        </div>
-                        <div class="property-accordeon__property">
-                            <p class="property-accordeon__property-title text-s">Статус</p>
-                            <p class="property-accordeon__property-value text-m">Просрочек нет</p>
+                            <p class="property-accordeon__property-value text-m">Заявка отправлена. Ожидайте звонка</p>
                         </div>
                     </div>
                 </div>
