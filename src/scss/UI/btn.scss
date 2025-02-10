@@ -99,5 +99,9 @@
             height: 24px;
             display: block;
         }
+
+        @media screen and (max-width: $breakpoint768) {
+            padding: 16px;
+        }
     }
 }

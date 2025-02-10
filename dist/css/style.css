@@ -373,6 +373,11 @@ main {
   flex-direction: column;
   gap: 24px;
 }
+@media screen and (max-width: 575.98px) {
+  main {
+    padding-top: 8px;
+  }
+}
 
 ul, ol {
   list-style-type: none;
@@ -745,6 +750,11 @@ button {
   width: 24px;
   height: 24px;
   display: block;
+}
+@media screen and (max-width: 767.98px) {
+  .btn_icon {
+    padding: 16px;
+  }
 }
 
 .filter-btn {
@@ -1798,6 +1808,7 @@ input.input:hover {
   font-weight: 600;
   font-size: clamp(28px, 3.6vw, 36px);
   line-height: 1.1;
+  padding: 0;
 }
 .header__nav_mobile .header__menu a.active {
   border-bottom: none;
@@ -3172,6 +3183,11 @@ input.input:hover {
 .sidebar__btns-row > * {
   flex: 1 0 fit-content;
 }
+.sidebar__btns-row .btn_icon {
+  flex-grow: 0;
+  flex-shrink: 0;
+  aspect-ratio: 1;
+}
 
 .qr {
   display: flex;
@@ -3407,7 +3423,6 @@ input.input:hover {
 
 /* -------- SHOWCASE -------- */
 .showcase-section {
-  padding-top: 15px;
   display: flex;
   align-items: flex-start;
   gap: 24px;

@@ -146,6 +146,12 @@
             & > * {
                 flex: 1 0 fit-content;
             }
+
+            .btn_icon {
+                flex-grow: 0;
+                flex-shrink: 0;
+                aspect-ratio: 1;
+            }
         }
     }
 }
